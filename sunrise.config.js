@@ -10,29 +10,6 @@ if (getEnv('VUE_APP_LOCAL_SUNRISE_CONFIG')) {
 }
 const config = {
   ct: {
-    auth: {
-      host:
-        getEnv('VUE_APP_CT_AUTH_HOST') ||
-        'https://auth.europe-west1.gcp.commercetools.com',
-      projectKey:
-        getEnv('VUE_APP_CT_PROJECT_KEY') || 'poc-consum',
-      credentials: {
-        clientId:
-          getEnv('VUE_APP_CT_CLIENT_ID') ||
-          'rOzs7bZvrMhE56S1OPPop-i-',
-        clientSecret:
-          getEnv('VUE_APP_CT_CLIENT_SECRET') ||
-          'L6VHj6G8SV3ye3_4Du1XNqadh_cuGhHg',
-      },
-      scope:
-        getEnv('VUE_APP_CT_SCOPE') ||
-        'manage_my_profile:poc-consum ' +
-        'create_anonymous_token:poc-consum ' +
-        'manage_my_payments:poc-consum ' +
-        'manage_my_shopping_lists:poc-consum ' +
-        'manage_my_orders:poc-consum ' +
-        'view_products:poc-consum ',
-    },
     // auth: {
     //   host:
     //     getEnv('VUE_APP_CT_AUTH_HOST') ||
@@ -42,15 +19,38 @@ const config = {
     //   credentials: {
     //     clientId:
     //       getEnv('VUE_APP_CT_CLIENT_ID') ||
-    //       'SNLGw7jdg0G3HL6_bnoBY-Yx',
+    //       'rOzs7bZvrMhE56S1OPPop-i-',
     //     clientSecret:
     //       getEnv('VUE_APP_CT_CLIENT_SECRET') ||
-    //       'IAeHgx-G7Bama6nW9Kp9YTNA3aY8SD6Y',
+    //       'L6VHj6G8SV3ye3_4Du1XNqadh_cuGhHg',
     //   },
     //   scope:
     //     getEnv('VUE_APP_CT_SCOPE') ||
-    //     'manage_project:poc-consum',
+    //     'manage_my_profile:poc-consum ' +
+    //     'create_anonymous_token:poc-consum ' +
+    //     'manage_my_payments:poc-consum ' +
+    //     'manage_my_shopping_lists:poc-consum ' +
+    //     'manage_my_orders:poc-consum ' +
+    //     'view_products:poc-consum ',
     // },
+    auth: {
+      host:
+        getEnv('VUE_APP_CT_AUTH_HOST') ||
+        'https://auth.europe-west1.gcp.commercetools.com',
+      projectKey:
+        getEnv('VUE_APP_CT_PROJECT_KEY') || 'poc-consum',
+      credentials: {
+        clientId:
+          getEnv('VUE_APP_CT_CLIENT_ID') ||
+          'SNLGw7jdg0G3HL6_bnoBY-Yx',
+        clientSecret:
+          getEnv('VUE_APP_CT_CLIENT_SECRET') ||
+          'IAeHgx-G7Bama6nW9Kp9YTNA3aY8SD6Y',
+      },
+      scope:
+        getEnv('VUE_APP_CT_SCOPE') ||
+        'manage_project:poc-consum',
+    },
     api:
       getEnv('VUE_APP_CT_API_HOST') ||
       'https://api.europe-west1.gcp.commercetools.com',
