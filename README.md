@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CommerceTools demo project - Vue SunriseSPA
 
 ## Links
@@ -15,3 +16,6 @@ If you want to use the default merchant center project there is no need to add a
 ```bash
 yarn start
 ```
+=======
+# poc-consum 
+>>>>>>> 33a957ade7b28dc39c04a7eedf1b830a3ba3aed3
