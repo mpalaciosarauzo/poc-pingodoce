@@ -4,7 +4,6 @@
 
 <template>
   <footer class="footer-area border-top-2 pt-50">
-    <div>Nuevo footer</div>
     <div class="footer-top">
       <div class="custom-container">
         <div class="row">
@@ -13,17 +12,14 @@
               <div class="footer-logo">
                 <a href="index.html"
                   ><img
-                    :src="
-                      require('presentation/assets/img/logo.svg')
-                    "
+                    src='https://www.consum.es/wp-content/uploads/2020/07/Logo-cast.png'
                     alt="logo"
                 /></a>
               </div>
               <div class="footer-info">
                 <ul>
-                  <li><a href="#">+49 (899) 9829960</a></li>
-                  <li><a href="#">info@example.com</a></li>
-                  <li>PO Box 1622 Colins Street West</li>
+                  <li><a href="#">900 500 126</a></li>
+                  <li>Av. Alginet, 1 46460 Silla, Valencia (España)</li>
                 </ul>
               </div>
               <div class="footer-map">
@@ -34,24 +30,22 @@
           <div class="footer-column footer-column-2">
             <div class="footer-widget mb-30">
               <div class="widget-title">
-                <h3>{{ t('company') }}</h3>
+                <h3>{{ t('categories') }}</h3>
               </div>
               <div class="footer-list">
                 <ul>
-                  <li>
-                    <a href="#">{{ t('about') }}</a>
-                  </li>
-                  <li>
-                    <a href="#">{{ t('jobs') }}</a>
-                  </li>
-                  <li>
-                    <a href="#">{{ t('press') }}</a>
-                  </li>
-                  <li>
-                    <a href="#">{{ t('contact') }}</a>
-                  </li>
-                  <li>
-                    <a href="#">{{ t('blog') }}</a>
+                  <li v-for="category in categories"
+                    :key="category.id">
+                    <router-link
+                      :class="isActive(category.slug) ? 'active' : ''"
+                      :to="{
+                        name: 'products',
+                        params: { categorySlug: category.slug },
+                      }"
+                      data-test="category-1st-level-link"
+                    >
+                      {{ category.name }}
+                    </router-link>
                   </li>
                 </ul>
               </div>
@@ -65,18 +59,31 @@
               <div class="footer-list">
                 <ul>
                   <li>
-                    <a href="#">{{ t('comm_link') }}</a>
+                    <a href="https://www.facebook.com/supermercadosconsum" target="_blank">
+                      {{ t('facebook') }}
+                    </a>
                   </li>
                   <li>
-                    <a href="#">{{
-                      t('facebook_group')
-                    }}</a>
+                    <a href="https://twitter.com/consum" target="_blank">
+                      {{
+                        t('twitter')
+                      }}
+                    </a>
                   </li>
                   <li>
-                    <a href="#">{{ t('forums') }}</a>
+                    <a href="https://www.youtube.com/user/SupermercadosConsum" target="_blank">
+                      {{ t('youtube') }}
+                    </a>
                   </li>
                   <li>
-                    <a href="#">{{ t('meetups') }}</a>
+                    <a href="https://www.instagram.com/supermercadosconsum/" target="_blank">
+                      {{ t('instagram') }}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/company/consum-cooperativa-valenciana" target="_blank">
+                      {{ t('linkedin') }}
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -90,13 +97,34 @@
               <div class="footer-list">
                 <ul>
                   <li>
-                    <a href="#">{{ t('privacy') }}</a>
+                    <a href="https://www.consum.es/aviso-legal" target="_blank">
+                      {{ t('legal_notice') }}
+                    </a>
                   </li>
                   <li>
-                    <a href="#">{{ t('use_terms') }}</a>
+                    <a href="https://www.consum.es/politica-de-privacidad" target="_blank">
+                      {{ t('data_privacy') }}
+                    </a>
                   </li>
                   <li>
-                    <a href="#">{{ t('license') }}</a>
+                    <a href="https://tienda.consum.es/site/es/psd2" target="_blank">
+                      {{ t('psd2') }}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.consum.es/condiciones-de-uso" target="_blank">
+                      {{ t('use_terms') }}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.consum.es/politica-de-privacidad" target="_blank">
+                      {{ t('privacy') }}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.consum.es/politica-de-cookies" target="_blank">
+                      {{ t('cookies_policy') }}
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -105,23 +133,19 @@
           <div class="footer-column footer-column-5">
             <div class="footer-widget mb-30">
               <div class="widget-title">
-                <h3>{{ t('profile') }}</h3>
+                <h3>{{ t('contact') }}</h3>
               </div>
               <div class="footer-list">
                 <ul>
                   <li>
-                    <a href="#">{{ t('my_account') }}</a>
+                    <a href="https://ayuda.consum.es/hc/es/" target="_blank">
+                      {{ t('customer_support') }}
+                    </a>
                   </li>
                   <li>
-                    <a href="#">{{ t('checkout') }}</a>
-                  </li>
-                  <li>
-                    <a href="#">{{
-                      t('order_tracking')
-                    }}</a>
-                  </li>
-                  <li>
-                    <a href="#">{{ t('support') }}</a>
+                    <a href="https://tienda.consum.es/site/es/faq" target="_blank">
+                      {{ t('faqs') }}
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -132,51 +156,46 @@
               class="footer-widget subscribe-right mb-30"
             >
               <div class="widget-title">
-                <h3>{{ t('join_newsletter') }}</h3>
+                <h3>{{ t('about_us') }}</h3>
               </div>
-              <div
-                id="mc_embed_signup"
-                class="subscribe-form-2 mt-20"
-              >
-                <form
-                  class="validate subscribe-form-style"
-                  novalidate=""
-                >
-                  <div
-                    id="mc_embed_signup_scroll"
-                    class="mc-form-2"
-                  >
-                    <input
-                      class="email"
-                      type="email"
-                      required=""
-                      :placeholder="`${t(
-                        'email_placeholder'
-                      )}`"
-                      name="EMAIL"
-                      value=""
-                    />
-                    <div
-                      class="mc-news-2"
-                      aria-hidden="true"
-                    >
-                      <input
-                        type="text"
-                        value=""
-                        tabindex="-1"
-                        name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef"
-                      />
-                    </div>
-                    <div class="clear-2">
-                      <input
-                        class="button"
-                        type="submit"
-                        name="subscribe"
-                        :value="`${t('submit')}`"
-                      />
-                    </div>
-                  </div>
-                </form>
+              <div class="footer-list">
+                <ul>
+                  <li>
+                    <a href="https://www.consum.es/historia" target="_blank">
+                      {{ t('history') }}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.consum.es/mision-vision-y-valores" target="_blank">
+                      {{ t('worths') }}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.consum.es/organigrama" target="_blank">
+                      {{ t('organization') }}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.consum.es/codigo-etico-canal-denuncias" target="_blank">
+                      {{ t('ethics') }}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.consum.es/nuestros-supermercados" target="_blank">
+                      {{ t('supermarkets') }}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.consum.es/red-logistica" target="_blank">
+                      {{ t('logistic') }}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.consum.es/prensa" target="_blank">
+                      {{ t('press') }}
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -193,7 +212,7 @@
             <div
               class="footer-widget copyright-2 text-center"
             >
-              <p>© 2020 SUNRISE</p>
+              <p>© 2021 Consum S. Coop. V. Todos los derechos reservados</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-4 col-sm-12 col-12">
