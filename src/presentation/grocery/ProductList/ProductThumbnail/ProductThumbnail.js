@@ -43,12 +43,14 @@ export default {
         props?.product?.masterVariant?.scopedPrice
           ?.discounted
     );
+    const marca = props.product.masterVariant.attributesRaw.find(attribute => attribute.name === "marca").value;
     return {
       productRoute,
       displayedImageUrl,
       t,
       hasPrice,
       hasDiscount,
+      marca
     };
   },
 };

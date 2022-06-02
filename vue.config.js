@@ -1,7 +1,7 @@
 const path = require('path');
 const PROJECT_VIEW_PATH =
   process.env.PROJECT_VIEW_PATH ||
-  'src/presentation/fashion/';
+  'src/presentation/grocery/';
 
 module.exports = {
   pluginOptions: {

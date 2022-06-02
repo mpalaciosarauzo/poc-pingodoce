@@ -4,6 +4,7 @@
 
 <template>
   <footer class="footer-area border-top-2 pt-50">
+    <div>Nuevo footer</div>
     <div class="footer-top">
       <div class="custom-container">
         <div class="row">
