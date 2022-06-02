@@ -3,8 +3,10 @@
   border: 1px solid rgb(226, 226, 226);
   border-radius: 0.5rem;
   padding: 16px 24px 16px 24px;
+  text-align: center;
   .product-wrap {
     position: relative;
+    display: inline;
     .product-img {
       vertical-align: bottom;
       display: table-cell;
