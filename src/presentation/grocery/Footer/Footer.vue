@@ -60,29 +60,34 @@
                 <ul>
                   <li>
                     <a href="https://www.facebook.com/supermercadosconsum" target="_blank">
-                      {{ t('facebook') }}
+                      <i class="lab la-facebook"></i>
+                      <span>{{ t('facebook') }}</span>
                     </a>
                   </li>
                   <li>
                     <a href="https://twitter.com/consum" target="_blank">
-                      {{
+                      <i class="lab la-twitter"></i>
+                      <span>{{
                         t('twitter')
-                      }}
+                      }}</span>
                     </a>
                   </li>
                   <li>
                     <a href="https://www.youtube.com/user/SupermercadosConsum" target="_blank">
-                      {{ t('youtube') }}
+                      <i class="lab la-youtube"></i>
+                      <span>{{ t('youtube') }}</span>
                     </a>
                   </li>
                   <li>
                     <a href="https://www.instagram.com/supermercadosconsum/" target="_blank">
-                      {{ t('instagram') }}
+                      <i class="lab la-instagram"></i>
+                      <span>{{ t('instagram') }}</span>
                     </a>
                   </li>
                   <li>
                     <a href="https://www.linkedin.com/company/consum-cooperativa-valenciana" target="_blank">
-                      {{ t('linkedin') }}
+                      <i class="lab la-linkedin"></i>
+                      <span>{{ t('linkedin') }}</span>
                     </a>
                   </li>
                 </ul>
