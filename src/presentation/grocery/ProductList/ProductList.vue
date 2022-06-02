@@ -27,7 +27,7 @@
         v-bind:show="show"
       /> -->
       <div class="shop-wrapper" v-if="products.length">
-        <div class="row">
+        <div class="row justify-content-around">
           <!-- @open-quick-view="openQuickView"
             @open-add-shopping-list="openAddToShoppingList" -->
           <ProductThumbnail

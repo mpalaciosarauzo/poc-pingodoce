@@ -3,13 +3,15 @@
 <script src="./ProductThumbnail.js"></script>
 
 <template>
-  <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-    <div class="product-wrap mb-50">
+  <div class="product-container">
+    <div class="product-wrap">
       <div class="product-img mb-25">
         <router-link
           :to="productRoute(product.slug, product.sku)"
         >
           <img
+            height="135"
+            width="135"
             class="default-img"
             :src="displayedImageUrl(product)"
             alt=""
@@ -26,28 +28,10 @@
             }}</span
           >
         </router-link>
-        <div class="product-action">
-          <!-- <a href @click.prevent="openAddToShoppingList"
-            ><i class="dl-icon-heart"></i>
-            <span>Shopping list</span></a
-          >
-          <a href @click.prevent="openQuickView"
-            ><i class="dl-icon-view"></i>
-            <span>Quick Shop</span></a
-          > -->
-          <!-- @todo: need translation -->
-          <a
-            data-toggle="tooltip"
-            title="Add to Cart"
-            href="#"
-            @click.prevent="() => addToCart(product.sku)"
-          >
-            <i class="dl-icon-cart29"></i>
-            <span>{{ t('addToCart') }}</span>
-          </a>
-        </div>
+        
       </div>
       <div class="product-content text-center mt-15">
+        <h3>{{marca}}</h3>
         <h3>
           <router-link
             :to="productRoute(product.slug, product.sku)"
@@ -59,6 +43,27 @@
           <BasePrice
             :price="product?.masterVariant?.scopedPrice"
           />
+        </div>
+        <div class="product-action mt-15">
+          <!-- <a href @click.prevent="openAddToShoppingList"
+            ><i class="dl-icon-heart"></i>
+            <span>Shopping list</span></a
+          >
+          <a href @click.prevent="openQuickView"
+            ><i class="dl-icon-view"></i>
+            <span>Quick Shop</span></a
+          > -->
+          <!-- @todo: need translation -->
+          <!-- <a
+            data-toggle="tooltip"
+            title="Add to Cart"
+            href="#"
+            @click.prevent="() => addToCart(product.sku)"
+          >
+            <i class="dl-icon-cart29"></i>
+            <span>{{ t('addToCart') }}</span>
+          </a> -->
+          <button class="product-button" @click.prevent="() => addToCart(product.sku)">{{ t('addToCart') }}</button>
         </div>
       </div>
     </div>
