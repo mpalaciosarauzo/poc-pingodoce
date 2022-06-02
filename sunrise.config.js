@@ -57,13 +57,13 @@ const config = {
   },
   languages: {
     es: 'Spanish',
-    en: 'English',
-    de: 'Deutsch',
+    // en: 'English',
+    // de: 'Deutsch',
   },
   countries: {
     ES: 'Spain',
-    DE: 'Deutschland',
-    US: 'United States',
+    // DE: 'Deutschland',
+    // US: 'United States',
   },
   formats: {
     number: {
@@ -74,19 +74,19 @@ const config = {
           currencyDisplay: 'symbol',
         },
       },
-      DE: {
-        currency: {
-          style: 'currency',
-          currency: 'EUR',
-          currencyDisplay: 'symbol',
-        },
-      },
-      US: {
-        currency: {
-          style: 'currency',
-          currency: 'USD',
-        },
-      },
+      // DE: {
+      //   currency: {
+      //     style: 'currency',
+      //     currency: 'EUR',
+      //     currencyDisplay: 'symbol',
+      //   },
+      // },
+      // US: {
+      //   currency: {
+      //     style: 'currency',
+      //     currency: 'USD',
+      //   },
+      // },
     },
     datetime: {
       ES: {
@@ -96,20 +96,20 @@ const config = {
           day: 'numeric',
         },
       },
-      US: {
-        short: {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
-        },
-      },
-      DE: {
-        short: {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
-        },
-      },
+      // US: {
+      //   short: {
+      //     year: 'numeric',
+      //     month: 'short',
+      //     day: 'numeric',
+      //   },
+      // },
+      // DE: {
+      //   short: {
+      //     year: 'numeric',
+      //     month: 'short',
+      //     day: 'numeric',
+      //   },
+      // },
     },
   },
   categories: {
@@ -170,7 +170,7 @@ const config = {
       },
     },
   ],
-  variantSelector: ['color', 'size'],
+  variantSelector: ['color', 'size', 'Marca', 'Peso', 'Tipo_de_corte'],
   variantInProductName: ['size'],
   ...localConfig,
 };
