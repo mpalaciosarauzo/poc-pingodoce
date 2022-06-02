@@ -56,15 +56,24 @@ const config = {
       'https://api.europe-west1.gcp.commercetools.com',
   },
   languages: {
+    es: 'Spanish',
     en: 'English',
     de: 'Deutsch',
   },
   countries: {
+    ES: 'Spain',
     DE: 'Deutschland',
     US: 'United States',
   },
   formats: {
     number: {
+      ES: {
+        currency: {
+          style: 'currency',
+          currency: 'EUR',
+          currencyDisplay: 'symbol',
+        },
+      },
       DE: {
         currency: {
           style: 'currency',
@@ -80,6 +89,13 @@ const config = {
       },
     },
     datetime: {
+      ES: {
+        short: {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        },
+      },
       US: {
         short: {
           year: 'numeric',
@@ -100,35 +116,9 @@ const config = {
     salesExternalId: '6',
   },
   facetSearches: [
-    {
-      name: 'size',
-      type: 'text',
-      label: {
-        it: 'Size',
-        de: 'Größe',
-        en: 'Size',
-      },
-    },
-    {
-      name: 'color',
-      type: 'lnum',
-      component: 'colors',
-      label: {
-        de: 'Farbe',
-        it: 'Color',
-        en: 'Color',
-      },
-    },
-    {
-      name: 'designer',
-      type: 'enum',
-      component: 'designer',
-      label: {
-        it: 'Designer',
-        de: 'Designer',
-        en: 'Designer',
-      },
-    },
+    { name: 'Marca', type: 'text', component: 'brand' },
+    { name: 'Peso', type: 'number', component: 'weight' },
+    { name: 'Tipo_de_corte', type: 'text', component: 'cutType' },
   ],
   detailAttributes: [
     {
