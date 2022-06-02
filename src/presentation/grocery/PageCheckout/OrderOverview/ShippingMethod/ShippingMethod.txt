@@ -1,3 +1,5 @@
+es:
+  shippingMethod: Método de envío
 en:
   shippingMethod: Shipping method
 de:

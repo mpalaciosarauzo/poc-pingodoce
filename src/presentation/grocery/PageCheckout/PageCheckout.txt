@@ -1,3 +1,6 @@
+es:
+  thankYou: "¡Gracias por tu compra!"
+  continueShopping: "Continuar comprando"
 en:
   thankYou: "Thank you for your order!"
   continueShopping: "Continue shopping"

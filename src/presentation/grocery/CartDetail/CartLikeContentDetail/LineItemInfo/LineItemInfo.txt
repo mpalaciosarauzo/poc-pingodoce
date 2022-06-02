@@ -1,3 +1,5 @@
+es:
+  available: "Disponible"
 en:
   available: "Available"
 de:

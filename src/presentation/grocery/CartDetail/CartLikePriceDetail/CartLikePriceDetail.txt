@@ -1,3 +1,11 @@
+es:
+  cartTotals: "Total del carrito"
+  subtotal: "Subtotal"
+  shipping: "Envío"
+  salesTax: "Impuestos"
+  total: "Total"
+  discount: "Descuento"
+  checkout: "Pagar"
 en:
   cartTotals: "Cart totals"
   subtotal: "Subtotal"

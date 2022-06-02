@@ -1,3 +1,8 @@
+es:
+  differentAddress: "¿Enviar a una dirección diferente?"
+  billingDetails: "Detalles de facturación"
+  orderNotes: "Comentarios del pedido (opcional)"
+  notesPlaceholder: "Comentarios sobre su pedido, p.e. Comentarios especiales para la entrega."
 en:
   differentAddress: "Ship to a different address?"
   billingDetails: "Billing Details"

@@ -1,3 +1,17 @@
+es:
+  firstName: "Nombre"
+  lastName: "Apellido"
+  address: "Dirección"
+  streetName: "Número y nombre de la calle"
+  additional: "Apartamento, suite, unidad, etc. (opcional)"
+  city: "Ciudad"
+  postCode: "Código Postal"
+  country: "País"
+  email: "Email"
+  phone: "Teléfono"
+  back: "Volver"
+  continue: "Continuar"
+  selectCountry: "Seleccionar país"
 en:
   firstName: "First Name"
   lastName: "Last Name"

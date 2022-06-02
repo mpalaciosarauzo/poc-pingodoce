@@ -1,3 +1,14 @@
+  es:
+    itemsTotal: "{n} item en total | {n} items en total"
+    editMyCart: "Editar carrito"
+    orderSummary: "Resumen de carrito"
+    product: "Producto"
+    quantity: "Cantidad"
+    price: "Precio"
+    total: "Total"
+    subtotal: "Subtotal"
+    shipping: "Envío"
+    placeOrder: "Realizar pedido"
   en:
     itemsTotal: "{n} item in total | {n} items in total"
     editMyCart: "Edit my shopping cart"

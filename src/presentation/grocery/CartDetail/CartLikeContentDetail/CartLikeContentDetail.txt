@@ -1,3 +1,9 @@
+es:
+  description: "Descripción"
+  quantity: "Cantidad"
+  price: "Precio"
+  total: "Total"
+  returnStatus: "Estado"
 en:
   description: "Description"
   quantity: "Quantity"

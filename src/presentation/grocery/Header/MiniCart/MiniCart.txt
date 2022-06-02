@@ -1,3 +1,13 @@
+  es:
+    miniCart: "Carrito"
+    viewBag: "Ver carrito"
+    quantity: "Quantity"
+    price: "Price"
+    totalPrice: "Total"
+    delete: "Delete"
+    checkout: "Pagar"
+    emptyCart: "Tu carrito está vacío actualmente"
+    subtotal: "Subtotal"
   de:
     miniCart: "Warenkorb"
     viewBag: "Warenkorb"

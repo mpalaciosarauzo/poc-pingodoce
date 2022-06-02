@@ -1,3 +1,13 @@
+es:
+  title: "Returning Customer Sign In"
+  required: "Required Fields"
+  description: "If you have an account, please sign in for a faster checkout"
+  email: "Email"
+  password: "Contraseña"
+  rememberMe: "Recuerdame"
+  forgotPassword: "¿Olvidaste tu contraseña?"
+  signIn: "Acceder"
+  invalidCredentials: "Invalid credentials"
 en:
   title: "Returning Customer Sign In"
   required: "Required Fields"

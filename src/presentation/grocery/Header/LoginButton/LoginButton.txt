@@ -1,3 +1,7 @@
+es:
+  signIn: "Iniciar sesión"
+  signOut: "Cerrar sesión"
+  myAccount: "Mi cuenta"
 en:
   signIn: "Sign In"
   signOut: "Sign Out"

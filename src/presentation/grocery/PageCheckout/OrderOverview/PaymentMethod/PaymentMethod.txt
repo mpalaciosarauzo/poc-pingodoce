@@ -1,3 +1,6 @@
+es:
+  creditCard: "Tarjeta de crédio"
+  paymentMethod: "Método de pago"
 en:
   creditCard: "Credit card"
   paymentMethod: "Payment method"

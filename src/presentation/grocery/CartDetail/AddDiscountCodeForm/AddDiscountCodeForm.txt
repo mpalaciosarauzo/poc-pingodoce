@@ -1,3 +1,7 @@
+es:
+  code: "Código de descuento"
+  apply: "Aplicar"
+  nonApplicable: "Este descuento no es aplicable"
 en:
   code: "Discount code"
   apply: "Apply"

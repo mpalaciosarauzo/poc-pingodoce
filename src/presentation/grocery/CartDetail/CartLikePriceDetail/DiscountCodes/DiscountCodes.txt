@@ -1,3 +1,5 @@
+es:
+  appliedDiscounts: "Descuentos aplicados"
 en:
   appliedDiscounts: "Applied discounts"
 de:
