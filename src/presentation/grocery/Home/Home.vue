@@ -5,20 +5,22 @@
 <template>
   <span>
     <!-- <Banner /> -->
-    <img
-      width="1680"
-      height="380"
-      src="https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast.jpg"
-      class="lazy-load vc_single_image-img attachment-full is-loaded"
-      alt=""
-      srcset="
-        https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast.jpg          1208w,
-        https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast-300x94.jpg    300w,
-        https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast-768x242.jpg   768w,
-        https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast-1024x322.jpg 1024w
-      "
-      sizes="1120px"
-    />
+    <div class="banner-home">
+      <img
+        width="1440"
+        height="auto"
+        src="https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast.jpg"
+        class="lazy-load vc_single_image-img attachment-full is-loaded"
+        alt=""
+        srcset="
+          https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast.jpg          1208w,
+          https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast-300x94.jpg    300w,
+          https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast-768x242.jpg   768w,
+          https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast-1024x322.jpg 1024w
+        "
+        sizes="1120px"
+      />
+    </div>
 
     <div class="pt-30 pl-15 text-center">
       <img
