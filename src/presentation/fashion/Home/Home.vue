@@ -4,8 +4,59 @@
 
 <template>
   <span>
-    <Banner />
-    <div class="banner-area pt-30">
+    <!-- <Banner /> -->
+    <img
+      width="1680"
+      height="380"
+      src="https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast.jpg"
+      class="lazy-load vc_single_image-img attachment-full is-loaded"
+      alt=""
+      srcset="
+        https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast.jpg          1208w,
+        https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast-300x94.jpg    300w,
+        https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast-768x242.jpg   768w,
+        https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast-1024x322.jpg 1024w
+      "
+      sizes="1120px"
+    />
+
+    <div class="pt-30 pl-15 text-center">
+      <img
+        src="https://www.consum.es/wp-content/uploads/2022/05/1208x256-banner-1º-JUNIO-CASTE.gif"
+        class="d-inline-block;"
+      />
+    </div>
+    <div class="pt-30 pl-15 text-center">
+      <div class="d-flex justify-content-around">
+        <div class="esparragos">
+          <a href="https://entrenosotros.consum.es/esparragos-propiedades" target="_blank">
+            <img
+              src="https://www.consum.es/wp-content/uploads/2022/05/CAST_esparragos_reposo_386x552px.jpg"
+            />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.consum.es/carta-helados/cast/index.html" target="_blank"
+          >
+            <img
+              src="https://www.consum.es/wp-content/uploads/2022/05/FRAME1-1.jpg"
+            />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://labodega.consum.es/tipos-de-cerveza-roja" target="_blank"
+          >
+            <img
+              src="https://www.consum.es/wp-content/uploads/2022/05/CAST_bodega_cerveza_roja_reposo_386x552px.jpg"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner-area pt-30 d-none">
       <div class="custom-container">
         <div class="row">
           <div class="col-lg-4 col-md-4 col-xs-12">

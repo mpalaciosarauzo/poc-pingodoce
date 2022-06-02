@@ -55,9 +55,7 @@
                   <div class="logo">
                     <router-link to="/">
                       <img
-                        :src="
-                          require('presentation/assets/img/logo.svg')
-                        "
+                        src="https://cdn.aktiosdigitalservices.com/tol/consum/shop-ang/6.7.0-FINAL/css/assets/images/logo/es/logo.png"
                         alt="SUNRISE"
                         class="img-responsive sunrise-logo"
                       />
