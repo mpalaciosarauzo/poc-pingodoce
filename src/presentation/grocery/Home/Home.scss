@@ -6,6 +6,18 @@ span {
     text-align: center;
   }
 }
+/*-------- Promociones home ---------*/
+.esparragos:hover {
+  content:url("https://www.consum.es/wp-content/uploads/2022/05/CAST_esparragos_activo_386x552px.jpg");
+}
+
+.helados:hover {
+  content:url("https://www.consum.es/wp-content/uploads/2022/05/FRAME2-1.jpg");
+}
+
+.cerveza:hover {
+  content:url("https://www.consum.es/wp-content/uploads/2022/05/CAST_bodega_cerveza_roja_activo_386x552px.jpg");
+}
 
 /*-------- 3. Slider style ---------*/
 
@@ -2358,9 +2370,12 @@ span {
 
 .service-wrap {
   display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
 
   .service-icon {
-    margin: 0 20px 0px 0;
+    margin: 0 20px 20px 0;
 
     i {
       font-size: 30px;

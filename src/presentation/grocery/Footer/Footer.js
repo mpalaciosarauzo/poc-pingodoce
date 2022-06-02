@@ -1,4 +1,7 @@
 import { useI18n } from 'vue-i18n';
+import { ref } from 'vue';
+import useCategories from 'hooks/useCategories';
+import { useRoute } from 'vue-router';
 
 export default {
   name: 'Footer',
@@ -7,6 +10,13 @@ export default {
       inheritLocale: true,
       useScope: 'local',
     });
-    return { t };
+    const { categories } = useCategories({
+      rootOnly: ref(true),
+      sort: ref(['orderHint asc']),
+    });
+    const route = useRoute();
+    const isActive = (slug) =>
+      slug === route.params.categorySlug;
+    return { t, categories, isActive };
   },
 };

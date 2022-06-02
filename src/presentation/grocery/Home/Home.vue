@@ -30,9 +30,9 @@
     </div>
     <div class="pt-30 pl-15 text-center">
       <div class="d-flex justify-content-around">
-        <div class="esparragos">
+        <div>
           <a href="https://entrenosotros.consum.es/esparragos-propiedades" target="_blank">
-            <img
+            <img class="esparragos"
               src="https://www.consum.es/wp-content/uploads/2022/05/CAST_esparragos_reposo_386x552px.jpg"
             />
           </a>
@@ -41,7 +41,7 @@
           <a
             href="https://www.consum.es/carta-helados/cast/index.html" target="_blank"
           >
-            <img
+            <img class="helados"
               src="https://www.consum.es/wp-content/uploads/2022/05/FRAME1-1.jpg"
             />
           </a>
@@ -50,7 +50,7 @@
           <a
             href="https://labodega.consum.es/tipos-de-cerveza-roja" target="_blank"
           >
-            <img
+            <img class="cerveza"
               src="https://www.consum.es/wp-content/uploads/2022/05/CAST_bodega_cerveza_roja_reposo_386x552px.jpg"
             />
           </a>
@@ -179,19 +179,10 @@
               data-wow-delay="0.1s"
             >
               <div class="service-icon">
-                <i class="las la-shipping-fast"></i>
+                <img src="https://cdn-pre.aktiosdigitalservices.com/tol/consum/media/PRE/estaticos/jpgs/todas%20las%20ofertas.jpg"/>
               </div>
               <div class="service-content">
-                <h6>{{ t('free_shipping_head') }}</h6>
-                <p>
-                  {{ t('free_shipping_body') }}&nbsp;
-                  <BaseMoney
-                    :money="{
-                      centAmount: 10000,
-                      fractionDigits: 2,
-                    }"
-                  />
-                </p>
+                <h6>{{ t('discounts') }}</h6>
               </div>
             </div>
           </div>
@@ -201,11 +192,10 @@
               data-wow-delay="0.2s"
             >
               <div class="service-icon">
-                <i class="las la-coins"></i>
+                <img src="https://cdn-pre.aktiosdigitalservices.com/tol/consum/media/PRE/estaticos/jpgs/frescos.jpg"/>
               </div>
               <div class="service-content">
-                <h6>{{ t('return_head') }}</h6>
-                <p>{{ t('return_body') }}</p>
+                <h6>{{ t('fresh') }}</h6>
               </div>
             </div>
           </div>
@@ -215,11 +205,11 @@
               data-wow-delay="0.3s"
             >
               <div class="service-icon">
-                <i class="las la-headphones"></i>
+                <img src="https://cdn-pre.aktiosdigitalservices.com/tol/consum/media/PRE/estaticos/jpgs/24%20horas.jpg"/>
               </div>
               <div class="service-content">
-                <h6>{{ t('support_head') }}</h6>
-                <p>{{ t('support_body') }}</p>
+                <h6>{{ t('24h') }}</h6>
+                <h6>{{ t('24h_body') }}</h6>
               </div>
             </div>
           </div>
@@ -229,11 +219,10 @@
               data-wow-delay="0.4s"
             >
               <div class="service-icon">
-                <i class="las la-shield-alt"></i>
+                <img src="https://cdn-pre.aktiosdigitalservices.com/tol/consum/media/PRE/estaticos/jpgs/pedidos.jpg"/>
               </div>
               <div class="service-content">
-                <h6>{{ t('secure_checkout_head') }}</h6>
-                <p>{{ t('secure_checkout_body') }}</p>
+                <h6>{{ t('orders') }}</h6>
               </div>
             </div>
           </div>

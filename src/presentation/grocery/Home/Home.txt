@@ -1,3 +1,23 @@
+es:
+  w_jeans: "WOMEN JEANS"
+  sneakers: "SNEAKERS"
+  accessories: "ACCESSORIES"
+  bathing_suits: "BATHING SUITS"
+  free_shipping_head: "Free Worldwide Shipping"
+  free_shipping_body: "On all orders over"
+  currency: "$"
+  return_head: "30 Days Money Returns"
+  return_body: "30 days money back guarantee"
+  support_head: "Support 24/7"
+  support_body: "Offered in the country of usage"
+  secure_checkout_head: "100% Secure Checkout"
+  secure_checkout_body: "Paypal / Visa / Master Card"
+  discounts: "Todas las ofertas Mundo Consum"
+  fresh: "Frescos al corte y en bandeja"
+  24h: "24 horas abiertos"
+  24h_body: "Compra cuando quieras"
+  orders: "Pedidos preparados en tienda"
+
 en:
   w_jeans: "WOMEN JEANS"
   sneakers: "SNEAKERS"
