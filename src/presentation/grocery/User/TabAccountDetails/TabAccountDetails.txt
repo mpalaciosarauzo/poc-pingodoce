@@ -1,3 +1,9 @@
+es:
+  title: "Detalles de la cuenta"
+  saveBtn: "Guardar cambios"
+  firstName: "Nombre"
+  lastName: "Apellido"
+  email: "Dirección de correo"
 en:
   title: "Account Details"
   saveBtn: "Save Changes"

@@ -3,6 +3,7 @@
 import { ref } from 'vue';
 import useProductTools from 'hooks/useProductTools';
 import ProductInfo from './ProductInfo/ProductInfo.vue';
+import Icons from 'presentation/Icons/Icons.vue';
 
 export default {
   name: 'PageProductDetail',
@@ -31,5 +32,6 @@ export default {
     // Breadcrumb,
     ProductInfo,
     // AddToShoppingList
+    Icons,
   },
 };

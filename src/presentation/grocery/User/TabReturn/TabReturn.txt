@@ -1,3 +1,9 @@
+es:
+  title: ¿Qué te gustaría devolver?
+  return: Devolver
+  alert: Por favor, seleccione al menos un artículo para devolver
+  modalText: Se ha realizado la devolución con éxito
+  close: Cerrar
 en:
   title: What would you like to return?
   return: Return

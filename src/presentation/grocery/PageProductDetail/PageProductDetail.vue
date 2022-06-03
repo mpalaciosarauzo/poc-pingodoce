@@ -25,4 +25,5 @@
       @close-modal="closeAddToShoppingList"
     /> -->
   </div>
+  <Icons />
 </template>

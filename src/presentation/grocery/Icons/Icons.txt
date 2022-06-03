@@ -1,0 +1,6 @@
+es:
+  discounts: "Todas las ofertas Mundo Consum"
+  fresh: "Frescos al corte y en bandeja"
+  24h: "24 horas abiertos"
+  24h_body: "Compra cuando quieras"
+  orders: "Pedidos preparados en tienda"

@@ -233,7 +233,7 @@ h3.cart-page-title {
     margin-left: -30px;
     margin-right: -30px;
     a {
-      background-color: #262626;
+      background-color: $theme-color;
       color: #fff;
       text-align: center;
       font-size: 14px;
@@ -242,7 +242,7 @@ h3.cart-page-title {
       font-weight: 600;
       text-transform: uppercase;
       &:hover {
-        background-color: $theme-color;
+        background-color: $theme-color-secondary;
       }
     }
   }

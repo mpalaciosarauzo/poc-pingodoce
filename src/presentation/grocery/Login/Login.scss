@@ -45,6 +45,15 @@
       }
     }
 
+    .login-register-btn {
+      button {
+        background-color: $theme-color;
+        &:hover {
+          background-color: $theme-color-secondary;
+        }
+      }
+    }
+
     .login-register-btn-remember {
       display: flex;
       align-items: center;

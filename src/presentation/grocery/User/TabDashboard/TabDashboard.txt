@@ -1,9 +1,9 @@
 en:
-  greeting: "Hello"
-  notYou: "If it's not you"
-  logout: "Logout"
-  description: "From your account dashboard you can easily check & view your recent orders,
-      manage your shipping and billing addresses and edit your password and account details."
+  greeting: "Hola"
+  notYou: "Si no eres tú"
+  logout: "Cerrar sesión"
+  description: "Desde el dashboard de su cuenta, puede verificar y ver fácilmente sus pedidos recientes,
+      administrar sus direcciones de envío y facturación y editar su contraseña y los detalles de su cuenta."
 de:
   greeting: "Hallo"
   notYou: "Wenn das nicht Sie sind"

@@ -1,3 +1,13 @@
+es:
+  accountDetails: "Detalles de la cuenta"
+  addressBook: "Direcciones"
+  paymentDetails: "Detalles de pago"
+  myOrders: "Mis pedidos"
+  returnsExchange: "Devoluciones / Cambios"
+  wishlist: "Lista de deseos"
+  signOut: "Cerrar sesión"
+  changePassword: "Cambiar contraseña"
+  dashboard: "Dashboard"
 en:
   accountDetails: "Account Details"
   addressBook: "Address Book"

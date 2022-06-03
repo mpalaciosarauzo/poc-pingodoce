@@ -36,7 +36,7 @@ export default [
         components: {
           default: Products,
           header: Header,
-          // footer: null,
+          footer: Footer,
         },
       },
       {

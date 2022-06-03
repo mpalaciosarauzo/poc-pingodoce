@@ -6,6 +6,7 @@ import ProductThumbnail from './ProductThumbnail/ProductThumbnail.vue';
 import { useI18n } from 'vue-i18n';
 import useProductTools from 'hooks/useProductTools';
 import useCartTools from 'hooks/useCartTools';
+import Icons from 'presentation/Icons/Icons.vue';
 
 export default {
   name: 'ProductList',
@@ -15,6 +16,7 @@ export default {
     Pagination,
     // ProductFilter,
     // TopBar,
+    Icons,
   },
   setup() {
     const { t } = useI18n();

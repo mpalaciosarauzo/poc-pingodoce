@@ -1,11 +1,12 @@
 import { useI18n } from 'vue-i18n';
 import Banner from 'presentation/Banner/Banner.vue';
 import BaseMoney from 'presentation/components/BaseMoney/BaseMoney.vue';
+import Icons from 'presentation/Icons/Icons.vue';
 import { useRouter } from 'vue-router';
 
 export default {
   name: 'Home',
-  components: { Banner, BaseMoney },
+  components: { Banner, BaseMoney, Icons },
 
   setup() {
     const router = useRouter();

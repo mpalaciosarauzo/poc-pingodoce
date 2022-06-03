@@ -12,11 +12,6 @@ es:
   support_body: "Offered in the country of usage"
   secure_checkout_head: "100% Secure Checkout"
   secure_checkout_body: "Paypal / Visa / Master Card"
-  discounts: "Todas las ofertas Mundo Consum"
-  fresh: "Frescos al corte y en bandeja"
-  24h: "24 horas abiertos"
-  24h_body: "Compra cuando quieras"
-  orders: "Pedidos preparados en tienda"
 
 en:
   w_jeans: "WOMEN JEANS"
