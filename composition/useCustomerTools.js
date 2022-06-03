@@ -6,6 +6,7 @@ import {
 } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import useMyOrder from 'hooks/useMyOrder';
+import useOrder from 'hooks/useOrder';
 import useMyOrders from 'hooks/useMyOrders';
 import basic from './ct/useCustomerTools';
 import {
@@ -150,6 +151,7 @@ function useCustomerTools() {
     resetPassword,
     useMyOrders,
     useMyOrder,
+    useOrder,
     returnItems,
     gotoResetToken,
     refreshUser,

@@ -1,3 +1,8 @@
+es:
+  productDetails: "Detalles del producto"
+  deliveryReturns: "Entrega y Devoluciones"
+  freeReturns: "Devolución gratuita para todos los pedidos"
+  moreDeliveryInfo: "Información de entrega"
 de:
   productDetails: "Produktdetails"
   deliveryReturns: "Versand & Retoure"

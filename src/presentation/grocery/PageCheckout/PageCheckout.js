@@ -6,6 +6,7 @@ import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 import useCart from 'hooks/useCart';
 import useCartTools from 'hooks/useCartTools';
+import TabOrderDetail from '../User/TabOrderDetail/TabOrderDetail.vue';
 
 export default {
   components: {
@@ -13,6 +14,7 @@ export default {
     OrderOverview,
     BillingDetails,
     ServerError,
+    TabOrderDetail
   },
   setup() {
     const { t } = useI18n();
@@ -28,6 +30,7 @@ export default {
     const error = shallowRef(null);
     const { cart, loading } = useCart();
     const cartTools = useCartTools();
+    const id = shallowRef("");
     //@todo: what happened to the payment method passed to this?
     const placeOrder = () => {
       if (!validBillingForm.value) {
@@ -43,7 +46,10 @@ export default {
           paymentMethod,
         })
         .then(
-          () => (orderComplete.value = true),
+          () => {
+            id.value = localStorage.getItem("orderId");
+            orderComplete.value = true
+          },
           (e) => {
             error.value = e;
           }
@@ -100,6 +106,7 @@ export default {
       error,
       cart,
       t,
+      id,
     };
   },
 };

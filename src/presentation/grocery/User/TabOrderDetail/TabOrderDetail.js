@@ -22,12 +22,17 @@ export default {
       return this.order.lineItems.length > 0 ? true : false;
     },
   },
-  props: {},
-  setup() {
+  props: {
+    id: {
+      required: false
+    }
+  },
+  setup(props) {
     const { showReturnItemButton } = useAccessRules();
     const tools = useCustomerTools();
     const { t } = useI18n();
-    const { loading, order } = tools.useMyOrder();
+    console.log(props.id);
+    const { loading, order } = props.id ? tools.useOrder(props.id) : tools.useMyOrder();
     const subtotal = computed(() => {
       //@todo: is this not already done in cart tools?
       if (order.value) {

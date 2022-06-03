@@ -182,8 +182,8 @@
         border-radius: 0.5rem;
       }
       .product-button:hover {
-        background-color: #d98918!important;
-        border-color: #d98918!important;
+        background-color: $theme-color-secondary !important;
+        border-color: $theme-color-secondary !important;
       }
       &.product-action-mrg {
         bottom: 53px;
@@ -928,11 +928,11 @@
 .quality-cart-wrap {
   display: flex;
   align-items: center;
-  background-color: #4a4141;
+  background-color: $theme-color;
   transition: all 0.3s ease 0s;
   min-height: 70px;
   &:hover {
-    background-color: $theme-color;
+    background-color: $theme-color-secondary;
   }
   .quality-wrap {
     position: relative;

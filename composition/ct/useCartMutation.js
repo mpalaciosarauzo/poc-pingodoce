@@ -105,7 +105,7 @@ export const createMyOrderFromCart = (id, version) => {
         createMyOrderFromCart(
           draft: { id: $id, version: $version }
         ) {
-          cartId: id
+          orderId: id
           version
         }
       }

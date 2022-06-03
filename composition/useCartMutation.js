@@ -131,7 +131,8 @@ export const useCartActions = () => {
               createMyOrderFromCart(id, version)
             );
           })
-          .then(() => {
+          .then((data) => {
+            localStorage.setItem("orderId", data.data.createMyOrderFromCart.orderId);
             cache.evict({ id: 'activeCart' });
             cache.gc();
           });

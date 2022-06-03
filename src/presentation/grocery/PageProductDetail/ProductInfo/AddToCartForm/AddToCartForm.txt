@@ -1,3 +1,8 @@
+es:
+  addToCart: Añadir al carrito
+  addToShoppingList: Añadir a la lista
+  notInStock: No hay stock
+  quantityError: Introduzca un valor menor o igual a {quantity}
 de:
   addToCart: Zum Warenkorb Hinzufügen
   addToShoppingList: ??????

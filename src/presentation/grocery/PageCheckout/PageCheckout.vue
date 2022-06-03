@@ -44,6 +44,7 @@
       <div class="container">
         <div class="order-complete text-center">
           <h2>{{ t('thankYou') }}</h2>
+          <TabOrderDetail :id="id"/>
           <router-link class="mt-50" to="/">
             {{ t('continueShopping') }}
           </router-link>

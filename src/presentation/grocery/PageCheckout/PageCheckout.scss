@@ -470,7 +470,7 @@
   }
   .Place-order {
     a {
-      background-color: #262626;
+      background-color: $theme-color;
       display: block;
       cursor: pointer;
       padding: 22px 50px 21px;
@@ -480,7 +480,7 @@
       font-weight: 600;
       text-transform: uppercase;
       &:hover {
-        background-color: $theme-color;
+        background-color: $theme-color-secondary;
       }
     }
   }
@@ -560,16 +560,16 @@
     margin: 25px 0 38px;
   }
   a {
-    background-color: #262626;
+    background-color: $theme-color;
     font-size: 12px;
     font-weight: bold;
     display: inline-block;
-    color: #fff;
+    color: #fff !important;
     line-height: 1;
     padding: 18px 40px 19px;
     border-radius: 50px;
     &:hover {
-      background-color: $theme-color;
+      background-color: $theme-color-secondary;
       color: #fff;
     }
   }
