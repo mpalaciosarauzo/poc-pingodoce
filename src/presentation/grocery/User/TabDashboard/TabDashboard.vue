@@ -11,6 +11,7 @@
           >{{ customer.firstName }}
           {{ customer.lastName }}</strong
         >
+        <span v-if="points"> You have {{ points }} loyalty points</span> 
         ({{ t('notYou') }} -
         <a
           href="javascript:;"
