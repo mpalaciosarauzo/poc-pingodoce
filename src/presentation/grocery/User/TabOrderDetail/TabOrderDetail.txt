@@ -1,3 +1,19 @@
+es:
+  title: Detalles de tu pedido
+  orderNumber: Número de pedido
+  date: Fecha del pedido
+  shippingAddress: Dirección de entrega
+  billingAddress: Dirección de facturación
+  shippingMethod: Método de envío
+  paymentDetails: Detalles del pago
+  subtotal: Subtotal
+  shipping: Transporte
+  appliedDiscounts: Descuentos aplicados
+  total: Total
+  notFound: Pedido no encontrado
+  return: Devolver un artículo
+  orderItemsTitle: Productos
+  returnedItemsTitle: Artículos devueltos
 en:
   title: Your order details
   orderNumber: Order Number

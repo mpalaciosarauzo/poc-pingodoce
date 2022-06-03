@@ -19,6 +19,13 @@
     padding: 20px 15px;
     margin-left: 0px;
   }
+  button {
+    background-color: $theme-color;
+    border-radius: 0.5rem;
+    &:hover {
+      background-color: $theme-color-secondary;
+    }
+  }
   form {
     margin-top: -20px;
   }
