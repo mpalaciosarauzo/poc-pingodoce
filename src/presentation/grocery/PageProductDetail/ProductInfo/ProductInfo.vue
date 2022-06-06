@@ -35,7 +35,7 @@
         />
         <a href @click.prevent="openAddToShoppingList">
           <i class="dl-icon-heart"></i
-          ><span>Shopping list</span>
+          ><span>Lista de la compra</span>
         </a>
 
         <DetailsSection :currentVariant="currentVariant" />
