@@ -14,7 +14,7 @@ export default {
     const points = computed(
       () =>
         customer?.value?.custom?.customFieldsRaw.find(
-          ({ name }) => name === 'points'
+          ({ name }) => name === 'puntosLoyalty'
         )?.value || 0
     );
     return { t, customer, logout, points };
