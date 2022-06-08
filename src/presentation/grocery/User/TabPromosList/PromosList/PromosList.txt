@@ -1,0 +1,4 @@
+es:
+    promos: "Mis promociones"
+    validUntil: "Válido hasta "
+    emptyPromos: "No tiene promociones activas"
