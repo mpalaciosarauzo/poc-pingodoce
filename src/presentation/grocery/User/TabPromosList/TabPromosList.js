@@ -1,5 +1,5 @@
 import Spinner from 'presentation/components/Spinner/Spinner.vue';
-import PromosList from './PromosList/PromosList';
+import PromosList from './PromosList/PromosList.vue';
 import { useI18n } from 'vue-i18n';
 import useCustomerTools from 'hooks/useCustomerTools';
 // import { computed, watch, ref } from 'vue';

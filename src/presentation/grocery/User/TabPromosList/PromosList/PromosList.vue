@@ -2,8 +2,6 @@
 <script src="./PromosList.js"></script>
 
 <template>
-    <p>{{promosListNotEmpty}}</p>
-    <p>{{promos}}</p>
     <div v-if="promosListNotEmpty">
         <div class="promos">
             <div class="card" v-for="promo in promos" :key="promo.id">

@@ -9,6 +9,8 @@
         <div v-else-if="customFieldsNotEmpty">
             <PromosList :idsPromos="idsPromos" />
         </div>
-        <!-- <PromosList :idsPromos="idsPromos" /> -->
+        <div v-else>
+            <p>{{ t('emptyPromos') }}</p>
+        </div>
     </div>
 </template>
