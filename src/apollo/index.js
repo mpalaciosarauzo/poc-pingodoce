@@ -30,7 +30,8 @@ export const cache = new InMemoryCache({
   },
 });
 const httpLink = createHttpLink({
-  uri: `${config.ct.api}/${config.ct.auth.projectKey}/graphql`,
+  //@todo: make config.ct.api the proxy url
+  uri: `http://localhost:8081/${config.ct.auth.projectKey}/proxy/graphql`,
   fetch,
 });
 export const apolloClient = new ApolloClient({

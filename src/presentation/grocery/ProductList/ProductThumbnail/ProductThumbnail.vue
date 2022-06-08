@@ -18,12 +18,12 @@
           />
           <span
             data-test="product-thumbnail-sale-flag"
-            v-if="hasDiscount"
+            v-if="hasDiscount && product.masterVariant.scopedPrice.discounted?.discount?.name"
             class="badge-pink badge-right"
             >{{
               (
                 product.masterVariant.scopedPrice.discounted
-                  .discount.name || ''
+                  ?.discount?.name || ''
               ).toUpperCase()
             }}</span
           >
