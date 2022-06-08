@@ -1,0 +1,12 @@
+.promos {
+    display: flex;
+    justify-content: space-around;
+
+    .card {
+        padding: 2%;
+
+        h5 {
+            font-size: 1.25rem;
+        }
+    }
+}

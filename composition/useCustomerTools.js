@@ -16,6 +16,8 @@ import {
 import { cache } from '../src/apollo';
 import { CUSTOMER } from '../src/constants';
 import { createReactive } from './lib';
+import useMyPromos from 'hooks/useMyPromos';
+import useCustomFieldsCustomer from 'hooks/useCustomFieldsCustomer';
 const saveCustomerState = (c) => {
   customerGlobal.setValue(c);
 };
@@ -156,6 +158,8 @@ function useCustomerTools() {
     gotoResetToken,
     refreshUser,
     updateMyCustomerPassword,
+    useMyPromos,
+    useCustomFieldsCustomer,
   };
 }
 export default useCustomerTools;

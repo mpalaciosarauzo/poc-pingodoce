@@ -28,6 +28,14 @@
       data-test="change-password-button"
       >{{ t('changePassword') }}</router-link
     >
+    <router-link
+      :class="
+        activeTab === 'promos' ? 'active' : ''
+      "
+      :to="{ name: 'promos' }"
+      data-test="my-promos-button"
+      >{{ t('myPromos') }}</router-link
+    >
     <a
       href="#"
       @click.prevent="logout"

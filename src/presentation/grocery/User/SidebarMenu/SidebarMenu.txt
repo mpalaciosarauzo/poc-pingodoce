@@ -8,6 +8,7 @@ es:
   signOut: "Cerrar sesión"
   changePassword: "Cambiar contraseña"
   dashboard: "Dashboard"
+  myPromos: "Mis promociones"
 en:
   accountDetails: "Account Details"
   addressBook: "Address Book"
