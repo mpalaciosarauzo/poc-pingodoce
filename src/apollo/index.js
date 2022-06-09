@@ -31,7 +31,7 @@ export const cache = new InMemoryCache({
 });
 const httpLink = createHttpLink({
   uri: (q)=>q.operationName==='products'
-//  ? `http://localhost:8081/${config.ct.auth.projectKey}/proxy/graphql`,
+    // ? `http://localhost:8081/${config.ct.auth.projectKey}/proxy/graphql`
     ? `https://nestor-consum-subscription-vikeh6xrjq-ew.a.run.app/${config.ct.auth.projectKey}/proxy/graphql`
     : `${config.ct.api}/${config.ct.auth.projectKey}/graphql`
   ,
