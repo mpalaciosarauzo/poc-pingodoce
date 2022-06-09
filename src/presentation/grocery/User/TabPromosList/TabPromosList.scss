@@ -4,6 +4,9 @@
 
     .card {
         padding: 2%;
+        margin: 2%;
+        border-color: $theme-color;
+        box-shadow: 5px 6px $theme-color-secondary;
 
         h5 {
             font-size: 1.25rem;
