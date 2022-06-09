@@ -5,9 +5,9 @@ import { useState } from 'react';
 function useMyPromos({ idsPromos, locale }) {
     const [promos, setPromos] = useState([]);
 
-    const where = idsPromos.map((id) => {
+    const where = "(" + idsPromos.map((id) => {
         return `id="${id}"`;
-    }).join(' or ') + " and isActive=true";
+    }).join(' or ') + ") and isActive=true";
 
     const query = gql`
         query ($where: String, $locale: Locale!) {
