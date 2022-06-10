@@ -96,6 +96,9 @@ const query = (expand) => gql`
             country
           }
         }
+        productType {
+          id
+        }
       }
     }
   }
@@ -275,6 +278,7 @@ const useProducts = ({
       sorts,
       priceSelector,
       filters,
+      expand: "productType"
     },
     onCompleted: (data) => {
       if (!data) {

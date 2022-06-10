@@ -18,6 +18,8 @@ import { CUSTOMER } from '../src/constants';
 import { createReactive } from './lib';
 import useMyPromos from 'hooks/useMyPromos';
 import useCustomFieldsCustomer from 'hooks/useCustomFieldsCustomer';
+import useVariantSelector from 'hooks/useVariantSelector';
+import useTranslation from 'hooks/useTranslation';
 const saveCustomerState = (c) => {
   customerGlobal.setValue(c);
 };
@@ -160,6 +162,8 @@ function useCustomerTools() {
     updateMyCustomerPassword,
     useMyPromos,
     useCustomFieldsCustomer,
+    useVariantSelector,
+    useTranslation,
   };
 }
 export default useCustomerTools;

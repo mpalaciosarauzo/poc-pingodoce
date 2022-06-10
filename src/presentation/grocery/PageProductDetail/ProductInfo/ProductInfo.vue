@@ -20,6 +20,7 @@
         <h3>
           <BasePrice :price="currentVariant.scopedPrice" />
         </h3>
+        <VariableWeightSelector v-if="productType.id === '58f284d8-d777-481f-acaf-cb476ac1d3b5'" :sku="sku" />
         <VariantSelector
           :sku="sku"
           :allVariants="allVariants"
