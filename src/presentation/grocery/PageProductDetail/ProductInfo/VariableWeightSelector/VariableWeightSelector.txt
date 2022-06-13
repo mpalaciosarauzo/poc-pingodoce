@@ -1,0 +1,9 @@
+es:
+  size: Tamaño
+  color: Color
+de:
+  size: Größe
+  color: Farbe
+en:
+  size: Size
+  color: Color

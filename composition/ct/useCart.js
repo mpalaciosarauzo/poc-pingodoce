@@ -2,6 +2,7 @@ import gql from 'graphql-tag';
 import useQueryFacade from '../useQueryFacade';
 import { useState, useEffect } from 'react';
 import { getValue } from '../../src/lib';
+import { useStore } from 'vuex';
 
 //@todo: we will worry about importing the partials
 //  when the cart route is done
@@ -123,6 +124,7 @@ const query = gql`
 const useCart = ({ locale }) => {
   const [cart, setCart] = useState();
   const [exist, setExist] = useState();
+  const store = useStore();
 
   const { loading, error } = useQueryFacade(query, {
     variables: { locale },
@@ -130,6 +132,7 @@ const useCart = ({ locale }) => {
       if (!data) {
         return;
       }
+      store.dispatch('setCart', data.myCart.activeCart);
       setCart(data.myCart.activeCart);
     },
   });

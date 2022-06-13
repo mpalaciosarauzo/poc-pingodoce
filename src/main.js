@@ -6,6 +6,7 @@ import router from './router';
 import VueGoogleMaps from '@fawmi/vue-google-maps';
 import i18n from './i18n';
 import 'presentation/assets/scss/main.scss';
+import store from './store';
 
 const app = createApp({
   setup() {
@@ -21,6 +22,7 @@ const app = createApp({
     },
   })
   .use(i18n)
-  .use(router);
+  .use(router)
+  .use(store);
 
 app.mount('#app');

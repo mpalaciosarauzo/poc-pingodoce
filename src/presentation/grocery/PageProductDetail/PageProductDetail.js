@@ -8,7 +8,7 @@ import Icons from 'presentation/Icons/Icons.vue';
 export default {
   name: 'PageProductDetail',
   setup() {
-    const { allVariants, currentVariant, sku, error } =
+    const { allVariants, currentVariant, sku, error, product } =
       useProductTools(true);
     const showAddToShoppingList = ref(false);
     const productSku = ref(null);
@@ -26,6 +26,7 @@ export default {
       currentVariant,
       error,
       sku,
+      product,
     };
   },
   components: {

@@ -60,6 +60,7 @@ function useProductTools(expand = false) {
     setPage,
     formatProduct,
     page,
+    product,
   };
 }
 export default useProductTools;

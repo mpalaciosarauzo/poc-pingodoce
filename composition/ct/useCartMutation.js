@@ -63,6 +63,37 @@ const mutation = gql`
       lineItems {
         lineId: id
         quantity
+        price {
+          value {
+            centAmount
+          }
+        }
+      }
+    }
+  }
+`;
+
+const mutationUpdateCart = gql`
+  mutation mutateCart(
+    $actions: [CartUpdateAction!]!
+    $version: Long!
+    $id: String!
+  ) {
+    updateCart(
+      actions: $actions
+      version: $version
+      id: $id
+    ) {
+      id
+      version
+      lineItems {
+        lineId: id
+        quantity
+        price {
+          value {
+            centAmount
+          }
+        }
       }
     }
   }
@@ -84,6 +115,19 @@ export const addLineItem = (sku, quantity, channel) => [
     },
   },
 ];
+export const setLineItemPrice = (lineItemId, weightFinalQtyPrice) => [
+  {
+    setLineItemPrice: {
+      lineItemId,
+      externalPrice: {
+        centPrecision: {
+          currencyCode: 'EUR',
+          centAmount: weightFinalQtyPrice
+        }
+      }
+    }
+  }
+]
 export const setBillingAddress = (address) => ({
   setBillingAddress: {
     address,
@@ -151,9 +195,11 @@ export const setShippingMethod = (shippingMethodId) => [
 const useCartMutation = ({ location, currency }) => {
   const [mutateFunction, { data, loading, error }] =
     useMutation(mutation);
+  const [mutateUpdateCartFunction] =
+    useMutation(mutationUpdateCart);
   const [createCart] = useMutation(create);
   const { cart, exist } = useCart();
-  const mutateCart = (actions) => {
+  const mutateCart = (actions, callback) => {
     return Promise.resolve()
       .then(() => {
         if (!getValue(exist) === true) {
@@ -205,6 +251,9 @@ const useCartMutation = ({ location, currency }) => {
             },
           });
         }
+        if (callback) {
+          callback(result);
+        }
         return result;
       })
       .then((result) => {
@@ -213,8 +262,30 @@ const useCartMutation = ({ location, currency }) => {
         return result;
       });
   };
+  const mutateUpdateCart = (actions, version, id) => {
+    return Promise.resolve()
+      .then(() => 
+        mutateUpdateCartFunction({
+          variables: {
+            actions,
+            version,
+            id,
+          },
+        })
+      )
+      .then((result) => {
+        return result;
+      })
+      .then((result) => {
+        cache.evict({ id: 'activeCart' });
+        cache.gc();
+        return result;
+      });
+  }
+  
   return {
     mutateCart,
+    mutateUpdateCart,
     data,
     loading,
     error,

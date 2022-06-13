@@ -17,9 +17,11 @@
         <h2 data-test="product-name">
           {{ currentVariant.name }}
         </h2>
+        {{cart}}
         <h3>
           <BasePrice :price="currentVariant.scopedPrice" />
         </h3>
+        <VariableWeightSelector v-if="productType.id === '58f284d8-d777-481f-acaf-cb476ac1d3b5'" :sku="sku" />
         <VariantSelector
           :sku="sku"
           :allVariants="allVariants"
@@ -32,6 +34,7 @@
           :sku="sku"
           :isOnStock="true"
           :availableQuantity="10"
+          :productId="productType.id"
         />
         <a href @click.prevent="openAddToShoppingList">
           <i class="dl-icon-heart"></i
