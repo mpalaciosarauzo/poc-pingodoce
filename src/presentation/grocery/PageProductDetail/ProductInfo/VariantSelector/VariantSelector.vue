@@ -11,7 +11,7 @@
         v-for="[label, variants] in variants"
         :key="label"
       >
-        <div class="pro-details-size">
+        <div class="pro-details-size row mt-20">
           <span style="margin-left: 3px">{{
             t(replaceSlash(label))
           }}</span>

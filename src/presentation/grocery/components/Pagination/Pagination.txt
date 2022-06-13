@@ -1,3 +1,8 @@
+  es:
+    page: Página
+    of: de
+    next: Siguiente
+    previous: Anterior
   en:
     page: Page
     of: of
