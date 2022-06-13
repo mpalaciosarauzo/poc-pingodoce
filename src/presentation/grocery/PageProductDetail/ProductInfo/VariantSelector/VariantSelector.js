@@ -122,6 +122,9 @@ export default {
     };
     const isSelected = (label, value) =>
       score.value.get(props.sku)[label] === value;
+    const replaceSlash = (label) => {
+      return label.replaceAll('_', ' ');
+    }
     return {
       variants,
       variantChange,
@@ -129,6 +132,7 @@ export default {
       setVariant,
       changeAndSet,
       t,
+      replaceSlash,
     };
   },
 };

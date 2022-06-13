@@ -13,7 +13,7 @@
       >
         <div class="pro-details-size">
           <span style="margin-left: 3px">{{
-            t(label)
+            t(replaceSlash(label))
           }}</span>
           <select
             v-on:change="changeAndSet(label, $event)"
