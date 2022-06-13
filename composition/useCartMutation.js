@@ -5,6 +5,7 @@ import useCurrency from './useCurrency';
 import useLocation from './useLocation';
 import {
   addLineItem,
+  setLineItemPrice,
   changeCartLineItemQuantity,
   removeLineItem,
   addDiscountCode,
@@ -54,7 +55,7 @@ export const useCartActions = () => {
       }, time);
     };
   };
-  const { error, mutateCart } = useCartMutation();
+  const { error, mutateCart, mutateUpdateCart } = useCartMutation();
   const changeLine = debounce(
     (lineItemId, quantity = 1) => {
       if (!quantity || quantity < 0) {
@@ -68,10 +69,12 @@ export const useCartActions = () => {
   const remove = (lineItemId) => {
     mutateCart(removeLineItem(lineItemId));
   };
-  const addLine = (sku, quantity) =>
+  const addLine = (sku, quantity, setVariablePrice) =>
     mutateCart(
-      addLineItem(sku, quantity, channel.value?.id)
+      addLineItem(sku, quantity, channel.value?.id), setVariablePrice
     );
+  const setLIPrice = (lineItemId, weightFinalQtyPrice, version, id) => 
+    mutateUpdateCart(setLineItemPrice(lineItemId, weightFinalQtyPrice), version, id);
   const applyDiscount = (code) =>
     mutateCart(addDiscountCode(code));
   const removeDiscount = (codeId) =>
@@ -146,6 +149,7 @@ export const useCartActions = () => {
     applyDiscount,
     removeDiscount,
     addLine,
+    setLIPrice,
     setShippingMethod: setShip,
     setBillingAddress: setBilling,
     setShippingAddress: setShipping,

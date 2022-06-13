@@ -8,6 +8,7 @@
 // import { move } from '../../../../../lib';
 import { ref } from 'vue';
 import useCustomerTools from 'hooks/useCustomerTools';
+import { useStore } from 'vuex';
 
 export default {
   props: {
@@ -21,11 +22,12 @@ export default {
     },
   },
   setup(props) {
+    const store = useStore();
     const tools = useCustomerTools();
-    const { product } = tools.useVariantSelector(props.sku);
+    const { product } = tools.useVariantSelector({sku: props.sku});
     const weightSelection = ref(1000);
     const  selectedWeight = () => {
-        this.$store.dispatch('setWeightQty', this.weightSelection);
+        store.dispatch('setWeightQty', weightSelection);
     }
     return {
       product,

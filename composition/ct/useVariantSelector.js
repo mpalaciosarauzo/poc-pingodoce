@@ -18,22 +18,14 @@ function useVariantSelector ({ sku }) {
                 }
               }                  
               attributesRaw {
-                ...on  Frescos{
-                  Tipo_de_corte{
-                    value
-                    name
-                  }
-                }
+                name
+                value
               }
             }
             variant(sku: $sku) {
               attributesRaw {
-                ...on Frescos {
-                  Tipo_de_corte{
-                    value
-                    name
-                  }                      
-                }
+                name
+                value
               }
             }
           }

@@ -17,6 +17,7 @@
         <h2 data-test="product-name">
           {{ currentVariant.name }}
         </h2>
+        {{cart}}
         <h3>
           <BasePrice :price="currentVariant.scopedPrice" />
         </h3>
@@ -33,6 +34,7 @@
           :sku="sku"
           :isOnStock="true"
           :availableQuantity="10"
+          :productId="productType.id"
         />
         <a href @click.prevent="openAddToShoppingList">
           <i class="dl-icon-heart"></i
