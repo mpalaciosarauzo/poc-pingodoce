@@ -8,6 +8,11 @@ const store = createStore({
             weightNumberQty: 0,
         }
     },
+    actions: {
+        setWeightQty: ({ commit }, weightNumberQty) => {
+            commit(SET_WEIGTH_QTY, weightNumberQty);
+        },
+    },
     mutations: {
         [SET_WEIGTH_QTY](state, weightNumberQty) {
             state.weightNumberQty = weightNumberQty;
