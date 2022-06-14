@@ -1,0 +1,2 @@
+es:
+    appliedPromotions: "Promociones aplicadas"

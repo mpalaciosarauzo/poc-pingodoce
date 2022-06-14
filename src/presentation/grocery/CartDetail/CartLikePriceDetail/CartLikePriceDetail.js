@@ -1,12 +1,15 @@
 import { useI18n } from 'vue-i18n';
 import BasePrice from 'presentation/components/BasePrice/BasePrice.vue';
 import DiscountCodes from './DiscountCodes/DiscountCodes.vue';
+import Promotions from './Promotions/Promotions.vue';
 import useCartTools from 'hooks/useCartTools';
+import { computed } from 'vue';
 
 export default {
   components: {
     DiscountCodes,
     BasePrice,
+    Promotions,
   },
   props: {
     cart: {
@@ -18,8 +21,12 @@ export default {
       default: false,
     },
   },
-  setup() {
+  setup(props) {
     const { t } = useI18n();
-    return { t, ...useCartTools() };
+    const promos = useCartTools().promotionsCodes(props.cart);
+    const promotionsCodesExists = computed(() => {
+      return Boolean(promos.length);
+    });
+    return { t, promotionsCodesExists, promos, ...useCartTools() };
   },
 };

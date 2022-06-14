@@ -6,7 +6,7 @@ const SET_CART = 'SET_CART';
 const store = createStore({
     state () {
         return {
-            weightNumberQty: 0,
+            weightNumberQty: 1000,
             cart: {}
         }
     },

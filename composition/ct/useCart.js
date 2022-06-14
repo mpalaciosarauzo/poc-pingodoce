@@ -34,6 +34,16 @@ const query = gql`
               }
             }
           }
+          discountedPricePerQuantity {
+            discountedPrice {
+              includedDiscounts {
+                discount {
+                  name(locale: $locale)
+                  id
+                }
+              }
+            }
+          }
           totalPrice {
             centAmount
             currencyCode

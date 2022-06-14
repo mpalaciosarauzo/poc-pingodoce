@@ -98,6 +98,21 @@ const discountCodesExist = (cart) => {
   return Boolean(cart.discountCodes?.length);
 };
 
+const promotionsCodes = (cart) => {
+  let promos = [];
+  cart.lineItems.forEach(li => {
+    li.discountedPricePerQuantity.forEach(dppq => {
+      dppq.discountedPrice.includedDiscounts.forEach(discount => {
+        const exists = promos.find((promo) => promo.id === discount.id);
+        if (!exists) {
+          promos.push(discount);
+        }
+      });
+    });
+  });
+  return promos;
+}
+
 function useCartTools() {
   const cartActions = useCartActions();
   const cartTools = {
@@ -111,6 +126,7 @@ function useCartTools() {
     taxes,
     discountCodesExist,
     useCart,
+    promotionsCodes,
   };
   return cartTools;
 }

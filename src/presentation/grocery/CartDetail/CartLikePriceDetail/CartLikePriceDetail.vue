@@ -37,6 +37,10 @@
         :cart="cart"
         :editable="editable"
       />
+      <Promotions
+        v-if="promotionsCodesExists"
+        :promotionsCodes="promos"
+      />
     </div>
     <div class="cart-total-wrap">
       <div class="single-cart-total-left col-sm-6">
