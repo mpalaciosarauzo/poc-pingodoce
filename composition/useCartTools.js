@@ -103,7 +103,9 @@ const promotionsCodes = (cart) => {
   cart.lineItems.forEach(li => {
     li.discountedPricePerQuantity.forEach(dppq => {
       dppq.discountedPrice.includedDiscounts.forEach(discount => {
-        const exists = promos.find((promo) => promo.id === discount.id);
+        const exists = promos.find((promo) => {
+          return promo.discount.id === discount.discount.id
+        });
         if (!exists) {
           promos.push(discount);
         }
