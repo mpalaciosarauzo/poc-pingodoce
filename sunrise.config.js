@@ -34,34 +34,25 @@ const config = {
     //     'view_products:poc-consum ',
     // },
     auth: {
-      host:
-        getEnv('VUE_APP_CT_AUTH_HOST') ||
-        'https://auth.europe-west1.gcp.commercetools.com',
-      projectKey:
-        getEnv('VUE_APP_CT_PROJECT_KEY') || 'poc-consum',
+      host: 'https://auth.europe-west1.gcp.commercetools.com',
+      projectKey: 'poc-pingo-doce',
       credentials: {
-        clientId:
-          getEnv('VUE_APP_CT_CLIENT_ID') ||
-          'SNLGw7jdg0G3HL6_bnoBY-Yx',
-        clientSecret:
-          getEnv('VUE_APP_CT_CLIENT_SECRET') ||
-          'IAeHgx-G7Bama6nW9Kp9YTNA3aY8SD6Y',
+        clientId: 'eunYkNNTiS2vuI7fMzl1zYIE',
+        clientSecret: 'UiPozTfLVi4-J07D8ZCwT45aa6saGbot',
       },
-      scope:
-        getEnv('VUE_APP_CT_SCOPE') ||
-        'manage_project:poc-consum',
+      scope: 'manage_my_payments:poc-pingo-doce manage_my_shopping_lists:poc-pingo-doce manage_my_quotes:poc-pingo-doce manage_my_business_units:poc-pingo-doce view_categories:poc-pingo-doce manage_my_orders:poc-pingo-doce view_published_products:poc-pingo-doce manage_my_profile:poc-pingo-doce manage_my_quote_requests:poc-pingo-doce create_anonymous_token:poc-pingo-doce',
     },
-    api:
-      getEnv('VUE_APP_CT_API_HOST') ||
-      'https://api.europe-west1.gcp.commercetools.com',
+    api: 'https://api.europe-west1.gcp.commercetools.com',
   },
   languages: {
     es: 'Spanish',
+    pt: 'Português'
     // en: 'English',
     // de: 'Deutsch',
   },
   countries: {
     ES: 'Spain',
+    PT: 'Portugal'
     // DE: 'Deutschland',
     // US: 'United States',
   },
@@ -96,6 +87,13 @@ const config = {
           day: 'numeric',
         },
       },
+      PT: {
+        short: {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        }
+      }
       // US: {
       //   short: {
       //     year: 'numeric',

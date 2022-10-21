@@ -13,3 +13,8 @@ en:
   addToShoppingList: Add to Shopping List
   notInStock: Item is not in stock
   quantityError: Enter the value less or equal to {quantity}
+pt:
+  addToCart: Adicionar ao carrinho
+  addToShoppingList: Adicionado a lista
+  notInStock: Sem estoque
+  quantityError: Insira um valor menor ou igual a {quantity}

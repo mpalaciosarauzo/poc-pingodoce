@@ -2,3 +2,5 @@ en:
   pageTitle: "Customer Sign In"
 de:
   pageTitle: "Kundenanmeldung"
+pt:
+  pageTitle: "Login do cliente"

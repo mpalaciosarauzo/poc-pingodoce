@@ -19,3 +19,10 @@ de:
   continueShopping: "Weiter einkaufen"
   shopNow: "Jetzt einkaufen"
   startCheckout: "Zur Kasse"
+pt:
+  yourCart: "Seu carrinho"
+  itemsTotal: "{n} item no total | {n} itens no total"
+  empty: "Seu carrinho está vazio no momento"
+  continueShopping: "Continue comprando"
+  shopNow: "Compre agora"
+  startCheckout: "Iniciar Checkout"

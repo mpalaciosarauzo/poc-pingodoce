@@ -28,3 +28,13 @@ de:
   forgotPassword: "Passwort vergessen"
   signIn: "Anmelden"
   invalidCredentials: "Ungültige Anmeldeinformationen"
+pt:
+  title: "Retorno de login do cliente"
+  required: "Os campos obrigatórios"
+  description: "Se você tiver uma conta, faça login para um checkout mais rápido"
+  email: "Email"
+  password: "Senha"
+  rememberMe: "Lembre de Mim"
+  forgotPassword: "Esqueceu sua senha?"
+  signIn: "Entrar"
+  invalidCredentials: "Credenciais inválidas"

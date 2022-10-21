@@ -7,3 +7,6 @@ en:
 de:
   suggestions:
     title: "Das könnte Ihnen auch gefallen"
+pt: 
+  suggestions:
+    title: "Você pode gostar"

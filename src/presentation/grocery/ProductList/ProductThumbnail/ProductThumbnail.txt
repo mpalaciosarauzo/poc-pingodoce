@@ -4,7 +4,7 @@ en:
   quickView: Quick view
   moreColors: More colours
   add: Add item to wishlist
-  addToCart: Añadir
+  addToCart: Add
 de:
   sale: Sale
   new: Neu
@@ -12,3 +12,10 @@ de:
   moreColors: Mehr Farben
   add: Auf den Wunschzettel
   addToCart: Zum Warenkorb Hinzufügen
+pt:
+  sale: Oferta
+  new: Novo
+  quickView: Olhada rápida
+  moreColors: Mais cores
+  add: Adicionar item à lista de desejos
+  addToCart: Añadir
