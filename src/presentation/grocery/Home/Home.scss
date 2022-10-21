@@ -7,17 +7,41 @@ span {
   }
 }
 /*-------- Promociones home ---------*/
-.esparragos:hover {
-  content:url("https://www.consum.es/wp-content/uploads/2022/05/CAST_esparragos_activo_386x552px.jpg");
+// .info-cards {
+//   background-color: #000000;
+//   height: 300px; 
+//   padding: 50px 90px;
+//   width: 100%;
+ 
+// }
+
+.receitas {
+  &:hover {
+    content: url("https://www.pingodoce.pt/wp-content/uploads/2022/10/como-cozer-ovos-na-perfeiçao.jpg");
+  };
+  border-radius: 5px;
+  height: 250px;
+  width: 370px;
 }
 
-.helados:hover {
-  content:url("https://www.consum.es/wp-content/uploads/2022/05/FRAME2-1.jpg");
+.frescos {
+  &:hover {
+  content:url("https://www.pingodoce.pt/wp-content/uploads/2022/03/carne-angus-nacional-pingo-doce.jpg");
+  };
+  border-radius: 5px;
+  height: 250px;
+  width: 370px;
 }
 
-.cerveza:hover {
-  content:url("https://www.consum.es/wp-content/uploads/2022/05/CAST_bodega_cerveza_roja_activo_386x552px.jpg");
+.marcas {
+  &:hover {
+    content: url("https://www.pingodoce.pt/wp-content/uploads/2022/09/imagem-produto-baku-destaque.jpg");
+  };  
+  border-radius: 5px;
+  height: 250px;
+  width: 370px;
 }
+
 
 /*-------- 3. Slider style ---------*/
 

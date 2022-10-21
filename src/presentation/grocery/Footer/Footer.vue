@@ -12,14 +12,14 @@
               <div class="footer-logo">
                 <a href="index.html"
                   ><img
-                    src='https://www.consum.es/wp-content/uploads/2020/07/Logo-cast.png'
-                    alt="logo"
+                    src='https://www.pingodoce.pt/wp-content/themes/pingodoce/library/images/v2/logo-footer.png'
+                    alt="Pingo Doce"
                 /></a>
               </div>
               <div class="footer-info">
                 <ul>
-                  <li><a href="#">900 500 126</a></li>
-                  <li>Av. Alginet, 1 46460 Silla, Valencia (España)</li>
+                  <li><a href="#">212 41 08 74 ou 808 20 45 45 (chamada para a rede fixa nacional)</a></li>
+                  <li>Lisboa, Portugal</li>
                 </ul>
               </div>
               <div class="footer-map">
@@ -59,37 +59,37 @@
               <div class="footer-list">
                 <ul>
                   <li>
-                    <a href="https://www.facebook.com/supermercadosconsum" target="_blank">
+                    <a href="https://www.facebook.com/pingodoce/" target="_blank">
                       <i class="lab la-facebook"></i>
                       <span>{{ t('facebook') }}</span>
                     </a>
                   </li>
-                  <li>
+                  <!-- <li>
                     <a href="https://twitter.com/consum" target="_blank">
                       <i class="lab la-twitter"></i>
                       <span>{{
                         t('twitter')
                       }}</span>
                     </a>
-                  </li>
+                  </li> -->
                   <li>
-                    <a href="https://www.youtube.com/user/SupermercadosConsum" target="_blank">
+                    <a href="https://www.youtube.com/user/pingodocept" target="_blank">
                       <i class="lab la-youtube"></i>
                       <span>{{ t('youtube') }}</span>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/supermercadosconsum/" target="_blank">
+                    <a href="https://www.instagram.com/pingodoce/" target="_blank">
                       <i class="lab la-instagram"></i>
                       <span>{{ t('instagram') }}</span>
                     </a>
                   </li>
-                  <li>
+                  <!-- <li>
                     <a href="https://www.linkedin.com/company/consum-cooperativa-valenciana" target="_blank">
                       <i class="lab la-linkedin"></i>
                       <span>{{ t('linkedin') }}</span>
                     </a>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>

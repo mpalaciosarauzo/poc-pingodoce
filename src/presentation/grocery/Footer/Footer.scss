@@ -1,4 +1,7 @@
 /*-------- 8. Footer style ---------*/
+.footer-area {
+  background-color: #000000;
+}
 
 .footer-about {
   ul {
@@ -243,7 +246,7 @@
     ul {
       li {
         font-size: 12px;
-        color: #333;
+        color: #fefefe;
         line-height: 1;
         margin: 0 0 9px;
 
@@ -252,7 +255,7 @@
         }
 
         a {
-          color: #333;
+          color: #fefefe;
           font-size: 12px;
 
           &:hover {
@@ -266,7 +269,7 @@
   .footer-map {
     a {
       font-size: 12px;
-      color: #333;
+      color: #fefefe;
       text-decoration: underline;
     }
   }
@@ -279,6 +282,7 @@
     }
 
     h3 {
+      color: #fefefe;
       font-size: 12px;
       font-weight: 700;
       margin: 0;
@@ -295,7 +299,7 @@
         }
 
         a {
-          color: #333;
+          color: #fefefe;
           font-size: 12px;
           display: block;
           line-height: 1;
@@ -336,7 +340,7 @@
 
   &.copyright-2 {
     p {
-      color: #333;
+      color: #fefefe;
       font-size: 12px;
       margin: 0;
     }

@@ -34,6 +34,7 @@
 }
 
 .dl-icon-cart1:before {
+  color: #fefefe;
   content: "\63";
 }
 
@@ -298,10 +299,12 @@
 }
 
 .dl-icon-user12:before {
+  color: #fefefe;
   content: "\27";
 }
 
 .dl-icon-search10:before {
+  color: #fefefe;
   content: "\28";
 }
 
