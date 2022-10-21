@@ -6,3 +6,7 @@ de:
   search: "Suche"
   stores: "Filiale"
   help: "Hilfe"
+pt:
+  search: "Procurar"
+  stores: "Lojas"
+  help: "Ajuda"

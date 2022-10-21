@@ -180,7 +180,7 @@
             name="q"
             type="text"
             v-model="search"
-            placeholder="Search entire store…"
+            placeholder="Pesquisar toda a loja…"
             @submit.prevent="doSearch"
           />
           <button

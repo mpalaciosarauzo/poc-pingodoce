@@ -4,3 +4,9 @@ es:
   24h: "24 horas abiertos"
   24h_body: "Compra cuando quieras"
   orders: "Pedidos preparados en tienda"
+pt:
+  discounts: "Todas as ofertas Mundo Pingo Doce"
+  fresh: "Corte fresco"
+  24h: "24 horas aberto"
+  24h_body: "Compre quando quiser"
+  orders: "Encomendas preparadas na loja"

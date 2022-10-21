@@ -4,3 +4,6 @@ en:
 de:
   more: "Mehr"
   teaser: "Sommer 2015 – Was ist Ihre Inspiration?"
+pt:
+  more: "Mais"
+  teaser: "Verão 2015 – O que te inspira?"

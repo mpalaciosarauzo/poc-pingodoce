@@ -10,3 +10,7 @@ de:
   signIn: "Anmelden"
   signOut: "Abmelden"
   myAccount: "Mein Konto"
+pt:
+  signIn: "Iniciar Sessão"
+  signOut: "Fechar Sessão"
+  myAccount: "Minha Conta"

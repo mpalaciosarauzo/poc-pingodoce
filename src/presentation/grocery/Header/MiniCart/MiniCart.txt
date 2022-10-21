@@ -28,3 +28,13 @@
     checkout: "Checkout"
     emptyCart: "Your cart is currently empty"
     subtotal: "Subtotal"
+  pt:
+    miniCart: "Carrinho de Compras"
+    viewBag: "Ver Carrinho"
+    quantity: "Quantidade"
+    price: "Preço"
+    totalPrice: "Total"
+    delete: "Excluir"
+    checkout: "Confira"
+    emptyCart: "Seu carrinho está vazio no momento"
+    subtotal: "Subtotal"
