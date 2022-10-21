@@ -17,6 +17,12 @@
 }
 
 .header-area {
+  div {
+    background-color: #000000;;
+  }
+
+  border-bottom: 12px solid #8ac53e;
+
   @media #{$md-layout} {
     padding: 30px 0;
 
@@ -650,6 +656,7 @@
         }
 
         > a {
+          color: #fefefe;
           text-transform: uppercase;
           display: block;
 

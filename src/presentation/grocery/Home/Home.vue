@@ -9,15 +9,9 @@
       <img
         width="1440"
         height="auto"
-        src="https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast.jpg"
+        src="https://www.pingodoce.pt/wp-content/uploads/2022/09/banner_principal.png"
         class="lazy-load vc_single_image-img attachment-full is-loaded"
-        alt=""
-        srcset="
-          https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast.jpg          1208w,
-          https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast-300x94.jpg    300w,
-          https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast-768x242.jpg   768w,
-          https://www.consum.es/wp-content/uploads/2022/05/ban-folleto-1208x380px-cast-1024x322.jpg 1024w
-        "
+        alt="Cada loja Pingo Doce vai apoiar a causa mais votada com até 1.000€"
         sizes="1120px"
       />
     </div>
@@ -28,30 +22,30 @@
         class="d-inline-block;"
       />
     </div>
-    <div class="pt-30 pl-15 text-center">
+    <div class="pt-40 pl-120 pr-120 pb-30 text-center">
       <div class="d-flex justify-content-around">
         <div>
-          <a href="https://entrenosotros.consum.es/esparragos-propiedades" target="_blank">
-            <img class="esparragos"
-              src="https://www.consum.es/wp-content/uploads/2022/05/CAST_esparragos_reposo_386x552px.jpg"
+          <a href="https://www.pingodoce.pt/receitas/" target="_blank">
+            <img class="receitas"
+              src="https://www.pingodoce.pt/wp-content/uploads/2022/10/receitas-one-pot.jpg"
             />
           </a>
         </div>
         <div>
           <a
-            href="https://www.consum.es/carta-helados/cast/index.html" target="_blank"
+            href="https://www.pingodoce.pt/produtos/frescos/" target="_blank"
           >
-            <img class="helados"
-              src="https://www.consum.es/wp-content/uploads/2022/05/FRAME1-1.jpg"
+            <img class="frescos"
+              src="https://www.pingodoce.pt/wp-content/uploads/2021/06/dourada-costa-da-madeira-pingo-doce.jpg"
             />
           </a>
         </div>
         <div>
           <a
-            href="https://labodega.consum.es/tipos-de-cerveza-roja" target="_blank"
+            href="https://www.pingodoce.pt/produtos/marca-propria-pingo-doce/" target="_blank"
           >
-            <img class="cerveza"
-              src="https://www.consum.es/wp-content/uploads/2022/05/CAST_bodega_cerveza_roja_reposo_386x552px.jpg"
+            <img class="marcas"
+              src="https://www.pingodoce.pt/wp-content/uploads/2022/10/Destaque_GoActive-2.jpg"
             />
           </a>
         </div>

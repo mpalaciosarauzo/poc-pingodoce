@@ -55,8 +55,8 @@
                   <div class="logo">
                     <router-link to="/">
                       <img
-                        src="https://cdn.aktiosdigitalservices.com/tol/consum/shop-ang/6.7.0-FINAL/css/assets/images/logo/es/logo.png"
-                        alt="SUNRISE"
+                        src="https://www.pingodoce.pt/wp-content/themes/pingodoce/library/images/v2/supermercados-pingo-doce.png"
+                        alt="Pingo Doce"
                         class="img-responsive sunrise-logo"
                       />
                     </router-link>
