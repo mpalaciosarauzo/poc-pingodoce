@@ -65,6 +65,13 @@ const config = {
           currencyDisplay: 'symbol',
         },
       },
+      PT: {
+        currency: {
+          style: 'currency',
+          currency: 'EUR',
+          currencyDisplay: 'symbol',
+        },
+      },
       // DE: {
       //   currency: {
       //     style: 'currency',
@@ -114,9 +121,9 @@ const config = {
     salesExternalId: '6',
   },
   facetSearches: [
-    { name: 'Marca', type: 'text', component: 'brand' },
+    /* { name: 'Marca', type: 'text', component: 'brand' },
     { name: 'Peso', type: 'number', component: 'weight' },
-    { name: 'Tipo_de_corte', type: 'text', component: 'cutType' },
+    { name: 'Tipo_de_corte', type: 'text', component: 'cutType' }, */
   ],
   detailAttributes: [
     {
