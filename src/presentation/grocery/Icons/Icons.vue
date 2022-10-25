@@ -12,7 +12,7 @@
               data-wow-delay="0.1s"
             >
               <div class="service-icon">
-                <img src="https://cdn-pre.aktiosdigitalservices.com/tol/consum/media/PRE/estaticos/jpgs/todas%20las%20ofertas.jpg"/>
+                <img src="../assets/img/discount-50_green.png"/>
               </div>
               <div class="service-content">
                 <h6>{{ t('discounts') }}</h6>
@@ -25,7 +25,7 @@
               data-wow-delay="0.2s"
             >
               <div class="service-icon">
-                <img src="https://cdn-pre.aktiosdigitalservices.com/tol/consum/media/PRE/estaticos/jpgs/frescos.jpg"/>
+                <img src="../assets/img/meat-50-green.png"/>
               </div>
               <div class="service-content">
                 <h6>{{ t('fresh') }}</h6>
@@ -38,7 +38,7 @@
               data-wow-delay="0.3s"
             >
               <div class="service-icon">
-                <img src="https://cdn-pre.aktiosdigitalservices.com/tol/consum/media/PRE/estaticos/jpgs/24%20horas.jpg"/>
+                <img src="../assets/img/clock-50-green.png"/>
               </div>
               <div class="service-content">
                 <h6>{{ t('24h') }}</h6>
@@ -52,7 +52,7 @@
               data-wow-delay="0.4s"
             >
               <div class="service-icon">
-                <img src="https://cdn-pre.aktiosdigitalservices.com/tol/consum/media/PRE/estaticos/jpgs/pedidos.jpg"/>
+                <img src="../assets/img/country-house-50-green.png"/>
               </div>
               <div class="service-content">
                 <h6>{{ t('orders') }}</h6>

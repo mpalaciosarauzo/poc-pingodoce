@@ -10,4 +10,10 @@ de:
   logout: "Abmelden"
   description: "Über Ihr Konto-Dashboard können Sie ganz einfach Ihre letzten Bestellungen überprüfen und anzeigen.
        Verwalten Sie Ihre Versand- und Rechnungsadressen und bearbeiten Sie Ihr Passwort und Ihre Kontodaten."
+pt:
+  greeting: "Olá"
+  notYou: "Se não for você"
+  logout: "Fechar Sessão"
+  description: "No painel da sua conta, você pode verificar e visualizar facilmente seus pedidos recentes,
+       gerencie seus endereços de envio e cobrança e edite sua senha e detalhes da conta."
 

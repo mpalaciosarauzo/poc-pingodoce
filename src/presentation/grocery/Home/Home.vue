@@ -24,30 +24,39 @@
     </div>
     <div class="pt-40 pl-120 pr-120 pb-30 text-center">
       <div class="d-flex justify-content-around">
-        <div>
-          <a href="https://www.pingodoce.pt/receitas/" target="_blank">
-            <img class="receitas"
-              src="https://www.pingodoce.pt/wp-content/uploads/2022/10/receitas-one-pot.jpg"
-            />
-          </a>
+        <div class="card" style="width: 22rem; background-color: #000000; border-style: none;">
+          <img class="card-img-top receitas"
+            src="https://www.pingodoce.pt/wp-content/uploads/2022/10/receitas-one-pot.jpg"/>
+          <div class="card-body pr-70 pl-70 pb-50 pt-50">
+            <a href="https://www.pingodoce.pt/receitas/" target="_blank"> 
+              <p class="card-text" style="color: #fefefe;"> O que lhe apetece comer hoje? Temos sugestões saudáveis e equilibradas para ajudar a planear os seus
+              almoços e jantares
+              </p>
+            </a>
+          </div>
         </div>
-        <div>
-          <a
-            href="https://www.pingodoce.pt/produtos/frescos/" target="_blank"
-          >
-            <img class="frescos"
-              src="https://www.pingodoce.pt/wp-content/uploads/2021/06/dourada-costa-da-madeira-pingo-doce.jpg"
-            />
-          </a>
+
+        <div class="card" style="width: 22rem; background-color: #000000; border-style: none;">
+          <img class="card-img-top frescos"
+            src="https://www.pingodoce.pt/wp-content/uploads/2021/06/dourada-costa-da-madeira-pingo-doce.jpg"/>
+          <div class="card-body pr-70 pl-70 pb-50 pt-50">
+            <a href="https://www.pingodoce.pt/produtos/frescos/" target="_blank"> 
+              <p class="card-text" style="color: #fefefe;"> Os frescos fazem parte da essência do Pingo Doce. A carne mais tenra, 
+                o peixe mais fresco e a fruta e os legumes acabados de colher
+              </p>
+            </a>
+          </div>
         </div>
-        <div>
-          <a
-            href="https://www.pingodoce.pt/produtos/marca-propria-pingo-doce/" target="_blank"
-          >
-            <img class="marcas"
-              src="https://www.pingodoce.pt/wp-content/uploads/2022/10/Destaque_GoActive-2.jpg"
-            />
-          </a>
+
+        <div class="card" style="width: 22rem; background-color: #000000; border-style: none;">
+          <img class="card-img-top marcas"
+            src="https://www.pingodoce.pt/wp-content/uploads/2022/10/Destaque_GoActive-2.jpg"/>
+          <div class="card-body pr-70 pl-70 pb-50 pt-50">
+            <a href="https://www.pingodoce.pt/produtos/marca-propria-pingo-doce/" target="_blank"> 
+              <p class="card-text" style="color: #fefefe;"> O melhor preço que a qualidade pode ter
+              </p>
+            </a>
+          </div>
         </div>
       </div>
     </div>

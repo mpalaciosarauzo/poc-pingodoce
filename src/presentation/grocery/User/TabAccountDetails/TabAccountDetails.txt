@@ -16,3 +16,9 @@ de:
   firstName: "Vorname"
   lastName: "Nachname"
   email: "Email Adresse"
+pt:
+  title: "Detalhes da conta"
+  saveBtn: "Salvar alterações"
+  firstName: "Primeiro nome"
+  lastName: "Sobrenome"
+  email: "Endereço de email"
