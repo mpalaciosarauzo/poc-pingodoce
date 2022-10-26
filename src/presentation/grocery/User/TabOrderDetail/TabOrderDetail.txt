@@ -46,3 +46,19 @@ de:
   return: Artikel zurückschicken
   orderItemsTitle: Artikel bestellen
   returnedItemsTitle: Zurückgegebene Artikel
+pt:
+  title: Detalhes do seu pedido
+  orderNumber: Número do pedido
+  date: Data do pedido
+  shippingAddress: Endereço de entrega
+  billingAddress: Endereço de cobrança
+  shippingMethod: Método de envio
+  paymentDetails: Detalhes do pagamento
+  subtotal: Subtotal
+  shipping: Envio
+  appliedDiscounts: Descontos aplicados
+  total: Total
+  notFound: Pedido não encontrado
+  return: Devolver um item
+  orderItemsTitle: Itens de ordem
+  returnedItemsTitle: Itens devolvidos

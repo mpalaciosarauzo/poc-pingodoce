@@ -16,3 +16,9 @@ de:
   price: "Preis"
   total: "Gesamtpreis"
   returnStatus: "Status"
+pt:
+  description: "Descrição"
+  quantity: "Quantidade"
+  price: "Preço"
+  total: "Total"
+  returnStatus: "Status"

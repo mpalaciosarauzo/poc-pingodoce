@@ -2,3 +2,7 @@ es:
     promos: "Mis promociones"
     validUntil: "Válido hasta "
     emptyPromos: "No tiene promociones activas"
+pt:
+    promos: "Minhas promoções"
+    validUntil: "Valido ate "
+    emptyPromos: "Você não tem promoções ativas"

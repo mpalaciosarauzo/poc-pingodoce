@@ -18,4 +18,4 @@ pt:
   quickView: Olhada rápida
   moreColors: Mais cores
   add: Adicionar item à lista de desejos
-  addToCart: Añadir
+  addToCart: Adicionar
