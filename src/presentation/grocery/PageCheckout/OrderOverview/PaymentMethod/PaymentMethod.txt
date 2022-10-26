@@ -7,3 +7,6 @@ en:
 de:
   creditCard: "Kreditkarte"
   paymentMethod: "Zahlungsweise"
+pt:
+  creditCard: "Cartão de crédito"
+  paymentMethod: "Forma de pagamento"

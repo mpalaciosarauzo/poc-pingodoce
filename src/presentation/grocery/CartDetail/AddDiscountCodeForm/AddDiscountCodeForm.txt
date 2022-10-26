@@ -10,3 +10,7 @@ de:
   code: "Rabattcode"
   apply: "Anwenden"
   nonApplicable: "Dieser Rabattcode ist nicht anwendbar"
+pt:
+  code: "Código de desconto"
+  apply: "Aplicar"
+  nonApplicable: "Este código de desconto não é aplicável"

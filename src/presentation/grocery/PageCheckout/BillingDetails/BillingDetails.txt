@@ -13,3 +13,8 @@ de:
   billingDetails: "Rechnungsdetails"
   orderNotes: "Bestellhinweise (optional)"
   notesPlaceholder: "Hinweise zu Ihrer Bestellung, z. Besondere Hinweise zur Lieferung."
+pt:
+  differentAddress: "Envie para um endereço diferente?"
+  billingDetails: "Detalhes de faturamento"
+  orderNotes: "Notas do pedido (opcional)"
+  notesPlaceholder: "Comentários sobre o seu pedido, por exemplo, observações especiais para entrega."

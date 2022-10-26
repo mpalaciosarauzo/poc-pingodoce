@@ -7,4 +7,7 @@ en:
 de:
   thankYou: "Vielen Dank für Ihre Bestellung!"
   continueShopping: "Weiter einkaufen"
+pt:
+  thankYou: "Obrigado pelo seu pedido!"
+  continueShopping: "Continuar comprando"
 

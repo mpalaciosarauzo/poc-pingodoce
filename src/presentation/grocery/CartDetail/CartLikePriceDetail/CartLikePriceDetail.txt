@@ -22,3 +22,11 @@ de:
   total: "Gesamtpreis"
   discount: "Rabatt"
   checkout: "Zur Kasse"
+pt:
+  cartTotals: "Total do carrinho"
+  subtotal: "Subtotal"
+  shipping: "Envio"
+  salesTax: "Imposto sobre vendas"
+  total: "Total"
+  discount: "Desconto"
+  checkout: "Pagar"
