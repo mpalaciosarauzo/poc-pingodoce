@@ -8,7 +8,7 @@
     <div class="banner-home">
       <img
         width="1440"
-        height="auto"
+        height="600"
         src="https://www.pingodoce.pt/wp-content/uploads/2022/09/banner_principal.png"
         class="lazy-load vc_single_image-img attachment-full is-loaded"
         alt="Cada loja Pingo Doce vai apoiar a causa mais votada com até 1.000€"
@@ -18,7 +18,7 @@
 
     <div class="pt-30 pl-15 text-center">
       <img
-        src="https://www.consum.es/wp-content/uploads/2022/05/1208x256-banner-1º-JUNIO-CASTE.gif"
+        src="../assets/img/PingoDoceOctubre_11.gif"
         class="d-inline-block;"
       />
     </div>
@@ -61,7 +61,7 @@
       </div>
     </div>
 
-    <div class="banner-area pt-30 d-none">
+    <!-- <div class="banner-area pt-30 d-none">
       <div class="custom-container">
         <div class="row">
           <div class="col-lg-4 col-md-4 col-xs-12">
@@ -172,7 +172,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <Icons />
   </span>
 </template>
