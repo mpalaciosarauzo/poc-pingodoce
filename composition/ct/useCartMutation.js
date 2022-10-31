@@ -115,6 +115,7 @@ export const addLineItem = (sku, quantity, channel) => [
     },
   },
 ];
+
 export const setLineItemPrice = (lineItemId, weightFinalQtyPrice) => [
   {
     setLineItemPrice: {
