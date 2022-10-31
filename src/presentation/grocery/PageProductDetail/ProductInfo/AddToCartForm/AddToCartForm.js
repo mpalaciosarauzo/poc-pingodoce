@@ -7,6 +7,8 @@ import BaseForm from 'presentation/components/BaseForm/BaseForm.vue';
 import BaseInput from 'presentation/components/BaseInput/BaseInput.vue';
 import ServerError from 'presentation/components/ServerError/ServerError.vue';
 import useCartTools from 'hooks/useCartTools';
+import useProductTools from 'hooks/useProductTools';
+
 import { useStore } from 'vuex';
 function Rules() {
   this.quantity = { required, numeric };
@@ -46,8 +48,8 @@ export default {
     const rules = new Rules(form);
     const v = useVuelidate(rules, form);
     const showQuantityError = shallowRef(false);
-    const { addLine, setLIPrice } = useCartTools();
-    
+    const { addLine, addLineById, setLIPrice } = useCartTools();
+
     const weightFinalQtyPrice = ref('');
     const store = useStore();
     const setVariablePrice = (response) => {
@@ -60,8 +62,44 @@ export default {
         setLIPrice(itemVariableWeight.lineId, weightFinalQtyPrice.value, response.data.updateMyCart.version, response.data.updateMyCart.id);
       }
     }
-    const addLineItem = () =>
-      addLine(props.sku, Number(form.value.quantity), setVariablePrice);
+
+
+    const { currentVariant } =
+    useProductTools(true);
+
+    const addLineItem = () => {
+      // check if it is a recipe product type
+      if (props.productId === '135944ba-fe38-4138-8a3c-a93cc8ec6a41') {
+        var produtos = getProdutos(currentVariant);
+        console.log(JSON.stringify(produtos));
+        var arrayProductId=[];
+        produtos.forEach(function (prod) {
+          console.log('Agrego al carrito el productID '+prod.id);
+          arrayProductId.push(prod.id);
+          
+        }); 
+        addLineById(arrayProductId, Number(1), null);
+      }
+      // regular type
+      else{
+        addLine(props.sku, Number(form.value.quantity), setVariablePrice);
+      }
+      
+    }
     return { t, addLineItem, v, showQuantityError };
+    
   },
 };
+
+function getProdutos(currentVariant){
+  var produtos = [];
+
+  currentVariant.value.attributesRaw.forEach(function (attribute) {
+    if(attribute.name==='produtos'){
+
+      produtos=attribute.value;
+      
+    }
+  }); 
+  return produtos;
+}
