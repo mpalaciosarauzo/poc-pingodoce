@@ -5,6 +5,7 @@ import useCurrency from './useCurrency';
 import useLocation from './useLocation';
 import {
   addLineItem,
+  addLineItemById,
   setLineItemPrice,
   changeCartLineItemQuantity,
   removeLineItem,
@@ -21,6 +22,7 @@ import { apolloClient, cache } from '../src/apollo';
 import useAccessRules from './useAccessRules';
 export {
   addLineItem,
+  addLineItemById,
   changeCartLineItemQuantity,
   removeLineItem,
   addDiscountCode,
@@ -73,6 +75,28 @@ export const useCartActions = () => {
     mutateCart(
       addLineItem(sku, quantity, channel.value?.id), setVariablePrice
     );
+
+
+  const addLineById = (arrayProductId, quantity, setVariablePrice) => {
+
+    var updateActions = [];
+    arrayProductId.forEach(function (id) {
+      updateActions.push({
+        addLineItem: {
+          productId:id,
+          quantity:quantity
+        }
+      });
+    }); 
+    
+    mutateCart(
+      updateActions, setVariablePrice
+    );
+
+  }
+    
+    
+
   const setLIPrice = (lineItemId, weightFinalQtyPrice, version, id) => 
     mutateUpdateCart(setLineItemPrice(lineItemId, weightFinalQtyPrice), version, id);
   const applyDiscount = (code) =>
@@ -149,6 +173,7 @@ export const useCartActions = () => {
     applyDiscount,
     removeDiscount,
     addLine,
+    addLineById,
     setLIPrice,
     setShippingMethod: setShip,
     setBillingAddress: setBilling,
