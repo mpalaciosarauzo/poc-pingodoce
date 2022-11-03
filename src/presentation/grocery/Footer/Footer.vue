@@ -217,7 +217,7 @@
             <div
               class="footer-widget copyright-2 text-center"
             >
-              <p>© 2021 Consum S. Coop. V. Todos los derechos reservados</p>
+              <p>© 2022 A sociedade Pingo Doce – Distribuição Alimentar, S.A. Todos os direitos reservados</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-4 col-sm-12 col-12">

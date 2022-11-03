@@ -121,9 +121,9 @@ const config = {
     salesExternalId: '6',
   },
   facetSearches: [
-    /* { name: 'Marca', type: 'text', component: 'brand' },
-    { name: 'Peso', type: 'number', component: 'weight' },
-    { name: 'Tipo_de_corte', type: 'text', component: 'cutType' }, */
+    { name: 'Marca', type: 'text', component: 'brand' },
+    { name: 'weight', type: 'number', component: 'weight' },
+    { name: 'tipo_de_corte', type: 'text', component: 'cutType' }
   ],
   detailAttributes: [
     {
@@ -175,7 +175,7 @@ const config = {
       },
     },
   ],
-  variantSelector: ['color', 'size', 'Marca', 'Peso', 'Tipo_de_corte'],
+  variantSelector: ['color', 'size', 'Marca', 'weight', 'tipo_de_corte'],
   variantInProductName: ['size'],
   ...localConfig,
 };

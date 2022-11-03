@@ -19,9 +19,9 @@
         </h2>
         {{cart}}
         <h3>
-          <BasePrice :price="currentVariant.scopedPrice" />{{productType.id === '58f284d8-d777-481f-acaf-cb476ac1d3b5' ? '/kg' : ''}}
+          <BasePrice :price="currentVariant.scopedPrice" />{{productType.id === 'f1a07b46-5104-4446-ba14-0289ef7e5537' ? '/kg' : ''}}
         </h3>
-        <VariableWeightSelector v-if="productType.id === '58f284d8-d777-481f-acaf-cb476ac1d3b5'" :sku="sku" />
+        <VariableWeightSelector v-if="productType.id === 'f1a07b46-5104-4446-ba14-0289ef7e5537'" :sku="sku" />
         <VariantSelector
           :sku="sku"
           :allVariants="allVariants"

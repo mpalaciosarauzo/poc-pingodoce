@@ -53,7 +53,7 @@ export default {
     const weightFinalQtyPrice = ref('');
     const store = useStore();
     const setVariablePrice = (response) => {
-      if (props.productId === '58f284d8-d777-481f-acaf-cb476ac1d3b5') {
+      if (props.productId === 'e9c1efb1-477f-430a-a1f0-c930406362c8') {
         console.log(response);
         const itemVariableWeight = response.data.updateMyCart.lineItems[response.data.updateMyCart.lineItems.length - 1];
         const itemPrice = itemVariableWeight.price.value.centAmount;

@@ -123,8 +123,11 @@ export default {
     const isSelected = (label, value) =>
       score.value.get(props.sku)[label] === value;
     const replaceSlash = (label) => {
+      label = label.toLowerCase().replace(/\b[a-z]/g, function(letter) {
+        return letter.toUpperCase();
+      });
       return label.replaceAll('_', ' ');
-    }
+    } 
     return {
       variants,
       variantChange,
