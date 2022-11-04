@@ -6,7 +6,7 @@
     <ul v-if="categories && categories.length">
       <li
         class="position-static"
-        v-for="category in categories"
+        v-for="category in categoriesWithoutReceita"
         :key="category.id"
         data-test="category-1st-level"
       >

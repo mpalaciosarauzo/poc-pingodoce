@@ -17,4 +17,11 @@ export default {
       isActive,
     };
   },
+  computed: {
+    categoriesWithoutReceita() {
+      return this.categories.filter(category => category.slug !== "receitas");
+    }
+  }
+      
+  
 };

@@ -41,7 +41,7 @@
           ><span>Lista da compra</span>
         </a>
 
-        <DetailsSection :currentVariant="currentVariant" />
+        <DetailsSection :currentVariant="currentVariant" :productDescription="productDescription"/>
       </div>
     </div>
   </div>

@@ -31,6 +31,7 @@ const query = (expand) => gql`
         # https://github.com/apollographql/apollo-client/issues/9429
         productId: id
         name(locale: $locale)
+        description(locale: $locale)
         slug(locale: $locale)
         ${
           expand.variants

@@ -18,6 +18,7 @@
         :currentVariant="currentVariant"
         :allVariants="allVariants"
         :productType="product.productType"
+        :productDescription="product.description"
       />
     </div>
     <!-- <AddToShoppingList
