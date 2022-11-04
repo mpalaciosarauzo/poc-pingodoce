@@ -32,6 +32,7 @@
           :class="{ show: expanded[0] }"
         >
           <div class="panel-body">
+            {{ productDescription }}
             <ul class="product-features-list">
               <li
                 v-for="attribute in attributes"

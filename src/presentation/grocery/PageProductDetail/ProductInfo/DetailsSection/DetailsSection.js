@@ -12,6 +12,9 @@ export default {
       type: Object,
       required: true,
     },
+    productDescription: {
+      type: String
+    }
   },
   setup(props) {
     const { t } = useI18n();

@@ -23,13 +23,16 @@ export default {
     },
     productType: {
       required: true
+    },
+    productDescription: {
+      type: String
     }
   },
   setup(props, { emit }) {
     //@todo: implement open shopping list
     const { product } = useMyProduct({
       sku: props.sku,
-      country: 'ES'
+      country: 'PT'
     });
     const openAddToShoppingList = () => {
       emit('open-add-shopping-list', {

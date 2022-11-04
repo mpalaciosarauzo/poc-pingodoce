@@ -38,7 +38,7 @@ function useVariantSelector ({ sku }) {
     const { loading, error } = useQueryFacade(query, {
         variables: {
             currency: 'EUR',
-            country: 'ES',
+            country: 'PT',
             sku: sku,
         },
         onCompleted: (data) => {
