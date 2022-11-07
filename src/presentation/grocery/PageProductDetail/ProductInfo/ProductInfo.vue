@@ -26,6 +26,7 @@
           :sku="sku"
           :allVariants="allVariants"
         />
+        <VariantNotes v-if="allVariants.length > 1" :sku="sku" />
         <!-- @todo: calculate in stock -->
         <!-- <div v-if="availableQ">
           {{ t('available') }}: {{ availableQuantity }}
