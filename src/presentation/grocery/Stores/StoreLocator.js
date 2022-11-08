@@ -40,13 +40,14 @@ function haversineDistance(mk1, mk2) {
   return d;
 }
 function initialLocation(channel) {
-  const [lng = 10.0015642, lat = 53.5512179] =
+  const [lng = -9.142685, lat = 38.736946] =
     channel.value?.geoLocation?.coordinates || [];
   return { lat, lng };
 }
 export default {
   name: 'StoreLocator',
   setup() {
+    console.log(channel);
     const { t } = useI18n();
     const { channel, setChannel } = useSelectedChannel();
     const center = shallowRef(initialLocation(channel));
