@@ -47,7 +47,6 @@ function initialLocation(channel) {
 export default {
   name: 'StoreLocator',
   setup() {
-    console.log(channel);
     const { t } = useI18n();
     const { channel, setChannel } = useSelectedChannel();
     const center = shallowRef(initialLocation(channel));
