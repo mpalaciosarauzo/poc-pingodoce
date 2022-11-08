@@ -1837,9 +1837,10 @@
     transition: all 0.3s ease 0s;
 
     i {
-      transition: all 0.3s ease 0s;
+      color: #fefefe;
       display: inline-block;
       font-size: 30px;
+      transition: all 0.3s ease 0s;
 
       &:hover {
         color: $theme-color;
@@ -1878,19 +1879,19 @@
         text-align: center;
         font-size: 30px;
         padding: 25px 40px 21px 36px;
-        color: #232324;
+        color: #fefefe;
         transition: all 0.3s ease-out;
         font-weight: 300;
         max-width: 100%;
         height: auto;
-        border-bottom: 2px solid #232324;
+        border-bottom: 2px solid #fefefe;
 
         &::-moz-input-placeholder {
-          color: #232324;
+          color: #fefefe;
         }
 
         &::-webkit-input-placeholder {
-          color: #232324;
+          color: #fefefe;
         }
 
         @media #{$xs-layout} {
