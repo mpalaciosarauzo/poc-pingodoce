@@ -4,6 +4,7 @@ import AddToCartForm from './AddToCartForm/AddToCartForm.vue';
 import DetailsSection from './DetailsSection/DetailsSection.vue';
 import ProductGallery from './ProductGallery/ProductGallery.vue';
 import VariableWeightSelector from './VariableWeightSelector/VariableWeightSelector.vue';
+import VariantNotes from './VariantNotes/VariantNotes.vue';
 import useMyProduct from '../../../../../composition/useProduct';
 
 export default {
@@ -50,5 +51,6 @@ export default {
     BasePrice,
     VariantSelector,
     VariableWeightSelector,
+    VariantNotes,
   },
 };
