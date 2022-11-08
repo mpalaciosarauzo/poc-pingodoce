@@ -40,40 +40,41 @@ function haversineDistance(mk1, mk2) {
   return d;
 }
 function initialLocation(channel) {
-  const [lng = 10.0015642, lat = 53.5512179] =
+  const [lng = -9.142685, lat = 38.736946] =
     channel.value?.geoLocation?.coordinates || [];
   return { lat, lng };
 }
 export default {
   name: 'StoreLocator',
   setup() {
+    console.log(channel);
     const { t } = useI18n();
     const { channel, setChannel } = useSelectedChannel();
     const center = shallowRef(initialLocation(channel));
     const radiusOptions = [
       {
         distance: 25,
-        label: '25 mi',
+        label: '25 km',
       },
       {
         distance: 50,
-        label: '50 mi',
+        label: '50 km',
       },
       {
         distance: 100,
-        label: '100 mi',
+        label: '100 km',
       },
       {
         distance: 500,
-        label: '500 mi',
+        label: '500 km',
       },
       {
         distance: 1000,
-        label: '1000 mi',
+        label: '1000 km',
       },
       {
         distance: 3000,
-        label: '3000 mi',
+        label: '3000 km',
       },
     ];
     const searchRadius = shallowRef(

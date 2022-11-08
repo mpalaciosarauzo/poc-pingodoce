@@ -8,7 +8,7 @@ const query = gql`
     channels(where: $where) {
       results {
         id
-        name(locale: "en")
+        name(locale: "pt")
         address {
           streetNumber
           streetName

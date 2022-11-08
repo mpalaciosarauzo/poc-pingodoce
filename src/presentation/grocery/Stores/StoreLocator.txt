@@ -5,3 +5,7 @@ en:
 de:
   title: Filialsuche
   search: Nach Ort suchen
+pt: 
+  title: Localizador de Lojas
+  search: Pesquisar por local
+  enterPostalCode: Coloque seu Codigo Postal
