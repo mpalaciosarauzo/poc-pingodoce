@@ -17,7 +17,7 @@
 
           <div class="header-right">
             <div class="store-sections">
-              <div class="header-selectors curr-lang-inc">
+              <!-- <div class="header-selectors curr-lang-inc">
                 <ul>
                   <Selector
                     data-test="country-selector-dropdown"
@@ -35,7 +35,7 @@
                     :setValue="setLocale"
                   />
                 </ul>
-              </div>
+              </div> -->
 
               <router-link
                 v-if="showStoreSelector"
@@ -103,35 +103,6 @@
     </div>
   </header>
 </template>
-
-
-<!-- CTA BUTTONS -->
-<!-- <div
-  class="search-content-wrap main-search-active"
-  :class="{ 'search-visible': searchOpen }"
->
-  <a @click="toggleSearch" class="search-close"
-    ><i class="dl-icon-close"></i
-  ></a>
-  <div class="search-content">
-    <form class="search-form">
-      <input
-        name="q"
-        type="text"
-        v-model="search"
-        placeholder="Pesquisar toda a loja…"
-        @submit.prevent="doSearch"
-      />
-      <button
-        @click.prevent="doSearch"
-        class="button-search"
-      >
-        <i class="dl-icon-search10"></i>
-      </button>
-    </form>
-  </div>
-</div> -->
-
 
 <!-- colocar en el footer -->
 <!-- <a href="#">{{ t('help') }}</a> -->
