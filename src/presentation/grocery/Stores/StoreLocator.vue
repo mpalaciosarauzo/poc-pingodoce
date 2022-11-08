@@ -67,12 +67,12 @@
                       {{ channel.name }}
                     </strong>
                     <div class="text-center store-distance">
-                      {{ distance(channel) }} mi away
+                      {{ distance(channel) }} quilômetros de distância
                     </div>
                   </span>
                   <b class="price"> </b>
                   <div class="info">
-                    <div class="info-title">Address:</div>
+                    <div class="info-title">Endereço:</div>
                     <div class="info-content">
                       {{ channel.address.streetNumber }}
                       {{ channel.address.streetName }}
@@ -81,7 +81,7 @@
                       {{ channel.address.postalCode }}
                     </div>
                     <div class="info-title">
-                      Opening hours:
+                      Horário de funcionamento:
                     </div>
                     <div class="info-content">
                       {{ openingHours(channel) }}
