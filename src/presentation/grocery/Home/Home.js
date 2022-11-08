@@ -3,6 +3,10 @@ import Banner from 'presentation/Banner/Banner.vue';
 import BaseMoney from 'presentation/components/BaseMoney/BaseMoney.vue';
 import Icons from 'presentation/Icons/Icons.vue';
 import { useRouter } from 'vue-router';
+import { CUSTOMER } from '../../../constants';
+
+const customer = JSON.parse(localStorage.getItem(CUSTOMER))
+const customerGroup = customer?.customerGroupRef?.customerGroupId === '33cb7626-44eb-4682-b29c-3afabe6f3900' ? 'Loyalty' : 'Customer'
 
 export default {
   name: 'Home',
@@ -21,4 +25,8 @@ export default {
       t,
     };
   },
+  
+  data: () => ({
+    customerGroup: customerGroup
+  })
 };

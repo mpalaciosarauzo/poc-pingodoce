@@ -16,7 +16,14 @@
       />
     </div>
 
-    <div class="pt-30 pl-15 text-center">
+    <div v-if="customerGroup === 'Loyalty'"  class="pt-30 pl-15 text-center">
+      <img
+        src="../assets/img/PingoDoceNoviembre_15.gif"
+        class="d-inline-block;"
+      />
+    </div>
+
+    <div v-if="customerGroup === 'Customer'"  class="pt-30 pl-15 text-center">
       <img
         src="../assets/img/PingoDoceOctubre_11.gif"
         class="d-inline-block;"
