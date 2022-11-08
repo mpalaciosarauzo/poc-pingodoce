@@ -102,7 +102,7 @@
                         :value="channel.id"
                         data-test="select-store"
                       >
-                        Select This Store
+                        Selecione esta loja
                       </button>
                     </div>
                     <div
@@ -115,15 +115,14 @@
                       v-else
                       data-test="unselect-store"
                     >
-                      Selected
+                      Selecionado
                     </div>
                   </div>
                 </div>
               </li>
             </ul>
             <div class="no-stores-found" v-else>
-              No stores found. Try increasing your search
-              radius.
+              Nenhuma loja encontrada. Tente aumentar seu raio de pesquisa.
             </div>
           </div>
         </div>
