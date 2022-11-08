@@ -176,7 +176,6 @@ const createPriceSelector = (
   currency,
   country,
   channel,
-  customerGroup
 ) => ({
   currency: getValue(currency),
   country: getValue(country),
@@ -186,12 +185,7 @@ const createPriceSelector = (
         id: getValue(channel).id,
       }
     : null,
-  customerGroup: getValue(customerGroup)
-    ? {
-        id: getValue(customerGroup),
-        typeId: 'customer-group',
-      }
-    : null,
+  customerGroup: null,
 });
 //this is the React api useQuery(query,options)
 // https://www.apollographql.com/docs/react/api/react/hooks/#function-signature
