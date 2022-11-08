@@ -364,10 +364,11 @@
     transition: all 0.3s ease 0s;
 
     i {
-      transition: all 0.3s ease 0s;
+      color: #fefefe;
       display: inline-block;
       font-size: 30px;
       color: white;
+      transition: all 0.3s ease 0s;
 
       &:hover {
         color: $theme-color;

@@ -90,6 +90,7 @@
             type="text"
             v-model="search"
             placeholder="Pesquisar toda a loja…"
+            onfocus="this.placeholder = ''"
             @submit.prevent="doSearch"
           />
           <button
