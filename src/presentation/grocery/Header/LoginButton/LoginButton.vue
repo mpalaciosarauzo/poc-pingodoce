@@ -3,25 +3,27 @@
 <script src="./LoginButton.js"></script>
 
 <template>
-  <div class="header-login component-same ml-10">
-    <span v-if="showLoggedIn" data-test="login-info-name">
-      <router-link
-        :to="{ name: 'user' }"
-        data-test="login-info-name"
-      >
-        <i class="dl-icon-user12"></i>
-        <span class="target-text hidden-xs hidden-sm">{{
-          t('myAccount')
-        }}</span>
-      </router-link>
-    </span>
-    <span v-else data-test="login-button">
-      <router-link :to="{ name: 'login' }">
-        <i class="dl-icon-user12"></i>
-        <span class="target-text hidden-xs hidden-sm">{{
-          t('signIn')
-        }}</span>
-      </router-link>
-    </span>
-  </div>
+    <router-link
+      v-if="showLoggedIn"
+      :to="{ name: 'user' }"
+      class="header-login account-link"
+      data-test="login-info-name"
+    >
+      <i class="dl-icon-user12" />
+      <span class="target-text hidden-xs hidden-sm">{{
+        t('myAccount')
+      }}</span>
+    </router-link>
+
+    <router-link 
+      v-else 
+      :to="{ name: 'login' }" 
+      class="header-login login-link" 
+      data-test="login-button"
+    >
+      <i class="dl-icon-user12" />
+      <span class="target-text hidden-xs hidden-sm">{{
+        t('Sign in')
+      }}</span>
+    </router-link>
 </template>

@@ -3,167 +3,76 @@
 <script src="./Header.js"></script>
 
 <template>
-  <header class="header-area">
-    <div class="main-header-wrap bg-gray">
+  <header class="header">
+    <div class="main-header-wrap">
       <div class="custom-container">
-        <div class="header-top pt-10 pb-10">
-          <div class="row align-items-center">
-            <div class="col-sm-6">
-              <div class="header-info header-info-inc">
-                <router-link
-                  :to="{ name: 'stores' }"
-                  data-test="stores-link"
-                  v-if="showStoreSelector"
-                >
-                  {{ t('stores') }}
-                </router-link>
-                <a href="#">{{ t('help') }}</a>
-              </div>
-            </div>
-            <div
-              class="col-sm-6 d-flex justify-content-end"
-            >
-              <div class="curr-lang-wrap curr-lang-inc">
+        <div class="header-top">
+          <router-link to="/" class="site-logo">
+            <img
+              src="https://www.pingodoce.pt/wp-content/themes/pingodoce/library/images/v2/supermercados-pingo-doce.png"
+              alt="Pingo Doce"
+              class="img-responsive sunrise-logo"
+            />
+          </router-link>
+
+          <div class="header-right">
+            <div class="store-sections">
+              <div class="header-selectors curr-lang-inc">
                 <ul>
                   <Selector
                     data-test="country-selector-dropdown"
                     v-if="showLocationSelector"
                     :values="locations"
-                    title="location"
+                    title="Location"
                     :value="location"
                     :setValue="setLocation"
                   />
                   <Selector
                     data-test="language-selector-dropdown"
                     :values="locales"
-                    title="language"
+                    title="Language"
                     :value="locale"
                     :setValue="setLocale"
                   />
                 </ul>
               </div>
+
+              <router-link
+                v-if="showStoreSelector"
+                :to="{ name: 'stores' }"
+                data-test="stores-link"
+                class="header-store"
+              >
+                {{ t('Stores') }}
+              </router-link>
+            </div>
+            <div class="user-sections">
+              <button
+                @click.prevent="toggleSearch"
+                class="header-search"
+              >
+                <i class="dl-icon-search10" />
+              </button>
+
+              <LoginButton />
+
+              <button
+                @click.prevent="miniCart.open"
+                data-test="mini-cart-open-button"
+                class="header-cart cart-active"
+              >
+                <i class="dl-icon-cart1" />
+
+                <span class="count-style"
+                  >{{ totalCartItems }}
+                </span>
+              </button>
             </div>
           </div>
         </div>
-      </div>
-      <div class="site-header-outer">
-        <div class="intelligent-header bg-white">
-          <div class="header-middle">
-            <div class="custom-container">
-              <div class="row align-items-center">
-                <div class="col-xl-2 col-lg-3">
-                  <div class="logo">
-                    <router-link to="/">
-                      <img
-                        src="https://www.pingodoce.pt/wp-content/themes/pingodoce/library/images/v2/supermercados-pingo-doce.png"
-                        alt="Pingo Doce"
-                        class="img-responsive sunrise-logo"
-                      />
-                    </router-link>
-                  </div>
-                </div>
-                <div
-                  class="col-xl-8 col-lg-6 position-static"
-                >
-                  <div
-                    class="
-                      main-menu
-                      menu-lh-3
-                      main-menu-blod main-menu-center
-                    "
-                  >
-                    <CategoriesMenu />
-                  </div>
-                </div>
-                <div class="col-xl-2 col-lg-3">
-                  <div class="header-component-wrap">
-                    <div
-                      class="header-search-2 component-same"
-                    >
-                      <a
-                        href
-                        @click.prevent="toggleSearch"
-                        class="search-active"
-                      >
-                        <i class="dl-icon-search10"></i>
-                      </a>
-                    </div>
-                    <LoginButton />
-                    <div
-                      class="cart-wrap component-same ml-10"
-                    >
-                      <a
-                        href
-                        @click.prevent="miniCart.open"
-                        data-test="mini-cart-open-button"
-                        class="cart-active"
-                      >
-                        <i class="dl-icon-cart1"></i>
-                        <span class="count-style"
-                          >{{ totalCartItems }}
-                        </span>
-                      </a>
-                    </div>
-                    <div
-                      class="cart-wrap component-same ml-10"
-                    >
-                      <!-- <router-link
-                        :to="{ name: 'shopping list' }"
-                      >
-                        <i class="dl-icon-heart"></i>
-                        <span class="count-style"
-                          >{{ totalShoppingCartItems }}
-                        </span>
-                      </router-link> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="header-small-mobile">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-6">
-            <div class="mobile-logo logo-width">
-              <a href="/">
-                <img
-                  alt=""
-                  :src="
-                    require('presentation/assets/img/logo.svg')
-                  "
-                />
-              </a>
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="mobile-header-right-wrap">
-              <div class="same-style cart-wrap">
-                <router-link :to="{ name: 'cart' }">
-                  <i class="dl-icon-cart1"></i>
-                  <span class="count-style">{{
-                    totalCartItems
-                  }}</span>
-                </router-link>
-              </div>
-              <div class="same-style cart-wrap">
-                <a href="#" class="cart-active">
-                  <i class="dl-icon-heart"></i>
-                  <span class="count-style">{{
-                    totalShoppingCartItems
-                  }}</span>
-                </a>
-              </div>
-              <div class="mobile-off-canvas">
-                <a class="mobile-aside-button" href="#"
-                  ><i class="dl-icon-menu2"></i
-                ></a>
-              </div>
-            </div>
-          </div>
+
+        <div class="header-bottom">
+          <CategoriesMenu />
         </div>
       </div>
     </div>
@@ -194,3 +103,35 @@
     </div>
   </header>
 </template>
+
+
+<!-- CTA BUTTONS -->
+<!-- <div
+  class="search-content-wrap main-search-active"
+  :class="{ 'search-visible': searchOpen }"
+>
+  <a @click="toggleSearch" class="search-close"
+    ><i class="dl-icon-close"></i
+  ></a>
+  <div class="search-content">
+    <form class="search-form">
+      <input
+        name="q"
+        type="text"
+        v-model="search"
+        placeholder="Pesquisar toda a loja…"
+        @submit.prevent="doSearch"
+      />
+      <button
+        @click.prevent="doSearch"
+        class="button-search"
+      >
+        <i class="dl-icon-search10"></i>
+      </button>
+    </form>
+  </div>
+</div> -->
+
+
+<!-- colocar en el footer -->
+<!-- <a href="#">{{ t('help') }}</a> -->
