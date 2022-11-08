@@ -40,7 +40,7 @@
               </select>
             </div>
           </div>
-          <h3>Stores</h3>
+          <h3>Lojas</h3>
           <div class="addresses">
             <ul class="list" v-if="channels?.length > 0">
               <li
