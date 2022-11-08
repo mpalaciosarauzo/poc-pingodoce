@@ -15,4 +15,3 @@ If you want to use the default merchant center project there is no need to add a
 ```bash
 yarn start
 ```
-
