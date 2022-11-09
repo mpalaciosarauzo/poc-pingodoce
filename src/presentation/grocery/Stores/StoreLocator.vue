@@ -5,9 +5,9 @@
   <div class="store-finder-wrapper">
     <div class="container pt-50">
       <div class="store-location-wrapper">
+        {{markers}}
         <div class="map">
-          <GMapMap :center="center" :zoom="12">
-            <!-- <GMapCluster :zoomOnClick="true">
+          <GMapMap :center="center" :zoom="7">
               <GMapMarker
                 :key="index"
                 v-for="(m, index) in markers"
@@ -16,7 +16,6 @@
                 :draggable="true"
                 @click="center = m.position"
               />
-            </GMapCluster> -->
           </GMapMap>
         </div>
         <div>
