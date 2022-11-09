@@ -40,7 +40,7 @@ function haversineDistance(mk1, mk2) {
   return d;
 }
 function initialLocation(channel) {
-  const [lng = -9.142685, lat = 38.736946] =
+  const [lng = -9.142685, lat = 39.5] =
     channel.value?.geoLocation?.coordinates || [];
   return { lat, lng };
 }
@@ -77,7 +77,7 @@ export default {
       },
     ];
     const searchRadius = shallowRef(
-      radiusOptions[0].distance
+      radiusOptions[3].distance
     );
     const { channels, loading } = useChannels(
       center,
@@ -99,6 +99,35 @@ export default {
       const hours = field && field.value && field.value.en;
       return hours;
     }
+    /* function getMarkers(channels) {
+      var arrayChannels = [];
+      console.log(channels);
+      for(var i = 0; i < channels.length-1; i++){
+        let position = {
+          id: i, 
+          position: {
+            lat: channels[i].geoLocation.coordinates[1],
+            lng: channels[i].geoLocation.coordinates[0]
+          }
+        }
+        arrayChannels.push(position);
+      }
+      return  arrayChannels;
+    } */
+    const markers = [
+        {
+          id: "1",
+          position: {
+            lat: 38.7688154, lng: -9.1012471
+          },
+        },
+        {
+          id: "2",
+          position: {
+            lat: 41.1275793, lng: -8.5832307
+          },
+        },  
+    ]
     function isSelected(c) {
       return channel.value?.name === c.name;
     }
@@ -125,6 +154,7 @@ export default {
       setStore,
       unsetStore,
       openingHours,
+      markers,
       t,
     };
   },
