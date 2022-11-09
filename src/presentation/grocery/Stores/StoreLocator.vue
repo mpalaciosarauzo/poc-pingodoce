@@ -5,7 +5,6 @@
   <div class="store-finder-wrapper">
     <div class="container pt-50">
       <div class="store-location-wrapper">
-        {{markers}}
         <div class="map">
           <GMapMap :center="center" :zoom="7">
               <GMapMarker
