@@ -47,7 +47,7 @@ export default {
         })
         .then(
           () => {
-            id.value = localStorage.getItem("orderId");
+            id.value = localStorage.getItem("orderId");            
             orderComplete.value = true
           },
           (e) => {
