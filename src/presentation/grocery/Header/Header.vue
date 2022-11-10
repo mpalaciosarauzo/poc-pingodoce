@@ -17,7 +17,7 @@
 
           <div class="header-right">
             <div class="store-sections">
-              <div class="header-selectors curr-lang-inc">
+              <!-- <div class="header-selectors curr-lang-inc">
                 <ul>
                   <Selector
                     data-test="country-selector-dropdown"
@@ -35,7 +35,7 @@
                     :setValue="setLocale"
                   />
                 </ul>
-              </div>
+              </div> -->
 
               <router-link
                 v-if="showStoreSelector"
@@ -54,8 +54,6 @@
                 <i class="dl-icon-search10" />
               </button>
 
-              <LoginButton />
-
               <button
                 @click.prevent="miniCart.open"
                 data-test="mini-cart-open-button"
@@ -67,6 +65,8 @@
                   >{{ totalCartItems }}
                 </span>
               </button>
+
+              <LoginButton />
             </div>
           </div>
         </div>

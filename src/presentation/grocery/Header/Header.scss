@@ -332,7 +332,8 @@
   left: 0;
   opacity: 0;
   visibility: hidden;
-  background-color: rgba(255, 255, 255, 0.97);
+  background-color: $theme-color-third;
+  opacity: 0.98;
   text-align: center;
   transition: all ease-in-out 0.25s;
   z-index: 99999;
@@ -364,6 +365,7 @@
 
     i {
       transition: all 0.3s ease 0s;
+      color: white;
       display: inline-block;
       font-size: 30px;
 
@@ -404,19 +406,19 @@
         text-align: center;
         font-size: 30px;
         padding: 25px 40px 21px 36px;
-        color: #232324;
+        color: white;
         transition: all 0.3s ease-out;
         font-weight: 300;
         max-width: 100%;
         height: auto;
-        border-bottom: 2px solid #232324;
+        border-bottom: 2px solid white;
 
         &::-moz-input-placeholder {
-          color: #232324;
+          color: white;
         }
 
         &::-webkit-input-placeholder {
-          color: #232324;
+          color: white;
         }
 
         @media #{$xs-layout} {
