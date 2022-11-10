@@ -1,22 +1,33 @@
-.list-item-user > .nav-list > .list-item-user {
-  @media screen and (max-width: 767px) {
-    width: 100%;
-    border: none;
-  }
-}
-i {
-  display: inline-block;
-  line-height: 20px;
-  font-size: 16px;
-  margin-right: 5px;
-  position: relative;
-  vertical-align: middle;
-}
+.header-login {  
+  outline: none;
+  border: none;
+  background: $theme-color;;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 18px 40px 18px;
+  text-transform: uppercase;
+  line-height: 1;
 
-.target-text {
-  color: #fefefe;
-  display: inline-block;
-  font-size: 14px;
-  vertical-align: middle;
-  transition: all 0s ease 0s;
+  i {
+    display: inline-block;
+    line-height: 20px;
+    font-size: 16px;
+    margin-right: 5px;
+    position: relative;
+    vertical-align: middle;
+  }
+  
+  .target-text {
+    color: #fefefe;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: normal;
+    vertical-align: middle;
+    transition: 3s;   
+
+    &:hover {
+      color: $theme-color;
+    }
+  }
 }
