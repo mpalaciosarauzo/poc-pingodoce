@@ -11,7 +11,9 @@ function useCustomFieldsCustomer({ customerId }) {
         variables: { customerId },
         onCompleted: (data) => {
             console.log(data);
-            setCustomFields(data.customer.custom.customFieldsRaw);
+            if (data.customer.custom) {
+                setCustomFields(data.customer.custom.customFieldsRaw);
+            }
         }
     });
 

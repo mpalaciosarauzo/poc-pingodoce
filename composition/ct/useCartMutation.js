@@ -152,11 +152,89 @@ export const createMyOrderFromCart = (id, version) => {
         ) {
           orderId: id
           version
+          totalPrice{
+            centAmount
+          }
         }
       }
     `,
   };
 };
+
+export function updateLoyatyFields (client, id, version, loyaltyPoints) {
+    return client.mutate({ mutation: gql`
+      mutation updateCustomerCustomFields($id: String!, $version: Long!, $loyaltyPoints: String!) {
+        updateCustomer(
+          version: $version
+          id: $id
+          actions: [
+            {
+              setCustomType: { typeKey:"pingo-customer-type"}
+            }
+            {
+              setCustomField: { name: "loyalty_points", value:$loyaltyPoints}
+            }
+          ]
+        ) {
+          id
+          version
+        }
+      }
+    `,variables: {
+      id, version, loyaltyPoints
+    },
+    })}
+
+
+export function createDiscountCode(
+  client,
+  cartDiscountDraft,
+  code
+) {
+  return client
+    .mutate({
+      mutation: gql`
+        mutation createNewCartDiscount(
+          $draft: CartDiscountDraft!
+        ) {
+          createCartDiscount(draft: $draft) {
+            id
+          }
+        }
+      `,
+      variables: {
+        draft: cartDiscountDraft,
+      },
+    })
+    .then((response) => response.data.createCartDiscount.id)
+    .then((id) =>
+      client.mutate({
+        mutation: gql`
+          mutation createNewDiscountCode(
+            $id: String!
+            $code: String!
+          ) {
+            createDiscountCode(
+              draft: {
+                code: $code
+                cartDiscounts: {
+                  typeId: "cart-discount"
+                  id: $id
+                }
+              }
+            ) {
+              id
+              code
+            }
+          }
+        `,
+        variables: { code, id },
+      })
+    )
+    .then((response) => response.data.createDiscountCode);
+}
+
+
 export const changeCartLineItemQuantity = (
   id,
   quantity

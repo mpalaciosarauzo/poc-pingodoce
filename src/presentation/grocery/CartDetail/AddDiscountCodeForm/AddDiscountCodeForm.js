@@ -5,6 +5,7 @@ import BaseInput from 'presentation/components/BaseInput/BaseInput.vue';
 import { useI18n } from 'vue-i18n';
 import useCartTools from 'hooks/useCartTools';
 import useDiscountCode from 'hooks/useDiscountCode';
+import useCustomerTools from 'hooks/useCustomerTools';
 
 export default {
   components: {
@@ -24,12 +25,25 @@ export default {
       return t('unknownError');
     };
 
+    const tools = useCustomerTools();
+    const { customFields } = tools.useCustomFieldsCustomer();
+    const discountCode = localStorage.getItem("discountCode");
+    const getLoyaltyPoints = () => {
+      if(JSON.parse(localStorage.getItem('CUSTOMER')) != null && customFields.value != null && discountCode!= null){
+        const loyaltyPoints = customFields.value.find((field) => field.name === "loyalty_points")?.value;
+        return 'Tienes ' + loyaltyPoints + ' loyalty points, que equivalen a ' +  loyaltyPoints*0.01 + '€ de descuento usando el código: ' + discountCode;
+      }
+      return 'No tienes cheques';
+    };
+
     return {
       t,
       applyDiscount,
       form,
       getErrorMessage,
       v,
+      getLoyaltyPoints
     };
   },
 };
+
