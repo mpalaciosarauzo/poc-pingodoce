@@ -1,4 +1,6 @@
 import org, {
+  createDiscountCode,
+  updateLoyatyFields,
   usePaymentMutation,
 } from './ct/useCartMutation';
 import useCurrency from './useCurrency';
@@ -14,12 +16,13 @@ import {
   setShippingMethod,
   setBillingAddress,
   setShippingAddress,
-  createMyOrderFromCart,
+  createMyOrderFromCart
 } from './ct/useCartMutation';
 import useSelectedChannel from './useSelectedChannel';
 import { getValue } from '../src/lib';
 import { apolloClient, cache } from '../src/apollo';
 import useAccessRules from './useAccessRules';
+import basic from './ct/useCustomerTools';
 export {
   addLineItem,
   addLineItemById,
@@ -30,15 +33,19 @@ export {
   setShippingMethod,
   setBillingAddress,
   setShippingAddress,
-  createMyOrderFromCart,
+  createMyOrderFromCart
 };
 const useCartMutation = () => {
   const { location } = useLocation();
   const currency = useCurrency();
   return org({ location, currency });
 };
+
 export default useCartMutation;
 
+export const randomNumber = () => {
+  return (Math.random() * (0.900000 - 0.100000) + 0.100000).toFixed(6);
+}
 export const useCartActions = () => {
   const { location } = useLocation();
   const { channel } = useSelectedChannel();
@@ -111,6 +118,7 @@ export const useCartActions = () => {
 
   const setShipping = (address) =>
     mutateCart(setShippingAddress(address));
+
   const createMyOrder = ({
     billingAddress,
     shippingAddress,
@@ -160,6 +168,56 @@ export const useCartActions = () => {
           })
           .then((data) => {
             localStorage.setItem("orderId", data.data.createMyOrderFromCart.orderId);
+            console.log(JSON.stringify(data.data.createMyOrderFromCart));
+            const orderTotal = data.data.createMyOrderFromCart.totalPrice.centAmount;
+
+            const discountRandomCode = Math.random().toString(36).slice(2);
+
+            const customer=JSON.parse(localStorage.getItem("CUSTOMER"));            
+            if(customer){
+              basic
+              .refreshUser().
+              then((result) =>
+                { 
+                  var loyaltyPoints = 0;
+                  if(result.data.me.customer.custom){
+                    loyaltyPoints = result.data.me.customer.custom.customFieldsRaw.find((field) => field.name === "loyalty_points")?.value
+                  }
+                  const updatedloyaltyPoints = (loyaltyPoints + (orderTotal/100)).toString();
+
+                  const discountValue = Math.ceil(Number(updatedloyaltyPoints));
+                  console.log('DPS discountValue: ' + discountValue + ' ' + updatedloyaltyPoints);
+                  const discountDraft = 
+                  {"isActive": true,
+                    "requiresDiscountCode": true,
+                    "sortOrder": randomNumber(),
+                    "target": {"lineItems": {
+                      "predicate": "1 = 1"
+                    }},
+                    "name": {
+                      "locale": "en",
+                      "value": "TestDisc"
+                    },
+                    "cartPredicate": "1 = 1",
+                    "value": 
+                    { "absolute": 
+                      {"money": 
+                        {
+                          "currencyCode": "EUR", 
+                          "centAmount": discountValue
+                        }
+                      }
+                    
+                  
+                  }};
+
+                  createDiscountCode(apolloClient, discountDraft, discountRandomCode);
+                  localStorage.setItem("discountCode",discountRandomCode);
+
+                  updateLoyatyFields(apolloClient, customer.customerId, result.data.me.customer.version, updatedloyaltyPoints);
+                }
+              );
+            }
             cache.evict({ id: 'activeCart' });
             cache.gc();
           });
@@ -178,6 +236,6 @@ export const useCartActions = () => {
     setShippingMethod: setShip,
     setBillingAddress: setBilling,
     setShippingAddress: setShipping,
-    createMyOrderFromCart: createMyOrder,
+    createMyOrderFromCart: createMyOrder
   };
 };
