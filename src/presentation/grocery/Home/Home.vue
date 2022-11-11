@@ -35,7 +35,7 @@
           <img class="card-img-top receitas"
             src="https://www.pingodoce.pt/wp-content/uploads/2022/10/receitas-one-pot.jpg"/>
           <div class="card-body pr-70 pl-70 pb-50 pt-50">
-            <router-link
+            <router-link @click="scrollToTop()" 
               :to="{
                 name: 'products',
                 params: { categorySlug: 'receitas' },

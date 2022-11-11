@@ -24,6 +24,13 @@ export default {
     return {
       t,
     };
+
+  },
+
+  methods: { 
+    scrollToTop() {
+      window.scrollTo(0,0);
+    }
   },
   
   data: () => ({
