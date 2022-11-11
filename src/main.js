@@ -17,7 +17,7 @@ const app = createApp({
 })
   .use(VueGoogleMaps, {
     load: {
-      key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg",
+      key: "AIzaSyD12zf4RjG7Ey0QvV-UBTQKjuk_CLckLTY",
       libraries: 'places',
     },
   })
