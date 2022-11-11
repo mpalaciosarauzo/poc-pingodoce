@@ -35,11 +35,16 @@
           <img class="card-img-top receitas"
             src="https://www.pingodoce.pt/wp-content/uploads/2022/10/receitas-one-pot.jpg"/>
           <div class="card-body pr-70 pl-70 pb-50 pt-50">
-            <a href="/PT/pt/products/receitas"> 
+            <router-link
+              :to="{
+                name: 'products',
+                params: { categorySlug: 'receitas' },
+              }"
+            >
               <p class="card-text" style="color: #fefefe;"> O que lhe apetece comer hoje? Temos sugestões saudáveis e equilibradas para ajudar a planear os seus
               almoços e jantares
               </p>
-            </a>
+            </router-link>
           </div>
         </div>
 
