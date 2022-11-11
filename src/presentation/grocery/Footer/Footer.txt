@@ -21,7 +21,7 @@ es:
   worths: "Misión, visión y valores"
   organization: "Órganos de dirección, administración y control"
   ethics: "Código Ético y Canal Denuncias"
-  supermarkets: "Comunicação de Irregularidades"
+  supermarkets: "Nuestros supermercados"
   logistic: "Red logística"
   press: "Prensa"
   
@@ -114,5 +114,5 @@ pt:
   worths: "Junte-se a nós"
   organization: "Grupo Jerónimo Martins"
   ethics: "Responsabilidade"
-  supermarkets: "Nossos supermercados"
+  supermarkets: "Comunicação de Irregularidades"
   logistic: "Acessibilidade"
