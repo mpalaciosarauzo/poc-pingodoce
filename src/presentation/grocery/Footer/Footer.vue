@@ -64,14 +64,6 @@
                       <span>{{ t('facebook') }}</span>
                     </a>
                   </li>
-                  <!-- <li>
-                    <a href="https://twitter.com/consum" target="_blank">
-                      <i class="lab la-twitter"></i>
-                      <span>{{
-                        t('twitter')
-                      }}</span>
-                    </a>
-                  </li> -->
                   <li>
                     <a href="https://www.youtube.com/user/pingodocept" target="_blank">
                       <i class="lab la-youtube"></i>
@@ -84,12 +76,6 @@
                       <span>{{ t('instagram') }}</span>
                     </a>
                   </li>
-                  <!-- <li>
-                    <a href="https://www.linkedin.com/company/consum-cooperativa-valenciana" target="_blank">
-                      <i class="lab la-linkedin"></i>
-                      <span>{{ t('linkedin') }}</span>
-                    </a>
-                  </li> -->
                 </ul>
               </div>
             </div>
@@ -102,33 +88,23 @@
               <div class="footer-list">
                 <ul>
                   <li>
-                    <a href="https://www.consum.es/aviso-legal" target="_blank">
-                      {{ t('legal_notice') }}
+                    <a href="https://www.pingodoce.pt/termos-condicoes/#cookies" target="_blank">
+                      {{ t('cookies_policy') }}
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.consum.es/politica-de-privacidad" target="_blank">
-                      {{ t('data_privacy') }}
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://tienda.consum.es/site/es/psd2" target="_blank">
-                      {{ t('psd2') }}
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.consum.es/condiciones-de-uso" target="_blank">
+                    <a href="https://www.pingodoce.pt/termos-condicoes/" target="_blank">
                       {{ t('use_terms') }}
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.consum.es/politica-de-privacidad" target="_blank">
-                      {{ t('privacy') }}
+                    <a href="https://www.pingodoce.pt/termos-condicoes/#dadospessoais" target="_blank">
+                      {{ t('data_privacy') }}
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.consum.es/politica-de-cookies" target="_blank">
-                      {{ t('cookies_policy') }}
+                    <a href="https://www.pingodoce.pt/acordo-ortografico/" target="_blank">
+                      {{ t('legal_notice') }}
                     </a>
                   </li>
                 </ul>
@@ -143,13 +119,18 @@
               <div class="footer-list">
                 <ul>
                   <li>
-                    <a href="https://ayuda.consum.es/hc/es/" target="_blank">
+                    <a href="https://www.pingodoce.pt/apoio-ao-cliente/" target="_blank">
                       {{ t('customer_support') }}
                     </a>
                   </li>
                   <li>
-                    <a href="https://tienda.consum.es/site/es/faq" target="_blank">
+                    <a href="https://www.pingodoce.pt/apoio-ao-cliente/perguntas-frequentes/" target="_blank">
                       {{ t('faqs') }}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.pingodoce.pt/apoio-ao-cliente/#contactos" target="_blank">
+                      {{ t('contact') }}
                     </a>
                   </li>
                 </ul>
@@ -166,37 +147,37 @@
               <div class="footer-list">
                 <ul>
                   <li>
-                    <a href="https://www.consum.es/historia" target="_blank">
+                    <a href="https://www.pingodoce.pt/sobre-nos/" target="_blank">
                       {{ t('history') }}
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.consum.es/mision-vision-y-valores" target="_blank">
+                    <a href="https://www.pingodoce.pt/junte-se-a-nos/" target="_blank">
                       {{ t('worths') }}
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.consum.es/organigrama" target="_blank">
+                    <a href="https://www.jeronimomartins.com/en/" target="_blank">
                       {{ t('organization') }}
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.consum.es/codigo-etico-canal-denuncias" target="_blank">
+                    <a href="https://www.pingodoce.pt/responsabilidade/" target="_blank">
                       {{ t('ethics') }}
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.consum.es/nuestros-supermercados" target="_blank">
+                    <a href="https://www.pingodoce.pt/comunicacao-de-irregularidades/" target="_blank">
                       {{ t('supermarkets') }}
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.consum.es/red-logistica" target="_blank">
+                    <a href="https://www.pingodoce.pt/acessibilidade/" target="_blank">
                       {{ t('logistic') }}
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.consum.es/prensa" target="_blank">
+                    <a href="https://www.pingodoce.pt/sobre-nos/noticias/" target="_blank">
                       {{ t('press') }}
                     </a>
                   </li>

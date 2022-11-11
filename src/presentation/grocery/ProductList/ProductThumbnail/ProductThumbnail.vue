@@ -30,8 +30,7 @@
         </router-link>
         
       </div>
-      <div class="product-content text-center mt-15">
-        <h3>{{marca}}</h3>
+      <div class="product-content text-center">
         <h3>
           <router-link
             :to="productRoute(product.slug, product.sku)"
@@ -39,7 +38,7 @@
             >{{ product.name }}
           </router-link>
         </h3>
-        <div class="product-price" v-if="hasPrice">
+        <div class="product-price mt-25" v-if="hasPrice">
           <BasePrice
             :price="product?.masterVariant?.scopedPrice"
           />
