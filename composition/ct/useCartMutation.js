@@ -161,7 +161,7 @@ export const createMyOrderFromCart = (id, version) => {
   };
 };
 
-export function updateLoyatyFields (client, id, version, loyaltyPoints) {
+export function updateLoyaltyFields (client, id, version, loyaltyPoints) {
     return client.mutate({ mutation: gql`
       mutation updateCustomerCustomFields($id: String!, $version: Long!, $loyaltyPoints: String!) {
         updateCustomer(
@@ -184,6 +184,31 @@ export function updateLoyatyFields (client, id, version, loyaltyPoints) {
       id, version, loyaltyPoints
     },
     })}
+
+
+    export function updateDeliveryDate (deliveryDate, id, version) {
+      return apolloClient.mutate({ mutation: gql`
+        mutation updateCartCustomFields($id: String!, $version: Long!, $deliveryDate: String!) {
+          updateCart(
+            version: $version
+            id: $id
+            actions: [
+              {
+                setCustomType: { typeKey:"pingo-cart-type"}
+              }
+              {
+                setCustomField: { name: "delivery_date", value:$deliveryDate}
+              }
+            ]
+          ) {
+            id
+            version
+          }
+        }
+      `,variables: {
+        id, version, deliveryDate
+      },
+      })}
 
 
 export function createDiscountCode(
