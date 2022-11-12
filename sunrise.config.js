@@ -130,51 +130,57 @@ const config = {
   ],
   detailAttributes: [
     {
-      name: 'designer',
+      name: 'tipo_de_corte',
       label: {
         it: 'Designer',
         de: 'Designer',
         en: 'Designer',
+        pt: 'Tipo de Corte'
       },
     },
     {
-      name: 'colorFreeDefinition',
+      name: 'weight',
       label: {
         it: 'Color',
         de: 'Farbe',
         en: 'Color',
+        pt: 'Peso em gramas'
       },
     },
     {
-      name: 'size',
+      name: 'production_origin',
       label: {
         it: 'Size',
         de: 'Grösse',
         en: 'Size',
+        pt: 'Produção'
       },
     },
     {
-      name: 'style',
+      name: 'conservation',
       label: {
         it: 'Style',
         de: 'Stil',
         en: 'Style',
+        pt: 'Conservação'
       },
     },
     {
-      name: 'gender',
+      name: 'composition',
       label: {
         it: 'Gender',
         de: 'Zielgruppe',
         en: 'Gender',
+        pt: 'Composição Química'
       },
     },
     {
-      name: 'articleNumberManufacturer',
+      name: 'consumption_suggestions',
       label: {
         it: 'Manufacturer AID',
         de: 'Herstellernummer',
         en: 'Manufacturer AID',
+        pt: 'Sugestões de Consumo'
       },
     },
   ],

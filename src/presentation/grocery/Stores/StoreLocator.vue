@@ -22,7 +22,7 @@
             <h4>{{ t('search') }}</h4>
             <div id="place-radius">
               <GMapAutocomplete
-                placeholder="This is a placeholder"
+                placeholder="Digite a sua localização"
                 id="place-input"
                 @place_changed="setPlace"
               >
