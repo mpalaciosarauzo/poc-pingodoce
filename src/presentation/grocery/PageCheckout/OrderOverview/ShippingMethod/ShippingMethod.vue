@@ -24,6 +24,7 @@
           data-test="checkout-form-shipping-method-price"
         />
       </label>
+      <date-picker v-model:value="datePickerDate" format="YYYY-MM-DD" @change="setDatePickerDate"></date-picker>
       <div class="payment-box payment_method_bacs">
         <p
           data-test="checkout-form-shipping-method-description"

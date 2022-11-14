@@ -4,6 +4,8 @@ import BaseMoney from 'presentation/components/BaseMoney/BaseMoney.vue';
 import { ref, shallowRef, watch } from 'vue';
 import useShippingMethods from 'hooks/useShippingMethods';
 import useCartTools from 'hooks/useCartTools';
+import DatePicker from 'vue-datepicker-next';
+import 'vue-datepicker-next/index.css';
 export default {
   props: {
     cart: {
@@ -13,6 +15,12 @@ export default {
   },
   components: {
     BaseMoney,
+    DatePicker
+  },
+  data() {
+    return {
+      datePickerDate: null
+    }
   },
   setup(props) {
     const { total, loading, error, shippingMethods } =
@@ -59,6 +67,15 @@ export default {
     watch(method, (method) => {
       setSelectedShippingMethod(method);
     });
+
+    
+
+  const setDatePickerDate = (event) => {
+    const result = cartTools.updateDeliveryDate(JSON.stringify(event), props.cart.cartId, props.cart.version);
+    console.log (JSON.stringify(result));
+  }
+
+
     return {
       method,
       total,
@@ -68,6 +85,7 @@ export default {
       price,
       selectedShippingMethod,
       setSelectedShippingMethod,
+      setDatePickerDate,
     };
   },
 };
