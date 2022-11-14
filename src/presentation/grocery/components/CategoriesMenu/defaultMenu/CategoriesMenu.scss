@@ -1,0 +1,18 @@
+.categories-menu {
+    .menu-list {
+        display: flex;
+        justify-content: center;
+
+        .menu-item {
+            a {
+                display: block;
+                padding: 8px 16px;
+                color: white;
+                
+                &:hover {
+                    color: $theme-color; 
+                }
+            }
+        }
+    }
+}
