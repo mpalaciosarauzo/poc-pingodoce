@@ -71,9 +71,8 @@ export default {
     
 
   const setDatePickerDate = (event) => {
-    console.log ('DPSSS' + JSON.stringify(event) + " " + JSON.stringify(props.cart.cartId)+ " " + props.cart.version);
-    const updateCart = cartTools.updateDeliveryDate(JSON.stringify(event), props.cart.cartId, props.cart.version);
-    console.log ('DPSSS2' + JSON.stringify(updateCart));
+    const result = cartTools.updateDeliveryDate(JSON.stringify(event), props.cart.cartId, props.cart.version);
+    console.log (JSON.stringify(result));
   }
 
 

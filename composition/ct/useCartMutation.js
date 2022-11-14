@@ -200,15 +200,19 @@ export function updateLoyaltyFields (client, id, version, loyaltyPoints) {
                 setCustomField: { name: "delivery_date", value:$deliveryDate}
               }
             ]
-          ) {
+          ){
             id
             version
-          }
+          } 
         }
       `,variables: {
         id, version, deliveryDate
       },
-      })}
+      }).then((result) => {         
+        cache.evict({ id: 'activeCart' });
+        cache.gc();
+        return result});
+      }
 
 
 export function createDiscountCode(
