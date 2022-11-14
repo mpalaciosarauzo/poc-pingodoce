@@ -1,6 +1,6 @@
 import org, {
   createDiscountCode,
-  updateLoyatyFields,
+  updateLoyaltyFields,
   usePaymentMutation,
 } from './ct/useCartMutation';
 import useCurrency from './useCurrency';
@@ -16,7 +16,8 @@ import {
   setShippingMethod,
   setBillingAddress,
   setShippingAddress,
-  createMyOrderFromCart
+  createMyOrderFromCart,
+  updateDeliveryDate,
 } from './ct/useCartMutation';
 import useSelectedChannel from './useSelectedChannel';
 import { getValue } from '../src/lib';
@@ -119,6 +120,8 @@ export const useCartActions = () => {
   const setShipping = (address) =>
     mutateCart(setShippingAddress(address));
 
+
+  const updateDelDate = (deliveryDate, id, version) =>  updateDeliveryDate(deliveryDate, id, version);
   const createMyOrder = ({
     billingAddress,
     shippingAddress,
@@ -214,7 +217,7 @@ export const useCartActions = () => {
                   createDiscountCode(apolloClient, discountDraft, discountRandomCode);
                   localStorage.setItem("discountCode",discountRandomCode);
 
-                  updateLoyatyFields(apolloClient, customer.customerId, result.data.me.customer.version, updatedloyaltyPoints);
+                  updateLoyaltyFields(apolloClient, customer.customerId, result.data.me.customer.version, updatedloyaltyPoints);
                 }
               );
             }
@@ -236,6 +239,7 @@ export const useCartActions = () => {
     setShippingMethod: setShip,
     setBillingAddress: setBilling,
     setShippingAddress: setShipping,
-    createMyOrderFromCart: createMyOrder
+    createMyOrderFromCart: createMyOrder,
+    updateDeliveryDate: updateDelDate
   };
 };
