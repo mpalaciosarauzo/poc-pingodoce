@@ -43,7 +43,7 @@
                 data-test="stores-link"
                 class="header-store"
               >
-                {{ t('Stores') }}
+                {{ t('stores') }}
               </router-link>
             </div>
             <div class="user-sections">
