@@ -11,10 +11,10 @@ function useAccessRules() {
      * If you want to select stores then you have to use a proxy or BFF or
      * run the risk of clients hacking access to unpublished products
      **/
-    return (
-      cart.value === null &&
+    return (true
+      /*cart.value === null &&
       (config.ct.auth.scope.includes('view_products') ||
-        config.ct.auth.scope.includes('manage_project'))
+        config.ct.auth.scope.includes('manage_project'))*/
     );
   });
   const showLocationSelector = computed(
