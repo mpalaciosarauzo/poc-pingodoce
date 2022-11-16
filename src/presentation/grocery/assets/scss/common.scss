@@ -1437,12 +1437,14 @@ input {
 }
 
 select {
-    width: 100%;
+    width: 13%;
     background: transparent;
     border: 0px solid #eceff8;
     box-shadow: none;
     font-size: 14px;
     color: #737373;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 option {

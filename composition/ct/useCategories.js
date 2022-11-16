@@ -18,6 +18,9 @@ const createQuery = (where) => gql`
           id
           slug(locale: $locale)
           name(locale: $locale)
+          parent {
+            id
+          }
         }
       }
     }
@@ -29,7 +32,7 @@ const createWhere = (categorySlug, rootOnly, locale) => {
           categorySlug
         )}")`
       : false,
-    getValue(rootOnly) ? 'parent is not defined' : false,
+    getValue(rootOnly) ? '' : false,
   ].filter((x) => x);
   return where.length ? where.join(' and ') : null;
 };

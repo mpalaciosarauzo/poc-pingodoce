@@ -20,8 +20,9 @@ export default {
   computed: {
     categoriesWithoutReceita() {
       return this.categories.filter(category => category.slug !== "receitas");
+    },
+    subcategoriesList() {
+      return this.categories.filter(category => category.parent)
     }
   }
-      
-  
 };
