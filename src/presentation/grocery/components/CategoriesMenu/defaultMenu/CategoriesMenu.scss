@@ -14,5 +14,19 @@
                 }
             }
         }
+        .menu-subitem {
+            font-size: 12px;
+            margin-left: 7px;
+
+            a {
+                display: block;
+                padding: 5px 14px;
+                color: white;
+
+                &:hover {
+                    color: $theme-color; 
+                }
+            }
+        }
     }
 }
