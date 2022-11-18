@@ -31,9 +31,9 @@ export default {
     const getLoyaltyPoints = () => {
       if(JSON.parse(localStorage.getItem('CUSTOMER')) != null && customFields.value != null && discountCode!= null){
         const loyaltyPoints = customFields.value.find((field) => field.name === "loyalty_points")?.value;
-        return 'Tienes ' + loyaltyPoints + ' loyalty points, que equivalen a ' +  loyaltyPoints*0.01 + '€ de descuento usando el código: ' + discountCode;
+        return 'Tem ' + loyaltyPoints + ' pontos de fidelização, que equivalem a ' +  loyaltyPoints*0.01 + '€ de desconto com o código:: ' + discountCode;
       }
-      return 'No tienes cheques';
+      return 'Você não tem cheques';
     };
 
     return {
