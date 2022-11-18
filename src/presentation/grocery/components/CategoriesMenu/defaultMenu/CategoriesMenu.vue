@@ -16,23 +16,32 @@
             name: 'products',
             params: { categorySlug: category.slug },
           }" 
-          data-test="category-1st-level-link">
+          data-test="category-1st-level-link"
+          @click="toggle = !toggle"
+        >
             {{ category.name.toUpperCase() }}
         </router-link>
-        <ul>
+        <div v-show="isActive(category.slug) ? 'toggle' : ''">
+          <ul>
           <li v-for="subcategory in subcategoriesList" 
             :key="subcategory.id"
             class="menu-subitem"  
             data-test="category-2nd-level-link"
           >
-            <router-link :class="isActive(subcategory.slug) ? 'active' : ''" :to="{
-              name: 'products',
-              params: { categorySlug: subcategory.slug },
-            }" data-test="category-2nd-level-link" v-if="category.id === subcategory.parent.id">
-              {{ subcategory.name.toUpperCase() }}
+            <router-link 
+              :class="isActive(subcategory.slug) ? 'active' : ''" :to="{
+                name: 'products',
+                params: { categorySlug: subcategory.slug },
+              }" 
+              data-test="category-2nd-level-link" 
+              v-if="category.id === subcategory.parent.id"
+            >
+              {{ subcategory.name }}
             </router-link>
           </li>
         </ul>
+        </div>
+     
       </li>
     </ul>
    
