@@ -3,7 +3,7 @@
 <script src="./ShippingMethod.js"></script>
 
 <template>
-  <div class="payment-method">
+  <div class="shipping-method payment-method">
     <div
       v-for="shippingMethod in shippingMethods"
       :key="shippingMethod.methodId"
