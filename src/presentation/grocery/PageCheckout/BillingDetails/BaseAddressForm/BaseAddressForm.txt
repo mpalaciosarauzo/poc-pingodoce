@@ -42,7 +42,7 @@ de:
   selectCountry: "Land auswählen"
 pt:
   firstName: "Primeiro nome"
-  lastName: "Sobrenome"
+  lastName: "Apelido"
   address: "Endereço"
   streetName: "Número da casa e nome da rua"
   additional: "Apartamento, suíte, unidade etc. (opcional)"

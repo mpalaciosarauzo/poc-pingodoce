@@ -20,5 +20,5 @@ pt:
   title: "Detalhes da conta"
   saveBtn: "Salvar alterações"
   firstName: "Primeiro nome"
-  lastName: "Sobrenome"
+  lastName: "Apelido"
   email: "Endereço de email"
