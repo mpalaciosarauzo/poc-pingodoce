@@ -5,11 +5,22 @@
 <template>
   <span>
     <!-- <Banner /> -->
-    <div class="banner-home">
+    <div class="banner-home" v-if="customerGroup !== 'Loyalty'">
       <img
         width="1440"
         height="600"
         src="https://www.pingodoce.pt/wp-content/uploads/2022/09/banner_principal.png"
+        class="lazy-load vc_single_image-img attachment-full is-loaded"
+        alt="Cada loja Pingo Doce vai apoiar a causa mais votada com até 1.000€"
+        sizes="1120px"
+      />
+    </div>
+
+    <div class="banner-home" v-if="customerGroup === 'Loyalty'">
+      <img
+        width="1440"
+        height="320"
+        src="../assets/img/E_tao_bom.png"
         class="lazy-load vc_single_image-img attachment-full is-loaded"
         alt="Cada loja Pingo Doce vai apoiar a causa mais votada com até 1.000€"
         sizes="1120px"
