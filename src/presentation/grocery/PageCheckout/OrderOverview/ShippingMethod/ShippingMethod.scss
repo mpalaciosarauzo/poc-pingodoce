@@ -1,0 +1,15 @@
+.shipping-method {
+    ::v-deep .mx-datepicker {
+        position: relative;
+        display: inline-block;
+        width: 210px;
+
+        .mx-icon-calendar {
+            position: absolute;
+            top: 7px;
+            right: -25px;
+            transform: translateY(+10%);
+            font-size: 24px;
+        }    
+    }
+}

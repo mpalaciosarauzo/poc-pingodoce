@@ -1,8 +1,9 @@
+<style src="./ShippingMethod.scss" lang="scss" scoped></style>
 <i18n src="./ShippingMethod.txt" lang="yaml"></i18n>
 <script src="./ShippingMethod.js"></script>
 
 <template>
-  <div class="payment-method">
+  <div class="shipping-method payment-method">
     <div
       v-for="shippingMethod in shippingMethods"
       :key="shippingMethod.methodId"
@@ -24,7 +25,7 @@
           data-test="checkout-form-shipping-method-price"
         />
       </label>
-      <date-picker v-model:value="datePickerDate" format="YYYY-MM-DD" @change="setDatePickerDate"></date-picker>
+      <date-picker class="mx-datepicker" v-model:value="datePickerDate" format="YYYY-MM-DD" @change="setDatePickerDate"></date-picker>
       <div class="payment-box payment_method_bacs">
         <p
           data-test="checkout-form-shipping-method-description"
