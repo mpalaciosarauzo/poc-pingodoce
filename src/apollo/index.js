@@ -30,12 +30,13 @@ export const cache = new InMemoryCache({
   },
 });
 const httpLink = createHttpLink({
-  uri: `${config.ct.api}/${config.ct.auth.projectKey}/graphql`
+  uri: (q)=>q.operationName==='products'
+    // `${config.ct.api}/${config.ct.auth.projectKey}/graphql`
     // (q)=>q.operationName==='products'
     // ? `http://localhost:8081/${config.ct.auth.projectKey}/proxy/graphql`
-    // ? `https://nestor-consum-subscription-vikeh6xrjq-ew.a.run.app/${config.ct.auth.projectKey}/proxy/graphql`
+    ? `https://alberto-consum-subscription-vikeh6xrjq-ew.a.run.app/${config.ct.auth.projectKey}/proxy/graphql`
     // ? `${config.ct.api}/${config.ct.auth.projectKey}/graphql`
-    // : `${config.ct.api}/${config.ct.auth.projectKey}/graphql`
+    : `${config.ct.api}/${config.ct.auth.projectKey}/graphql`
   ,
   fetch,
 });
