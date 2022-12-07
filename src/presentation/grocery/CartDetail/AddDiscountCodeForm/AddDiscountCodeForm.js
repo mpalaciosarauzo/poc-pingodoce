@@ -6,6 +6,7 @@ import { useI18n } from 'vue-i18n';
 import useCartTools from 'hooks/useCartTools';
 import useDiscountCode from 'hooks/useDiscountCode';
 import useCustomerTools from 'hooks/useCustomerTools';
+import store from '../../../../store';
 
 export default {
   components: {
@@ -29,7 +30,7 @@ export default {
     const { customFields } = tools.useCustomFieldsCustomer();
     const discountCode = localStorage.getItem("discountCode");
     const getLoyaltyPoints = () => {
-      if(JSON.parse(localStorage.getItem('CUSTOMER')) != null && customFields.value != null && discountCode!= null){
+      if(store.state.customer != null && customFields.value != null && discountCode!= null){
         const loyaltyPoints = customFields.value.find((field) => field.name === "loyalty_points")?.value;
         return 'Tem ' + loyaltyPoints + ' pontos de fidelização, que equivalem a ' +  loyaltyPoints*0.01 + '€ de desconto com o código: ' + discountCode;
       }

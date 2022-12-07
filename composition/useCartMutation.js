@@ -176,7 +176,8 @@ export const useCartActions = () => {
 
             const discountRandomCode = Math.random().toString(36).slice(2);
 
-            const customer=JSON.parse(localStorage.getItem("CUSTOMER"));            
+            //const customer=JSON.parse(localStorage.getItem("CUSTOMER"));
+            const customer = store.state.customer;            
             if(customer){
               basic
               .refreshUser().

@@ -10,6 +10,7 @@ import {
 } from './group';
 import config from '../../sunrise.config';
 import fetch from 'isomorphic-fetch';
+import store from '../store'
 
 const createAuth = (au) => encode(`${au.id}:${au.secret}`);
 const au = {
@@ -144,5 +145,6 @@ export const loginToken = (email, password) => {
 export const logout = () => {
   resetToken();
   localStorage.removeItem(CUSTOMER);
+  store.dispatch('setCustomer', null);
 };
 export default fetchWithToken;
