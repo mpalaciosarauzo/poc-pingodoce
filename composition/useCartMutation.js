@@ -1,6 +1,6 @@
 import org, {
   createDiscountCode,
-  updateLoyaltyFields,
+  // updateLoyaltyFields,
   usePaymentMutation,
 } from './ct/useCartMutation';
 import useCurrency from './useCurrency';
@@ -210,14 +210,12 @@ export const useCartActions = () => {
                           "centAmount": discountValue
                         }
                       }
-                    
-                  
                   }};
 
                   createDiscountCode(apolloClient, discountDraft, discountRandomCode);
                   localStorage.setItem("discountCode",discountRandomCode);
 
-                  updateLoyaltyFields(apolloClient, customer.customerId, result.data.me.customer.version, updatedloyaltyPoints);
+                  // updateLoyaltyFields(apolloClient, customer.customerId, result.data.me.customer.version, updatedloyaltyPoints);
                 }
               );
             }
