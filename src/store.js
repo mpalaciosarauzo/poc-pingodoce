@@ -5,6 +5,7 @@ const SET_WEIGTH_QTY = 'SET_WEIGTH_QTY';
 const SET_PREPARATION_NOTES = 'SET_PREPARATION_NOTES';
 const SET_CART = 'SET_CART';
 const SET_CUSTOMER = 'SET_CUSTOMER';
+const SET_DISCOUNT = 'SET_DISCOUNT';
 
 const store = createStore({
     state () {
@@ -29,6 +30,9 @@ const store = createStore({
         },
         setCustomer: ({ commit }, customer) => {
             commit(SET_CUSTOMER, customer);
+        },
+        setDiscount: ({ commit }, discount) => {
+            commit(SET_DISCOUNT, discount);
         }
     },
     mutations: {
@@ -43,6 +47,9 @@ const store = createStore({
         },
         [SET_CUSTOMER](state, customer) {
             state.customer = customer;
+        },
+        [SET_DISCOUNT](state, discount) {
+            state.discount = discount;
         }
     }
 });

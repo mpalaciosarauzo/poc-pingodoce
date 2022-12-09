@@ -28,7 +28,7 @@ export default {
 
     const tools = useCustomerTools();
     const { customFields } = tools.useCustomFieldsCustomer();
-    const discountCode = localStorage.getItem("discountCode");
+    const discountCode = store.state.discount;
     const getLoyaltyPoints = () => {
       if(store.state.customer != null && customFields.value != null && discountCode!= null){
         const loyaltyPoints = customFields.value.find((field) => field.name === "loyalty_points")?.value;
