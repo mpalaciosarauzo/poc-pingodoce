@@ -1,0 +1,12 @@
+.old-price {
+    margin-right: 8px;
+    ::v-deep span {
+        font-size: 12px !important;
+    }
+}
+
+.new-price {
+    ::v-deep span {
+        font-size: 16px !important;
+    }
+}

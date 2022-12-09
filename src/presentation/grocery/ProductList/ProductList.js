@@ -18,6 +18,7 @@ export default {
     // TopBar,
     Icons,
   },
+  props: ['categorySlug'],
   setup() {
     const { t } = useI18n();
     const { addLine } = useCartTools();

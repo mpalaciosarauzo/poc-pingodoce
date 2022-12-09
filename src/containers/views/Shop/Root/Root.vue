@@ -9,8 +9,13 @@
   >
     <div @click="close()" class="body-overlay"></div>
     <MiniCart />
+
     <router-view name="header" />
-    <router-view />
+
+    <main>
+      <router-view />
+    </main>
+
     <footer>
       <router-view name="footer" />
     </footer>

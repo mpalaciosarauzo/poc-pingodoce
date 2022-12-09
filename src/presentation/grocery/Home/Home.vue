@@ -3,88 +3,128 @@
 <i18n src="./Home.txt" lang="yaml"></i18n>
 
 <template>
-  <span>
+  <div class="home-page">
     <!-- <Banner /> -->
-    <div class="banner-home" v-if="customerGroup !== 'Loyalty'">
-      <img
-        width="1440"
-        height="600"
-        src="https://www.pingodoce.pt/wp-content/uploads/2022/09/banner_principal.png"
-        class="lazy-load vc_single_image-img attachment-full is-loaded"
-        alt="Cada loja Pingo Doce vai apoiar a causa mais votada com até 1.000€"
-        sizes="1120px"
-      />
-    </div>
+    <section
+      v-if="customerGroup === 'Loyalty'"
+      class="home-section image-section animated-banner"
+    >
+      <div class="section-container">
+        <img
+          src="../assets/img/PingoDoceNoviembre_15.gif"
+          class="d-inline-block;"
+        />
+      </div>
+    </section>
 
-    <div class="banner-home" v-if="customerGroup === 'Loyalty'">
-      <img
-        width="1440"
-        height="320"
-        src="../assets/img/E_tao_bom.png"
-        class="lazy-load vc_single_image-img attachment-full is-loaded"
-        alt="Cada loja Pingo Doce vai apoiar a causa mais votada com até 1.000€"
-        sizes="1120px"
-      />
-    </div>
+    <section
+      v-if="customerGroup !== 'Loyalty'"
+      class="home-section image-section raffle-banner"
+    >
+      <div class="section-container">
+        <img
+          src="https://www.pingodoce.pt/wp-content/uploads/2022/09/banner_principal.png"
+          class="lazy-load vc_single_image-img attachment-full is-loaded"
+          alt="Cada loja Pingo Doce vai apoiar a causa mais votada com até 1.000€"
+          sizes="1120px"
+        />
+      </div>
+    </section>
 
-    <div v-if="customerGroup === 'Loyalty'"  class="pt-30 pl-15 text-center">
-      <img
-        src="../assets/img/PingoDoceNoviembre_15.gif"
-        class="d-inline-block;"
-      />
-    </div>
+    <section
+      v-if="customerGroup === 'Customer'"
+      class="home-section image-section gift-banner"
+    >
+      <div class="section-container">
+        <img
+          src="../assets/img/PingoDoceOctubre_11.gif"
+          class="d-inline-block;"
+        />
+      </div>
+    </section>
 
-    <div v-if="customerGroup === 'Customer'"  class="pt-30 pl-15 text-center">
-      <img
-        src="../assets/img/PingoDoceOctubre_11.gif"
-        class="d-inline-block;"
-      />
-    </div>
-    <div class="pt-40 pl-120 pr-120 pb-30 text-center">
-      <div class="d-flex justify-content-around">
-        <div class="card" style="width: 22rem; background-color: #000000; border-style: none;">
-          <img class="card-img-top receitas"
-            src="https://www.pingodoce.pt/wp-content/uploads/2022/10/receitas-one-pot.jpg"/>
-          <div class="card-body pr-70 pl-70 pb-50 pt-50">
-            <router-link @click="scrollToTop()" 
-              :to="{
-                name: 'products',
-                params: { categorySlug: 'receitas' },
-              }"
-            >
-              <p class="card-text" style="color: #fefefe;"> O que lhe apetece comer hoje? Temos sugestões saudáveis e equilibradas para ajudar a planear os seus
-              almoços e jantares
-              </p>
-            </router-link>
+    <section class="home-section product-cards">
+      <div class="section-container">
+        <div class="product-cards-wrapper d-flex">
+          <div class="card">
+            <img
+              class="card-img-top receitas"
+              src="https://www.pingodoce.pt/wp-content/uploads/2022/10/receitas-one-pot.jpg"
+            />
+            <div class="card-body">
+              <router-link
+                @click="scrollToTop()"
+                :to="{
+                  name: 'products',
+                  params: { categorySlug: 'receitas' },
+                }"
+              >
+                <p class="card-text">
+                  O que lhe apetece comer hoje? Temos sugestões saudáveis e
+                  equilibradas para ajudar a planear os seus almoços e jantares
+                </p>
+              </router-link>
+            </div>
           </div>
-        </div>
 
-        <div class="card" style="width: 22rem; background-color: #000000; border-style: none;">
-          <img class="card-img-top frescos"
-            src="https://www.pingodoce.pt/wp-content/uploads/2021/06/dourada-costa-da-madeira-pingo-doce.jpg"/>
-          <div class="card-body pr-70 pl-70 pb-50 pt-50">
-            <a href="https://www.pingodoce.pt/produtos/frescos/" target="_blank"> 
-              <p class="card-text" style="color: #fefefe;"> Os frescos fazem parte da essência do Pingo Doce. A carne mais tenra, 
-                o peixe mais fresco e a fruta e os legumes acabados de colher
-              </p>
-            </a>
+          <div class="card">
+            <img
+              class="card-img-top frescos"
+              src="https://www.pingodoce.pt/wp-content/uploads/2021/06/dourada-costa-da-madeira-pingo-doce.jpg"
+            />
+            <div class="card-body">
+              <a
+                href="https://www.pingodoce.pt/produtos/frescos/"
+                target="_blank"
+              >
+                <p class="card-text">
+                  Os frescos fazem parte da essência do Pingo Doce. A carne mais
+                  tenra, o peixe mais fresco e a fruta e os legumes acabados de
+                  colher
+                </p>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="card" style="width: 22rem; background-color: #000000; border-style: none;">
-          <img class="card-img-top marcas"
-            src="https://www.pingodoce.pt/wp-content/uploads/2022/10/Destaque_GoActive-2.jpg"/>
-          <div class="card-body pr-70 pl-70 pb-50 pt-50">
-            <a href="https://www.pingodoce.pt/produtos/marca-propria-pingo-doce/" target="_blank"> 
-              <p class="card-text" style="color: #fefefe;"> O melhor preço que a qualidade pode ter
-              </p>
-            </a>
+          <div class="card">
+            <img
+              class="card-img-top marcas"
+              src="https://www.pingodoce.pt/wp-content/uploads/2022/10/Destaque_GoActive-2.jpg"
+            />
+            <div class="card-body">
+              <a
+                href="https://www.pingodoce.pt/produtos/marca-propria-pingo-doce/"
+                target="_blank"
+              >
+                <p class="card-text">O melhor preço que a qualidade pode ter</p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- <div class="banner-area pt-30 d-none">
+    <section class="home-section icon-products">
+      <Icons />
+    </section>
+
+    <section
+      v-if="customerGroup === 'Loyalty'"
+      class="home-section image-section media-banner"
+    >
+      <div class="section-container">
+        <img
+          src="../assets/img/E_tao_bom.png"
+          class="lazy-load vc_single_image-img attachment-full is-loaded"
+          alt="Cada loja Pingo Doce vai apoiar a causa mais votada com até 1.000€"
+          sizes="1120px"
+        />
+      </div>
+    </section>
+  </div>
+</template>
+
+<!-- <div class="banner-area pt-30 d-none">
       <div class="custom-container">
         <div class="row">
           <div class="col-lg-4 col-md-4 col-xs-12">
@@ -196,6 +236,3 @@
         </div>
       </div>
     </div> -->
-    <Icons />
-  </span>
-</template>
