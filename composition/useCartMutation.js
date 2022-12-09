@@ -173,8 +173,8 @@ export const useCartActions = () => {
           .then((data) => {
             localStorage.setItem("orderId", data.data.createMyOrderFromCart.orderId);
             console.log(JSON.stringify(data.data.createMyOrderFromCart));
-            const orderTotal = data.data.createMyOrderFromCart.totalPrice.centAmount;
-
+            const orderTotal = data?.data?.createMyOrderFromCart?.totalPrice?.centAmount - (data?.data?.createMyOrderFromCart?.shippingInfo?.price?.centAmount || 0);
+            console.log(orderTotal);
             const discountRandomCode = Math.random().toString(36).slice(2);
 
             //const customer=JSON.parse(localStorage.getItem("CUSTOMER"));
