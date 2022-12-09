@@ -39,6 +39,7 @@ export default [
           header: Header,
           footer: Footer,
         },
+        props: true
       },
       {
         path: 'product/:productSlug/:sku',

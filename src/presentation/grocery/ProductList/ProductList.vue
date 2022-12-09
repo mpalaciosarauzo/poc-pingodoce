@@ -3,7 +3,7 @@
 <script src="./ProductList.js"></script>
 
 <template>
-  <div class="shop-area pb-100">
+  <div class="shop-area">
     <div v-if="error">
       <pre>{{ JSON.stringify(error, undefined, 2) }}</pre>
     </div>
@@ -26,8 +26,13 @@
         :allChannels="allChannels"
         v-bind:show="show"
       /> -->
+
+      <div class="category-header">
+        <h1>{{ categorySlug }}</h1>
+      </div>
+
       <div class="shop-wrapper" v-if="products.length">
-        <div class="row justify-content-around">
+        <div class="row justify-content-center mb-40">
           <!-- @open-quick-view="openQuickView"
             @open-add-shopping-list="openAddToShoppingList" -->
           <ProductThumbnail
@@ -38,31 +43,21 @@
             :addToCart="addToCart"
           />
         </div>
-        <Pagination
-          :total="total"
-          :page="page"
-          :setPage="setPage"
-        />
+        <Pagination :total="total" :page="page" :setPage="setPage" />
       </div>
 
       <div v-else>
         <div class="empty-results-container">
-          <span
-            class="empty-results"
-            data-test="empty-results"
-          >
-            {{ t('notFound') }}
+          <span class="empty-results" data-test="empty-results">
+            {{ t("notFound") }}
           </span>
         </div>
       </div>
     </div>
     <div v-else>
       <div class="empty-results-container">
-        <span
-          class="empty-results"
-          data-test="category-not-found"
-        >
-          {{ t('categoryNotFound') }}
+        <span class="empty-results" data-test="category-not-found">
+          {{ t("categoryNotFound") }}
         </span>
       </div>
     </div>

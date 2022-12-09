@@ -2391,7 +2391,7 @@ span {
   text-align: center;
 
   .service-icon {
-    margin: 0 20px 20px 0;
+    margin-bottom: 20px;
 
     i {
       font-size: 30px;
@@ -2522,6 +2522,60 @@ span {
   transform: scale(1, -1);
 }
 
+/* ONLY HEADER CODE */
+.home-page {
+  .home-section {
+    width: 100%;
+
+    .section-container {
+      width: 100%;
+      max-width: 2000px;
+      margin: 0 auto;
+    }
+
+    &.image-section {
+      .section-container {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    &.product-cards {
+      .section-container {
+        padding: 100px 40px;
+        padding-bottom: 60px;
+
+        .product-cards-wrapper {
+          max-width: 1200px;
+          width: 100%;
+          justify-content: space-between;
+          margin: 0 auto;
+
+          .card {
+            border: none;
+            width: 100%;
+            max-width: 328px;
+            box-shadow: 3px 4px 5px -3px rgb(222 222 222);
+            transition: 0.5s;
+
+            .card-body {
+              .card-text {
+                color: black;
+              }
+            }
+
+            &:hover {
+              box-shadow: 3px 4px 22px -3px rgba(209,209,209,1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ICON CSS */
 .la-icon.files_add:before {
   content: '\e900';
 }

@@ -1,4 +1,23 @@
 /*-------- 16. Shop style ---------*/
+.category-header {
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 40px;
+  padding-bottom: 12px;
+
+  h1 {
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0;
+  }
+}
+
+.shop-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
 .shop-area {
   background-color: #fff;
 }
