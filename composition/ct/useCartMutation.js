@@ -155,6 +155,11 @@ export const createMyOrderFromCart = (id, version) => {
           totalPrice{
             centAmount
           }
+          shippingInfo {
+            price {
+              centAmount
+            }
+          }
         }
       }
     `,
