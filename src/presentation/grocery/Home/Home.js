@@ -3,16 +3,17 @@ import Banner from 'presentation/Banner/Banner.vue';
 import BaseMoney from 'presentation/components/BaseMoney/BaseMoney.vue';
 import Icons from 'presentation/Icons/Icons.vue';
 import { useRouter } from 'vue-router';
-import { CUSTOMER } from '../../../constants';
+import store from '../../../store';
 
-const customer = JSON.parse(localStorage.getItem(CUSTOMER))
-const customerGroup = customer?.customerGroupRef?.customerGroupId === '33cb7626-44eb-4682-b29c-3afabe6f3900' ? 'Loyalty' : 'Customer'
 
 export default {
   name: 'Home',
   components: { Banner, BaseMoney, Icons },
 
   setup() {
+    const customer = store.state.customer
+    const customerGroup = customer?.customerGroupRef?.customerGroupId === '33cb7626-44eb-4682-b29c-3afabe6f3900' ? 'Loyalty' : 'Customer'
+    
     const router = useRouter();
     if (window.innerWidth < 990) {
       router.replace({
@@ -23,6 +24,8 @@ export default {
     const { t } = useI18n();
     return {
       t,
+      customer,
+      customerGroup
     };
 
   },
@@ -32,8 +35,10 @@ export default {
       window.scrollTo(0,0);
     }
   },
-  
-  data: () => ({
-    customerGroup: customerGroup
-  })
+
+  computed: {
+    customer () {
+      return store.state.customer
+    }
+  }
 };

@@ -39,9 +39,11 @@
           </router-link>
         </h3>
         <div class="product-price mt-25" v-if="hasPrice">
-          <BasePrice
+          <span>
+            <BasePrice
             :price="product?.masterVariant?.scopedPrice"
-          />
+            />{{product.productType.id === 'f1a07b46-5104-4446-ba14-0289ef7e5537' ? '/kg' : ''}}
+          </span>
         </div>
         <div class="product-action mt-15">
           <!-- <a href @click.prevent="openAddToShoppingList"

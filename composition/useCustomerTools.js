@@ -20,16 +20,23 @@ import useMyPromos from 'hooks/useMyPromos';
 import useCustomFieldsCustomer from 'hooks/useCustomFieldsCustomer';
 import useVariantSelector from 'hooks/useVariantSelector';
 import useTranslation from 'hooks/useTranslation';
+import store from '../src/store';
+
 const saveCustomerState = (c) => {
+  console.log("c en saveCustomerState", c)
   customerGlobal.setValue(c);
-};
+  store.dispatch('setCustomer', c);
+}
+console.log("CUSTOMER DEL STORE!!!!!!! useCustomerTools", store.state.customer)
+console.log("CUSTOMER DEL LOCALSTORAGE", localStorage.getItem(CUSTOMER))
 const createResetToken = basic.createResetToken;
 const refreshUser = () =>
   basic
     .refreshUser()
-    .then((result) =>
+    .then((result) => {
+      console.log("refreshUser useCsutomerTools",result.data.me.customer)
       saveCustomerState(result.data.me.customer)
-    );
+    });
 const updateUser = ({ firstName, lastName, email }) =>
   basic
     .updateUser({
@@ -39,6 +46,7 @@ const updateUser = ({ firstName, lastName, email }) =>
       email,
     })
     .then((result) => {
+      console.log("updateUser useCsutomerTools", result.data.updateMyCustomer)
       saveCustomerState(result.data.updateMyCustomer);
     });
 const li = (email, password) =>
@@ -48,6 +56,7 @@ const li = (email, password) =>
       return loginToken(email, password).then(() => data);
     })
     .then((result) => {
+      console.log("li useCsutomerTools", result.data.customerSignMeIn.customer)
       saveCustomerState(
         result.data.customerSignMeIn.customer
       );
@@ -62,6 +71,7 @@ const customerGlobal = createReactive(
 );
 function useCustomerTools() {
   const customer = shallowRef(customerGlobal.ref.value);
+  //const customer = store.state.customer;
   const unListen = { fn: () => 88 };
   onMounted(() => {
     unListen.fn = customerGlobal.addListener((newValue) => {
@@ -83,6 +93,7 @@ function useCustomerTools() {
         );
       })
       .then((result) => {
+        console.log("signup useCustomerTools", result.data.customerSignMeUp.customer)
         saveCustomerState(
           result.data.customerSignMeUp.customer
         );
@@ -101,6 +112,7 @@ function useCustomerTools() {
   const logout = () => {
     lo();
     customerGlobal.setValue(null);
+    store.dispatch('setCustomer', null);
     //reset entire cache, customer may have had specific prices
     cache.reset();
     router.push({ name: 'login' });
@@ -133,6 +145,7 @@ function useCustomerTools() {
       })
       .then((result) => {
         const c = result.data.customerChangeMyPassword;
+        console.log("updateMyCustomerPassword useCustomerTools", c)
         saveCustomerState(c);
         return loginToken(c.email, newPassword);
       })

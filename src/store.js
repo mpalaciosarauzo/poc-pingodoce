@@ -1,16 +1,23 @@
 import { createStore } from 'vuex';
+import createPersistedState from "vuex-persistedstate";
 
 const SET_WEIGTH_QTY = 'SET_WEIGTH_QTY';
 const SET_PREPARATION_NOTES = 'SET_PREPARATION_NOTES';
 const SET_CART = 'SET_CART';
+const SET_CUSTOMER = 'SET_CUSTOMER';
+const SET_DISCOUNT = 'SET_DISCOUNT';
 
 const store = createStore({
     state () {
         return {
             weightNumberQty: 1000,
-            cart: {}
+            cart: {}, 
+            customer: null
         }
     },
+    plugins: [createPersistedState({
+        storage: window.sessionStorage,
+    })],
     actions: {
         setWeightQty: ({ commit }, weightNumberQty) => {
             commit(SET_WEIGTH_QTY, weightNumberQty);
@@ -20,6 +27,12 @@ const store = createStore({
         },
         setCart: ({ commit }, cart) => {
             commit(SET_CART, cart);
+        },
+        setCustomer: ({ commit }, customer) => {
+            commit(SET_CUSTOMER, customer);
+        },
+        setDiscount: ({ commit }, discount) => {
+            commit(SET_DISCOUNT, discount);
         }
     },
     mutations: {
@@ -31,8 +44,14 @@ const store = createStore({
         },
         [SET_CART](state, cart) {
             state.cart = cart;
+        },
+        [SET_CUSTOMER](state, customer) {
+            state.customer = customer;
+        },
+        [SET_DISCOUNT](state, discount) {
+            state.discount = discount;
         }
-    }, 
+    }
 });
 
 export default store;

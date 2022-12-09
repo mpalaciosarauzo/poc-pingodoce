@@ -24,6 +24,7 @@ import { getValue } from '../src/lib';
 import { apolloClient, cache } from '../src/apollo';
 import useAccessRules from './useAccessRules';
 import basic from './ct/useCustomerTools';
+import store from '../src/store'
 export {
   addLineItem,
   addLineItemById,
@@ -176,7 +177,8 @@ export const useCartActions = () => {
 
             const discountRandomCode = Math.random().toString(36).slice(2);
 
-            const customer=JSON.parse(localStorage.getItem("CUSTOMER"));            
+            //const customer=JSON.parse(localStorage.getItem("CUSTOMER"));
+            const customer = store.state.customer;            
             if(customer){
               basic
               .refreshUser().
@@ -213,7 +215,8 @@ export const useCartActions = () => {
                   }};
 
                   createDiscountCode(apolloClient, discountDraft, discountRandomCode);
-                  localStorage.setItem("discountCode",discountRandomCode);
+                  // localStorage.setItem("discountCode",discountRandomCode);
+                  store.dispatch('setDiscount', discountRandomCode);
 
                   // updateLoyaltyFields(apolloClient, customer.customerId, result.data.me.customer.version, updatedloyaltyPoints);
                 }
