@@ -28,7 +28,34 @@
       /> -->
 
       <div class="category-header">
-        <h1>{{ categorySlug }}</h1>
+
+        <section
+          v-if="categorySlug === 'frescos'"
+          class="home-section image-section fresh-banner"
+        >
+          <div class="section-container">
+            <img
+              src="../assets/img/Frescos.png"
+              class="d-inline-block;"
+            />
+          </div>
+        </section>
+
+        <section
+          v-else-if="categorySlug === 'bebidas'"
+          class="home-section image-section drinks-banner"
+        >
+          <div class="section-container">
+            <img
+              src="../assets/img/Bebidas.png"
+              class="d-inline-block;"
+            />
+          </div>
+        </section>
+
+        <div v-else-if="categorySlug != ('frescos' || 'bebidas')">
+          <h1>{{ categorySlug }}</h1>
+        </div>
       </div>
 
       <div class="shop-wrapper" v-if="products.length">

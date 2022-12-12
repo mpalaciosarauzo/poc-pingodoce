@@ -20,6 +20,10 @@
         {{cart}}
         <h3>
           <BasePrice :price="currentVariant.scopedPrice" />{{productType.id === 'f1a07b46-5104-4446-ba14-0289ef7e5537' ? '/kg' : ''}}
+          <span v-if="currentVariant.scopedPrice.discounted != null">
+            <DiscountTag 
+              :name="currentVariant?.scopedPrice?.discounted?.discount?.name" />
+          </span>
         </h3>
         <VariableWeightSelector v-if="productType.id === 'f1a07b46-5104-4446-ba14-0289ef7e5537'" :sku="sku" />
         <VariantSelector
