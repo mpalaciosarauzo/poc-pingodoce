@@ -6,6 +6,7 @@ import ProductGallery from './ProductGallery/ProductGallery.vue';
 import VariableWeightSelector from './VariableWeightSelector/VariableWeightSelector.vue';
 import VariantNotes from './VariantNotes/VariantNotes.vue';
 import useMyProduct from '../../../../../composition/useProduct';
+import DiscountTag from 'presentation/components/DiscountTag/DiscountTag.vue';
 
 export default {
   name: 'ProductInfo',
@@ -27,7 +28,11 @@ export default {
     },
     productDescription: {
       type: String
-    }
+    },
+    discount: {
+      type: Object,
+      required: false,
+    },
   },
   setup(props, { emit }) {
     //@todo: implement open shopping list
@@ -52,5 +57,6 @@ export default {
     VariantSelector,
     VariableWeightSelector,
     VariantNotes,
+    DiscountTag,
   },
 };

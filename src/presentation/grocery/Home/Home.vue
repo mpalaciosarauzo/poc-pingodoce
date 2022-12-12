@@ -6,39 +6,27 @@
   <div class="home-page">
     <!-- <Banner /> -->
     <section
-      v-if="customerGroup === 'Loyalty'"
+      v-if="customerGroup && customerGroup != 'Loyalty'"
       class="home-section image-section animated-banner"
     >
       <div class="section-container">
         <img
-          src="../assets/img/PingoDoceNoviembre_15.gif"
+          src="../assets/img/Productos_Pingo_Doce.png"
           class="d-inline-block;"
         />
       </div>
     </section>
 
     <section
-      v-if="customerGroup !== 'Loyalty'"
+      v-if="customerGroup == 'Loyalty'"
       class="home-section image-section raffle-banner"
     >
       <div class="section-container">
         <img
-          src="https://www.pingodoce.pt/wp-content/uploads/2022/09/banner_principal.png"
+          src="../assets/img/Junte-se_a_nos.png"
           class="lazy-load vc_single_image-img attachment-full is-loaded"
-          alt="Cada loja Pingo Doce vai apoiar a causa mais votada com até 1.000€"
+          alt="Junte-se a nós"
           sizes="1120px"
-        />
-      </div>
-    </section>
-
-    <section
-      v-if="customerGroup === 'Customer'"
-      class="home-section image-section gift-banner"
-    >
-      <div class="section-container">
-        <img
-          src="../assets/img/PingoDoceOctubre_11.gif"
-          class="d-inline-block;"
         />
       </div>
     </section>
