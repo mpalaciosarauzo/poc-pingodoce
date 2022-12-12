@@ -6,31 +6,74 @@
   <div class="home-page">
     <!-- <Banner /> -->
     <section
-      v-if="customerGroup && customerGroup != 'Loyalty'"
-      class="home-section image-section animated-banner"
+      v-if="customer == null || customerGroup == 'Customer'"
+      class="home-section image-section christmas-banner"
     >
       <div class="section-container">
         <img
-          src="../assets/img/Productos_Pingo_Doce.png"
-          class="d-inline-block;"
+          src="../assets/img/oNatal.png"
+          class="lazy-load vc_single_image-img attachment-full is-loaded"
+          alt="O Natal do Pingo Doce"
         />
       </div>
     </section>
 
     <section
-      v-if="customerGroup == 'Loyalty'"
-      class="home-section image-section raffle-banner"
+      v-else-if="customerGroup == 'Loyalty'"
+      class="home-section hero-section raffle-banner"
     >
       <div class="section-container">
         <img
-          src="../assets/img/Junte-se_a_nos.png"
-          class="lazy-load vc_single_image-img attachment-full is-loaded"
-          alt="Junte-se a nós"
-          sizes="1120px"
+          src="https://www.pingodoce.pt/wp-content/uploads/2021/11/junte-se-a-nos-pingo-doce.jpg"
+          class="lazy-load vc_single_image-img attachment-full is-loaded section-background"
+          alt="Acesso exlusivo"
         />
+        <div class="content-area">
+          <h1 class="title"> Obrigado por fazer parte do Pingo Doce </h1>
+          <div class="content"> Obtenha acesso exclusivo a ofertas e descontos antes de qualquer outra pessoa </div>
+        </div>
       </div>
     </section>
 
+    <section
+        v-if="customerGroup == 'Customer'"
+        class="home-section image-section vote-banner"
+      >
+        <div class="section-container">
+          <img
+            src="../assets/img/Vote_principal.png"
+            class="d-inline-block;"
+            alt="Vote"
+          />
+        </div>
+      </section>
+
+      <section
+        v-if="customerGroup == 'Loyalty'"
+        class="home-section image-section christmas-banner"
+      >
+        <div class="section-container">
+          <img
+            src="../assets/img/oNatal.png"
+            class="lazy-load vc_single_image-img attachment-full is-loaded"
+            alt="O Natal do Pingo Doce"
+          />
+        </div>
+      </section>
+
+      <section
+        v-if="customer == null || customerGroup == 'Loyalty'"
+        class="home-section image-section product-banner"
+      >
+        <div class="section-container">
+          <img
+            src="../assets/img/Productos_Pingo_Doce.png"
+            class="d-inline-block;"
+            alt="Productos"
+          />
+        </div>
+      </section>
+    
     <section class="home-section product-cards">
       <div class="section-container">
         <div class="product-cards-wrapper d-flex">
@@ -92,12 +135,23 @@
       </div>
     </section>
 
+    <section 
+      class="home-section image-section gif-banner"
+    >
+      <div class="section-container">
+        <img 
+          src="../assets/img/PingoDoceNoviembre_15.gif" 
+          class="d-inline-block;" 
+          alt="Productos" 
+        />
+      </div>
+    </section>
+
     <section class="home-section icon-products">
       <Icons />
     </section>
 
     <section
-      v-if="customerGroup === 'Loyalty'"
       class="home-section image-section media-banner"
     >
       <div class="section-container">

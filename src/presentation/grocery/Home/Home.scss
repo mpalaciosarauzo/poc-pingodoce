@@ -2541,6 +2541,56 @@ span {
       }
     }
 
+    &.hero-section {
+      overflow: hidden;
+
+      .section-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        .section-background {
+          width: 100%;
+        }
+
+        .content-area {
+          z-index: 9;
+          position: absolute;
+          text-align: center;
+
+          .title,
+          .content {
+            color: white;
+          }
+
+          .title {
+            font-size: 48px;
+            font-weight: bold;
+            line-height: 50px;
+          }
+
+          .content {
+            font-size: 16px;
+            line-height: 22px;
+
+          }
+        }
+      }
+    }
+
+    &.raffle-banner {
+      margin-bottom: 50px;
+    }
+
+    &.christmas-banner {
+      margin-bottom: 50px;
+    }
+
+    &.vote-banner {
+      margin-bottom: 50px;
+    }
+
     &.product-cards {
       .section-container {
         padding: 100px 40px;

@@ -13,3 +13,8 @@
     of: von
     next: Nächste
     previous: Vorherige
+  pt:
+    page: Página
+    of: do
+    next: Próxima
+    previous: Anterior

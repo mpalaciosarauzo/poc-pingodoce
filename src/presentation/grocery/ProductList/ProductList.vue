@@ -54,7 +54,7 @@
         </section>
 
         <div v-else-if="categorySlug != ('frescos' || 'bebidas')">
-          <h1>{{ categorySlug }}</h1>
+          <h1>{{ categorySlug.split('-')[0] }}</h1>
         </div>
       </div>
 
