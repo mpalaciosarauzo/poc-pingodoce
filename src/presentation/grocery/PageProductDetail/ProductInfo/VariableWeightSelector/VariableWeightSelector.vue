@@ -8,7 +8,7 @@
       <li>
         <p>Insira o peso em gramas</p>
         <div class="d-flex flex-row justify-content-center align-items-center align-content-center">
-          <input type="number" id="weightQty" v-model="weightSelection" @change="selectedWeight">
+          <input type="number" id="weightQty" v-model="weightSelection.value" @change="selectedWeight">
           <span class="ml-2">Gramas</span>
         </div>
       </li>

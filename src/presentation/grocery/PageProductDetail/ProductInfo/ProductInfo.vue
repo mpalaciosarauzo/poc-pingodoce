@@ -25,7 +25,7 @@
               :name="currentVariant?.scopedPrice?.discounted?.discount?.name" />
           </span>
         </h3>
-        <VariableWeightSelector v-if="productType.id === 'f1a07b46-5104-4446-ba14-0289ef7e5537'" :sku="sku" />
+        <VariableWeightSelector v-if="productType.id === 'f1a07b46-5104-4446-ba14-0289ef7e5537'" :currentVariant="currentVariant" :sku="sku"/>
         <VariantSelector
           :sku="sku"
           :allVariants="allVariants"
