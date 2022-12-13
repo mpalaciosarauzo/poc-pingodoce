@@ -4,13 +4,10 @@
 
 <template>
   <div class="single-grand-total">
-    <div class="single-grand-total-left col-sm-6">
-      <span>{{ t('appliedDiscounts') }}</span>
+    <div class="single-grand-total-left">
+      <span>{{ t("appliedDiscounts") }}</span>
     </div>
-    <div
-      class="single-grand-total-right col-sm-6"
-      data-test="discount-code-name"
-    >
+    <div class="single-grand-total-right" data-test="discount-code-name">
       <div
         v-for="discountInfo in cart.discountCodes"
         :key="discountInfo.discountCode.codeId"

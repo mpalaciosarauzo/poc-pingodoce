@@ -733,6 +733,20 @@ span {
       }
     }
 
+    .variant-selector {
+      margin-bottom: 20px;
+      max-width: 350px;
+    }
+
+    .variant-notes {
+      margin-bottom: 32px;
+      max-width: 350px;
+
+      ::v-deep text-area {
+        max-height: 120px;
+      }
+    }
+
     ::v-deep .product-dec-action-wrap {
       max-width: 350px;
       margin: 0;
