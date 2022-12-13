@@ -14,7 +14,7 @@
           padding: 16px 0 17px;
           color: $theme-color;
           &::after {
-            content: '\f068';
+            content: "\f068";
             color: #262626;
             font-family: FontAwesome;
             position: absolute;
@@ -29,7 +29,7 @@
               color: $theme-color;
             }
             &::after {
-              content: '\f067';
+              content: "\f067";
             }
           }
         }
@@ -176,7 +176,19 @@
   }
 }
 
-.attribute-name {
-  color: #989898;
-  font-size: 13px;
+.description-review-wrapper {
+  .attribute-name {
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+    margin-right: 4px;
+  }
+
+  .product-features-list {
+    margin: 8px 0;
+
+    li {
+      margin-bottom: 8px;
+    }
+  }
 }

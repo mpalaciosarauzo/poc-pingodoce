@@ -28,34 +28,19 @@
       /> -->
 
       <div class="category-header">
-
-        <section
+        <img
           v-if="categorySlug === 'frescos'"
-          class="home-section image-section fresh-banner"
-        >
-          <div class="section-container">
-            <img
-              src="../assets/img/Frescos.png"
-              class="d-inline-block;"
-            />
-          </div>
-        </section>
+          src="../assets/img/Frescos.png"
+          class="category-banner"
+        />
 
-        <section
+        <img
           v-else-if="categorySlug === 'bebidas'"
-          class="home-section image-section drinks-banner"
-        >
-          <div class="section-container">
-            <img
-              src="../assets/img/Bebidas.png"
-              class="d-inline-block;"
-            />
-          </div>
-        </section>
+          src="../assets/img/Bebidas.png"
+          class="category-banner"
+        />
 
-        <div v-else-if="categorySlug != ('frescos' || 'bebidas')">
-          <h1>{{ categorySlug.split('-')[0] }}</h1>
-        </div>
+        <h1 v-else>{{ categorySlug.split("-")[0] }}</h1>
       </div>
 
       <div class="shop-wrapper" v-if="products.length">

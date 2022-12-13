@@ -11,10 +11,10 @@
       #default="{ error }"
     >
       <ServerError :error="error" class="server-error">{{
-        'unknownError'
+        "unknownError"
       }}</ServerError>
       <div class="quality-cart-wrap">
-        <div class="quality-wrap">
+        <div class="quality-wrap quantity-wrap">
           <BaseInput
             v-model="v.quantity.$model"
             :vuelidate="v.quantity"
@@ -27,7 +27,7 @@
             title="Qty"
           />
         </div>
-        <div class="quality-wrap">
+        <div class="quality-wrap submit-wrap">
           <input
             data-test="add-to-cart-button"
             type="submit"
@@ -35,13 +35,9 @@
           />
         </div>
       </div>
-      <div
-        class="mt-2"
-        style="color: red"
-        v-if="showQuantityError"
-      >
+      <div class="mt-2" style="color: red" v-if="showQuantityError">
         {{
-          t('quantityError', {
+          t("quantityError", {
             quantity: availableQuantity,
           })
         }}
@@ -50,7 +46,7 @@
 
     <div v-else>
       <div class="pro-cart-wrap">
-        {{ t('notInStock') }}
+        {{ t("notInStock") }}
       </div>
     </div>
   </div>

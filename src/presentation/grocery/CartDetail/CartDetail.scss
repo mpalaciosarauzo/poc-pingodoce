@@ -274,3 +274,126 @@ h3.cart-page-title {
     }
   }
 }
+
+.cart-page {
+  .cart-header {
+    margin-bottom: 64px;
+    .cart-title {
+      text-align: center;
+      padding-top: 40px;
+      font-size: 40px;
+      font-weight: bold;
+      margin: 0;
+      line-height: 58px;
+    }
+  }
+
+  .cart-main-area {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .cart-product-table {
+      padding-right: 40px;
+
+      table {
+        .price-title,
+        .quantity-title {
+          text-align: center;
+        }
+
+        .total-title {
+          text-align: right;
+        }
+
+        [data-test="cart-line-item"] {
+          > tr > td {
+            padding: 20px 0;
+          }
+
+          .product-price,
+          .cart-quality {
+            text-align: center;
+          }
+
+          .product-remove {
+            a {
+              padding-left: 4px;
+              padding-right: 12px;
+            }
+          }
+
+          .product-img {
+            padding-right: 12px;
+
+            a {
+              display: block;
+              width: 78px;
+              height: 78px;
+              min-width: 78px;
+            }
+          }
+
+          .product-name {
+            width: 100%;
+            padding-right: 20px;
+          }
+
+          .product-price {
+            .discount-tag {
+              width: 100%;
+              background-color: #e93838;
+              color: white;
+              border-radius: 0;
+              border-left: 1px dashed #fff;
+              line-height: 1;
+              padding: 4px 18px;
+
+              span {
+                color: white;
+                font-size: 12px;
+                white-space: nowrap;
+              }
+            }
+          }
+
+          .cart-quality {
+            padding: 0 24px;
+          }
+
+          .product-total {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+.grand-total-wrap {
+  .summary-title {
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
+
+  .grand-total-content {
+    margin: 0;
+  }
+
+  .grand-total-content {
+    margin-bottom: 24px;
+
+    .single-grand-total {
+      justify-content: space-between;
+    }
+  }
+
+  .cart-total-wrap {
+    margin: 0;
+  }
+
+  .cart-total-wrap {
+    justify-content: space-between;
+    padding-bottom: 28px;
+  }
+}
