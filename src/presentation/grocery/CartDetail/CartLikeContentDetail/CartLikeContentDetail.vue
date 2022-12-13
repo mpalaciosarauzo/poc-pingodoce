@@ -1,30 +1,25 @@
-<style
-  src="./CartLikeContentDetail.scss"
-  lang="scss"
-></style>
+<style src="./CartLikeContentDetail.scss" lang="scss"></style>
 <i18n src="./CartLikeContentDetail.txt" lang="yaml"></i18n>
 <script src="./CartLikeContentDetail.js"></script>
 
 <template>
-  <div
-    class="table-content table-responsive cart-table-content"
-  >
+  <div class="table-content table-responsive cart-table-content">
     <table>
       <thead>
         <tr>
           <th style="width: 10%" v-if="selectable"></th>
           <th v-if="editable"></th>
           <th></th>
-          <th>{{ t('description') }}</th>
-          <th v-if="!selectable && !returnedItem">
-            {{ t('price') }}
+          <th class="description-title">{{ t("description") }}</th>
+          <th v-if="!selectable && !returnedItem" class="price-title">
+            {{ t("price") }}
           </th>
-          <th>{{ t('quantity') }}</th>
-          <th v-if="!selectable && !returnedItem">
-            {{ t('total') }}
+          <th class="quantity-title">{{ t("quantity") }}</th>
+          <th v-if="!selectable && !returnedItem" class="total-title">
+            {{ t("total") }}
           </th>
           <th v-if="returnedItem">
-            {{ t('returnStatus') }}
+            {{ t("returnStatus") }}
           </th>
         </tr>
       </thead>

@@ -19,3 +19,62 @@
   font-weight: 500;
   font-size: 16px;
 }
+
+.myaccount-content {
+  .cart-table-content {
+    .description-title {
+      text-align: left;
+    }
+
+    .total-title {
+      text-align: right;
+    }
+
+    [data-test="cart-line-item"] {
+      > tr > td {
+        padding: 20px 0;
+      }
+
+      .product-name {
+        text-align: left;
+      }
+
+      .product-total {
+        text-align: right;
+      }
+
+      .product-price {
+        .discount-tag {
+          width: 100%;
+          background-color: #e93838;
+          color: white;
+          border-radius: 0;
+          border-left: 1px dashed #fff;
+          line-height: 1;
+          padding: 4px 18px;
+
+          span {
+            color: white;
+            font-size: 12px;
+            white-space: nowrap;
+          }
+        }
+      }
+
+      .cart-quality {
+        padding: 0 20px;
+        .quantity {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .subtotal-price {
+    padding-right: 0;
+  }
+
+  .total-price {
+    padding-right: 0;
+  }
+}

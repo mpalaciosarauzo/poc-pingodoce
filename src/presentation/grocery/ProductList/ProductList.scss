@@ -3,13 +3,23 @@
   max-width: 1500px;
   margin: 0 auto;
   width: 100%;
-  padding: 40px;
+  padding: 0 40px;
   padding-bottom: 12px;
+
+  img {
+    width: 100%;
+  }
 
   h1 {
     text-align: center;
     text-transform: capitalize;
     margin: 0;
+    padding: 40px 0;
+
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 58px;
   }
 }
 
@@ -294,7 +304,7 @@
                 font-size: 12px;
               }
               &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 left: 50%;
                 bottom: 80%;
@@ -501,7 +511,7 @@
               font-size: 12px;
             }
             &::after {
-              content: '';
+              content: "";
               position: absolute;
               left: 50%;
               bottom: 80%;

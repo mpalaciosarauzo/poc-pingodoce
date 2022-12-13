@@ -4,11 +4,12 @@
 
 <template>
   <span>
-    <div
-      v-if="cartNotEmpty(cart)"
-      class="checkout-main-area pt-130 pb-100"
-    >
+    <div v-if="cartNotEmpty(cart)" class="checkout-main-area pt-40 pb-100">
       <div class="container">
+        <div class="checkout-header mb-60">
+          <h2 class="checkout-title">{{ t("Checkout") }}</h2>
+        </div>
+
         <div class="checkout-wrap">
           <div class="row">
             <div class="col-lg-7">
@@ -30,11 +31,9 @@
                 :showError="showError"
                 :cart="cart"
               />
-              <ServerError
-                :error="error"
-                class="server-error"
-                >{{ 'unknownError' }}</ServerError
-              >
+              <ServerError :error="error" class="server-error">{{
+                "unknownError"
+              }}</ServerError>
             </div>
           </div>
         </div>
@@ -43,14 +42,14 @@
     <div v-if="orderComplete" class="pt-80 pb-100">
       <div class="container">
         <div class="order-complete text-center">
-          <h2>{{ t('thankYou') }}</h2>
+          <h2>{{ t("thankYou") }}</h2>
         </div>
         <div class="mt-30 text-center">
-            <TabOrderDetail :id="id"/>
+          <TabOrderDetail :id="id" />
         </div>
         <div class="order-complete text-center">
           <router-link class="mt-50" to="/">
-            {{ t('continueShopping') }}
+            {{ t("continueShopping") }}
           </router-link>
         </div>
       </div>

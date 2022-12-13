@@ -19,8 +19,8 @@
           <i class="dl-icon-close"></i>
         </a>
         <div class="cart-content">
-          <h3>{{ t('miniCart') }}</h3>
-          <span v-if="cartNotEmpty(cart)">
+          <h3>{{ t("miniCart") }}</h3>
+          <div v-if="cartNotEmpty(cart)" class="cart-product-table">
             <ul>
               <li
                 v-for="lineItem in cart.lineItems"
@@ -31,9 +31,7 @@
                 <div class="cart-img">
                   <router-link :to="productRoute(lineItem)">
                     <img
-                      :src="
-                        displayedImageUrl(lineItem.variant)
-                      "
+                      :src="displayedImageUrl(lineItem.variant)"
                       :alt="lineItem.name"
                     />
                   </router-link>
@@ -53,15 +51,13 @@
                     <BasePrice :price="total(lineItem)" />
                   </span>
                 </div>
-                <LineItemDeleteForm
-                  :lineItemId="lineItem.lineId"
-                />
+                <LineItemDeleteForm :lineItemId="lineItem.lineId" />
               </li>
             </ul>
             <div class="cart-total">
               <h4>
                 <!-- @todo: when discounted the strikout style is not working -->
-                {{ t('subtotal') }}:
+                {{ t("subtotal") }}:
                 <BasePrice
                   :price="subTotal(cart)"
                   data-test="mini-cart-price"
@@ -74,19 +70,19 @@
                 @click="close"
                 class="btn-grey"
               >
-                {{ t('viewBag') }}
+                {{ t("viewBag") }}
               </router-link>
               <router-link
                 :to="{ name: 'checkout' }"
                 data-test="checkout-button"
                 @click="close"
-                >{{ t('checkout') }}</router-link
+                >{{ t("checkout") }}</router-link
               >
             </div>
-          </span>
-          <span v-if="!cartNotEmpty(cart)">
-            <h5>{{ t('emptyCart') }}</h5>
-          </span>
+          </div>
+          <div v-if="!cartNotEmpty(cart)">
+            <h5>{{ t("emptyCart") }}</h5>
+          </div>
         </div>
       </div>
     </div>

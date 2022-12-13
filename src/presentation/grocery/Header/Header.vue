@@ -43,14 +43,11 @@
                 data-test="stores-link"
                 class="header-store"
               >
-                {{ t('stores') }}
+                {{ t("stores") }}
               </router-link>
             </div>
             <div class="user-sections">
-              <button
-                @click.prevent="toggleSearch"
-                class="header-search"
-              >
+              <button @click.prevent="toggleSearch" class="header-search">
                 <i class="dl-icon-search10" />
               </button>
 
@@ -61,7 +58,9 @@
               >
                 <i class="dl-icon-cart1" />
 
-                <span class="count-style"
+                <span
+                  class="count-style"
+                  :class="{ active: totalCartItems > 0 }"
                   >{{ totalCartItems }}
                 </span>
               </button>
@@ -92,10 +91,7 @@
             placeholder="Pesquisar toda a loja…"
             @submit.prevent="doSearch"
           />
-          <button
-            @click.prevent="doSearch"
-            class="button-search"
-          >
+          <button @click.prevent="doSearch" class="button-search">
             <i class="dl-icon-search10"></i>
           </button>
         </form>
@@ -103,7 +99,6 @@
     </div>
   </header>
 </template>
-
 
 <!-- CTA BUTTONS -->
 <!-- <div
@@ -131,7 +126,6 @@
     </form>
   </div>
 </div> -->
-
 
 <!-- colocar en el footer -->
 <!-- <a href="#">{{ t('help') }}</a> -->

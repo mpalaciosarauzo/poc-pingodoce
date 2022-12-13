@@ -3,16 +3,14 @@
 <script src="./CartLikePriceDetail.js"></script>
 <template>
   <div v-if="cart" class="grand-total-wrap">
-    <h4>{{ t('cartTotals') }}</h4>
+    <h4 class="summary-title">{{ t("cartTotals") }}</h4>
+
     <div class="grand-total-content">
       <div class="single-grand-total">
-        <div class="single-grand-total-left col-sm-6">
-          <span>{{ t('subtotal') }}</span>
+        <div class="single-grand-total-left">
+          <span>{{ t("subtotal") }}</span>
         </div>
-        <div
-          class="single-grand-total-right col-sm-6"
-          data-test="cart-subtotal-price"
-        >
+        <div class="single-grand-total-right" data-test="cart-subtotal-price">
           <span>
             <BasePrice :price="subTotal(cart)" />
           </span>
@@ -20,13 +18,10 @@
       </div>
 
       <div class="single-grand-total">
-        <div class="single-grand-total-left col-sm-6">
-          <span>{{ t('salesTax') }}</span>
+        <div class="single-grand-total-left">
+          <span>{{ t("salesTax") }}</span>
         </div>
-        <div
-          class="single-grand-total-right col-sm-6"
-          data-test="cart-taxes-amount"
-        >
+        <div class="single-grand-total-right" data-test="cart-taxes-amount">
           <span>
             <BasePrice :price="taxes(cart)" />
           </span>
@@ -37,30 +32,22 @@
         :cart="cart"
         :editable="editable"
       />
-      <Promotions
-        v-if="promotionsCodesExists"
-        :promotionsCodes="promos"
-      />
+      <Promotions v-if="promotionsCodesExists" :promotionsCodes="promos" />
     </div>
     <div class="cart-total-wrap">
-      <div class="single-cart-total-left col-sm-6">
-        <b>{{ t('total') }}</b>
+      <div class="single-cart-total-left">
+        <b>{{ t("total") }}</b>
       </div>
-      <div
-        class="single-cart-total-right col-sm-6"
-        data-test="cart-total-price"
-      >
+      <div class="single-cart-total-right" data-test="cart-total-price">
         <b>
           <BasePrice :price="{ value: cart.totalPrice }" />
         </b>
       </div>
     </div>
     <div class="grand-btn">
-      <router-link
-        :to="{ name: 'checkout' }"
-        data-test="checkout-button"
-        >{{ t('checkout') }}</router-link
-      >
+      <router-link :to="{ name: 'checkout' }" data-test="checkout-button">{{
+        t("checkout")
+      }}</router-link>
     </div>
   </div>
 </template>
