@@ -47,9 +47,17 @@
           :sku="sku"
         />
 
-        <VariantSelector :sku="sku" :allVariants="allVariants" />
+        <VariantSelector
+          :sku="sku"
+          :allVariants="allVariants"
+          class="variant-selector"
+        />
 
-        <VariantNotes v-if="allVariants.length > 1" :sku="sku" />
+        <VariantNotes
+          v-if="allVariants.length > 1"
+          :sku="sku"
+          class="variant-notes"
+        />
         <!-- @todo: calculate in stock -->
         <!-- <div v-if="availableQ">
           {{ t('available') }}: {{ availableQuantity }}
