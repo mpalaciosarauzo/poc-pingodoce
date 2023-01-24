@@ -304,9 +304,13 @@
           display: flex;
           align-items: flex-start;
           margin-top: 4px;
+
+          [data-test="product-original-price"] {
+            font-weight: 600;
+          }
         }
       }
-
+      
       .cart-checkout-btn {
         display: block;
         width: 100%;
