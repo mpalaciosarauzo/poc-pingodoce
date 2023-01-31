@@ -311,6 +311,29 @@
         display: block;
         width: 100%;
 
+        .checkout-button {
+          border: 2px solid $theme-color;
+          transition: .5s;
+
+          &:hover {
+            background-color: white;
+            color: $theme-color;
+            border: 2px solid $theme-color;
+          }
+        }
+
+        .confirm-button {
+          background-color: white;
+          color: $theme-color;
+          border: 2px solid $theme-color;
+          transition: .5s;
+
+          &:hover {
+            background-color: $theme-color;
+            color: #fff;
+          }
+        }
+
         a {
           width: 100%;
           display: block;
@@ -322,10 +345,6 @@
           color: #fff;
           text-transform: uppercase;
           font-size: 12px;
-
-          &:hover {
-            background-color: $theme-color-secondary;
-          }
 
           &:first-child {
             margin-top: 0;
