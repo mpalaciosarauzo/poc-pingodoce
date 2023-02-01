@@ -47,7 +47,7 @@
                     </router-link>
                   </h4>
                   <span data-test="cart-line-item-quantity">
-                    {{ lineItem.quantity }} ×
+                    {{ lineItem.quantity }} ud.
                     <BasePrice :price="total(lineItem)" />
                   </span>
                 </div>
