@@ -34,9 +34,15 @@
           <BasePrice
             :price="currentVariant.scopedPrice"
             class="original-price"
-          />{{
+          />
+          {{
             productType.id === "f1a07b46-5104-4446-ba14-0289ef7e5537"
               ? "/kg"
+              : ""
+          }}
+          {{
+            productType.id === "2fd1da80-2956-4c98-a6f2-3f68fd9d738b" 
+              ? "/un"
               : ""
           }}
         </div>

@@ -23,7 +23,6 @@ import useTranslation from 'hooks/useTranslation';
 import store from '../src/store';
 
 const saveCustomerState = (c) => {
-  console.log("c en saveCustomerState", c)
   customerGlobal.setValue(c);
   store.dispatch('setCustomer', c);
 }
@@ -34,7 +33,6 @@ const refreshUser = () =>
   basic
     .refreshUser()
     .then((result) => {
-      console.log("refreshUser useCsutomerTools",result.data.me.customer)
       saveCustomerState(result.data.me.customer)
     });
 const updateUser = ({ firstName, lastName, email }) =>
@@ -46,7 +44,6 @@ const updateUser = ({ firstName, lastName, email }) =>
       email,
     })
     .then((result) => {
-      console.log("updateUser useCsutomerTools", result.data.updateMyCustomer)
       saveCustomerState(result.data.updateMyCustomer);
     });
 const li = (email, password) =>
@@ -56,7 +53,6 @@ const li = (email, password) =>
       return loginToken(email, password).then(() => data);
     })
     .then((result) => {
-      console.log("li useCsutomerTools", result.data.customerSignMeIn.customer)
       saveCustomerState(
         result.data.customerSignMeIn.customer
       );
@@ -93,7 +89,6 @@ function useCustomerTools() {
         );
       })
       .then((result) => {
-        console.log("signup useCustomerTools", result.data.customerSignMeUp.customer)
         saveCustomerState(
           result.data.customerSignMeUp.customer
         );
@@ -145,7 +140,6 @@ function useCustomerTools() {
       })
       .then((result) => {
         const c = result.data.customerChangeMyPassword;
-        console.log("updateMyCustomerPassword useCustomerTools", c)
         saveCustomerState(c);
         return loginToken(c.email, newPassword);
       })
