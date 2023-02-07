@@ -32,6 +32,11 @@
               ? "/kg"
               : ""
           }}
+          {{
+            product.productType.id === "2fd1da80-2956-4c98-a6f2-3f68fd9d738b"
+              ? "/un"
+              : ""
+          }}
         </div>
 
         <router-link

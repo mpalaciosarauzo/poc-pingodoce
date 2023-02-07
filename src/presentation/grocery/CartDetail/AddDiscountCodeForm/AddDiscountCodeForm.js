@@ -27,12 +27,14 @@ export default {
     };
 
     const tools = useCustomerTools();
-    const { customFields } = tools.useCustomFieldsCustomer();
     const discountCode = store.state.discount;
     const getLoyaltyPoints = () => {
-      if(store.state.customer != null && customFields.value != null && discountCode!= null){
-        const loyaltyPoints = customFields.value.find((field) => field.name === "loyalty_points")?.value;
-        return 'Tem ' + loyaltyPoints + ' pontos de fidelização, que equivalem a ' +  loyaltyPoints*0.01 + '€ de desconto com o código: ' + discountCode;
+      if (store.state.customer != null && discountCode != null) {
+        const { customFields } = tools.useCustomFieldsCustomer();
+        if (customFields.value != null) {
+          const loyaltyPoints = customFields.value.find((field) => field.name === "loyalty_points")?.value;
+          return 'Tem ' + loyaltyPoints + ' pontos de fidelização, que equivalem a ' + loyaltyPoints * 0.01 + '€ de desconto com o código: ' + discountCode;
+        }
       }
       return 'Você não tem cheques';
     };
