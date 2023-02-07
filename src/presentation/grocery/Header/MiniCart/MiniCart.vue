@@ -47,7 +47,7 @@
                     </router-link>
                   </h4>
                   <span data-test="cart-line-item-quantity">
-                    {{ lineItem.quantity }} ×
+                    {{ lineItem.quantity }} ud.
                     <BasePrice :price="total(lineItem)" />
                   </span>
                 </div>
@@ -68,13 +68,14 @@
               <router-link
                 :to="{ name: 'cart' }"
                 @click="close"
-                class="btn-grey"
+                class="checkout-button"
               >
                 {{ t("viewBag") }}
               </router-link>
               <router-link
                 :to="{ name: 'checkout' }"
                 data-test="checkout-button"
+                class="confirm-button"
                 @click="close"
                 >{{ t("checkout") }}</router-link
               >

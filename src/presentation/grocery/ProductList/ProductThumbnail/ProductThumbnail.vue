@@ -26,6 +26,19 @@
       </div>
 
       <div class="product-description">
+        <div class="cta-price">
+          <BasePrice :price="product?.masterVariant?.scopedPrice" />{{
+            product.productType.id === "f1a07b46-5104-4446-ba14-0289ef7e5537"
+              ? "/kg"
+              : ""
+          }}
+          {{
+            product.productType.id === "2fd1da80-2956-4c98-a6f2-3f68fd9d738b"
+              ? "/un"
+              : ""
+          }}
+        </div>
+
         <router-link
           :to="productRoute(product.slug, product.sku)"
           data-test="product-thumbnail-name"
@@ -39,19 +52,6 @@
           @click.prevent="() => addToCart(product.sku)"
         >
           <span class="add-label">{{ t("addToCart") }}</span>
-          <div class="cta-price">
-            <BasePrice :price="product?.masterVariant?.scopedPrice" />
-            {{
-              product.productType.id === "f1a07b46-5104-4446-ba14-0289ef7e5537"
-                ? "/kg"
-                : ""
-            }}
-            {{
-              product.productType.id === "2fd1da80-2956-4c98-a6f2-3f68fd9d738b" 
-                ? "/un"
-                : ""
-            }}
-          </div>
         </button>
       </div>
     </div>
