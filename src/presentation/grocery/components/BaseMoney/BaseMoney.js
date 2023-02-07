@@ -1,6 +1,6 @@
 import { computed } from 'vue';
-import { useI18n } from 'vue-i18n';
 import useLocation from 'hooks/useLocation';
+import useLocale from 'hooks/useLocale';
 
 export default {
   props: {
@@ -10,10 +10,12 @@ export default {
     },
   },
   setup(props) {
-    const { n } = useI18n();
     const { location } = useLocation();
+    const { locale } = useLocale();
+    const lcLoc = location.value + '-' + locale.value;
+    const formatter = new Intl.NumberFormat(lcLoc, {style: 'currency', currency: props.money.currencyCode})
     const formattedMoney = computed(() => {
-      return n(amount.value, 'currency', location.value);
+      return formatter.format(amount.value)
     });
     const amount = computed(() => {
       if (props?.money) {
