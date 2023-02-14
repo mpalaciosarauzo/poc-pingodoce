@@ -39,10 +39,10 @@
                 data-test="product-attributes-list"
                 :key="attribute.name"
               >
-                <span class="attribute-name">
+                <span class="attribute-name" v-if="attribute.name != 'Tipo de Corte' && attribute.name != 'Peso em gramas'">
                   {{ attribute.name }}:
                 </span>
-                <span>
+                <span v-if="attribute.name != 'Tipo de Corte' && attribute.name != 'Peso em gramas'">
                   {{ attribute.label || attribute.value }}
                 </span>
               </li>
